@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RapasAI Lab | R-DR｜RapasAI Document Reviewer</title>
+  <meta
+    name="description"
+    content="RapasAI Labは、専門文書レビューを支援する文書解析エンジン R-DR｜RapasAI Document Reviewer を企画・開発する個人事業です。"
+  />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <div class="brand-mark" aria-hidden="true">
+          <img class="brand-logo" src="rapasai-logo-mark.png" alt="" />
+        </div>
+        <div>
+          <p class="brand-name">RapasAI Lab</p>
+          <p class="brand-subtitle">R-DR</p>
+        </div>
+      </div>
+
+      <nav class="site-nav" aria-label="ページ内ナビゲーション">
+        <a href="#about">About</a>
+        <a href="#dqc-core">R-DR</a>
+        <a href="#overview">Overview</a>
+        <a href="#scope">Scope</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-content">
+        <p class="eyebrow">R-DR｜RapasAI Document Reviewer</p>
+        <h1>専門文書レビューを支援する<br />R-DR｜RapasAI Document Reviewer</h1>
+        <p class="hero-text">
+          R-DRは、分担執筆された提案書、監査文書、IR文書などにおける
+          章間不整合、欠落、責任範囲のズレ、結論回収不足を解析し、
+          レビュー責任者の確認・修正指示作成を支援する文書解析エンジンです。
+        </p>
+
+        <div class="hero-actions">
+          <a class="button primary" href="#contact">お問い合わせ</a>
+          <a class="button secondary" href="assets/pdf/R-DR_overview.pdf" target="_blank" rel="noopener">概要PDF</a>
+          <a class="button secondary" href="#disclosure">情報開示方針</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="support-strip" aria-label="R-DRが支援すること">
+      <div class="container">
+        <div class="support-card">
+          <div class="support-heading">
+            <p class="section-label">Support</p>
+            <h2>R-DRが支援すること</h2>
+          </div>
+
+          <div class="support-grid">
+            <article class="support-item">
+              <span>01</span>
+              <h3>文書全体の構造を確認</h3>
+              <p>
+                集約後の文書全体を対象に、章構成や説明のつながりを確認します。
+              </p>
+            </article>
+
+            <article class="support-item">
+              <span>02</span>
+              <h3>章間の矛盾・欠落を検出</h3>
+              <p>
+                前提条件、責任範囲、記述粒度、結論回収のズレを検出対象にします。
+              </p>
+            </article>
+
+            <article class="support-item">
+              <span>03</span>
+              <h3>修正指示へつなげる</h3>
+              <p>
+                レビュー責任者が確認し、修正担当者へ渡しやすい形への整理を支援します。
+              </p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="section">
+      <div class="container narrow">
+        <p class="section-label">About</p>
+        <h2>RapasAI Labについて</h2>
+        <p>
+          RapasAI Labは、文書レビュー支援ツール／文書解析エンジン「R-DR｜RapasAI Document Reviewer」を企画・開発する個人事業です。
+          小規模な開発主体として、提供範囲を明確に限定しながら、
+          専門文書レビューを支援するツールの開発に取り組んでいます。
+        </p>
+      </div>
+    </section>
+
+    <section id="dqc-core" class="section soft">
+      <div class="container">
+        <div class="section-heading">
+          <p class="section-label">R-DR</p>
+          <h2>R-DR｜RapasAI Document Reviewerとは</h2>
+          <p class="lead">
+            R-DRは、文章の自動生成や自動判断を行うものではなく、文書全体の構造、確認観点、章間の関係を解析する文書解析エンジンです。
+          </p>
+        </div>
+
+        <div class="feature-grid">
+          <article class="feature-card">
+            <h3>文書全体を対象にする</h3>
+            <p>
+              単文の校正ではなく、集約後の文書全体を対象に、
+              章構成、前提条件、責任範囲、結論回収のつながりを確認します。
+            </p>
+          </article>
+
+          <article class="feature-card">
+            <h3>専門文書のズレを検出する</h3>
+            <p>
+              SIer提案書、監査文書、IR文書など、複数人で作成される専門文書における
+              矛盾、欠落、記述粒度のズレを検出対象とします。
+            </p>
+          </article>
+
+          <article class="feature-card">
+            <h3>修正指示へつなげる</h3>
+            <p>
+              検出結果を、レビュー責任者が確認し、修正担当者へ渡しやすい形へ整理することを目指します。
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+
+    <section id="overview" class="section">
+      <div class="container narrow">
+        <p class="section-label">Overview</p>
+        <h2>R-DR概要資料</h2>
+        <p>
+          R-DRは、文章の校正や修正を自動で行うツールではなく、
+          統合文書を解析し、確認観点・ばらつき・修正候補を洗い出す文書解析エンジンです。
+          概要資料では、R-DRの機能、統合した文書の特徴、R-DRのしくみを掲載しています。
+        </p>
+        <a class="button primary" href="assets/pdf/R-DR_概要.pdf" target="_blank" rel="noopener">R-DR概要資料を見る（PDF）</a>
+      </div>
+    </section>
+
+    <section id="scope" class="section">
+      <div class="container">
+        <div class="section-heading">
+          <p class="section-label">Scope</p>
+          <h2>提供方針</h2>
+          <p class="lead">
+            R-DRは、単体の公開SaaSとしてではなく、導入先企業のUI、生成AI、RAG、チャットボット、文書管理システム等と組み合わせて利用する文書解析エンジンとして提供することを想定しています。
+          </p>
+        </div>
+
+        <div class="scope-grid">
+          <article class="scope-card positive">
+            <h3>提供するもの</h3>
+            <ul>
+              <li>R-DR本体</li>
+              <li>文書解析エンジン</li>
+              <li>標準提供資料</li>
+              <li>NDA締結後に開示する入出力・連携情報</li>
+              <li>契約で定める範囲のレンタル利用許諾</li>
+            </ul>
+          </article>
+
+          <article class="scope-card negative">
+            <h3>提供しないもの</h3>
+            <ul>
+              <li>UI開発</li>
+              <li>個別設定ファイルの作成代行</li>
+              <li>顧客導入・顧客運用・顧客サポート</li>
+              <li>導入研修</li>
+              <li>保守サービス</li>
+              <li>バージョンアップ対応</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="disclosure" class="section soft">
+      <div class="container narrow">
+        <p class="section-label">Disclosure</p>
+        <h2>情報開示について</h2>
+        <p>
+          本サイトでは、R-DR｜RapasAI Document Reviewerの概要のみを掲載しています。
+          詳細な仕様、連携情報、標準資産、検証手順、価格条件、契約条件は、
+          個別相談および秘密保持契約の締結後に開示します。
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container info-grid">
+        <div>
+          <p class="section-label">Business</p>
+          <h2>事業者情報</h2>
+        </div>
+
+        <dl class="info-list">
+          <div>
+            <dt>事業者名</dt>
+            <dd>RapasAI Lab</dd>
+          </div>
+          <div>
+            <dt>事業形態</dt>
+            <dd>個人事業</dd>
+          </div>
+          <div>
+            <dt>開業日</dt>
+            <dd>2026年3月12日</dd>
+          </div>
+          <div>
+            <dt>所在地</dt>
+            <dd>日本国内</dd>
+          </div>
+          <div>
+            <dt>事業内容</dt>
+            <dd>文書レビュー支援ツール／文書解析エンジン「R-DR｜RapasAI Document Reviewer」の企画・開発</dd>
+          </div>
+        </dl>
+      </div>
+    </section>
+
+    <section id="contact" class="contact-section">
+      <div class="container contact-card">
+        <p class="section-label">Contact</p>
+        <h2>お問い合わせ</h2>
+        <p>
+          R-DR｜RapasAI Document Reviewerに関する初期のお問い合わせは、以下のメールアドレスまでご連絡ください。
+        </p>
+        <a class="contact-mail" href="mailto:rapasai.lab@gmail.com">rapasai.lab@gmail.com</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© 2026 RapasAI Lab</p>
+      <p>R-DR｜RapasAI Document Reviewer</p>
+    </div>
+  </footer>
+</body>
+</html>
