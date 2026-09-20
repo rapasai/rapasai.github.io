@@ -28,4 +28,4 @@ Email: rapasai.lab@gmail.com
 `ask/` は、Tawk.toチャット入口ページです。
 公開URL想定：`https://rapasai.github.io/ask/`
 
-親サイトの Contact セクションから `ask/` へリンクしています。
+親サイトの Contact セクションから `ask/` へのリンクは外しています。
