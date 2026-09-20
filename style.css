@@ -379,6 +379,16 @@ h3 {
   text-decoration: underline;
 }
 
+.contact-chat {
+  margin-top: 28px;
+  padding-top: 24px;
+  border-top: 1px solid var(--line);
+}
+
+.contact-chat p {
+  margin: 0 0 14px;
+}
+
 .site-footer {
   border-top: 1px solid var(--line);
   padding: 26px 0;

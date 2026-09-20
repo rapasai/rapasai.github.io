@@ -21,3 +21,11 @@ Email: rapasai.lab@gmail.com
 ## Included PDF
 
 - assets/pdf/R-DR_overview.pdf
+
+
+## /ask/ page
+
+`ask/` は、Tawk.toチャット入口ページです。
+公開URL想定：`https://rapasai.github.io/ask/`
+
+親サイトの Contact セクションから `ask/` へリンクしています。
