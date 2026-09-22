@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>RapasAI Lab｜聞いてみる</title>
-  <meta name="description" content="文書チェックや解析エンジンについて、チャットまたはメールでお問い合わせいただけます。">
+  <title>RapasAI Lab｜お問い合わせ</title>
+  <meta name="description" content="R-DR｜RapasAI Document Reviewerについて、知りたいことや確認したいことがある方向けのお問い合わせフォームです。">
   <link rel="stylesheet" href="./assets/ask.css">
 </head>
 <body>
@@ -32,64 +32,76 @@
   <main class="page" aria-labelledby="page-title">
     <section class="hero-card">
       <p class="eyebrow">RapasAI Labに聞いてみる</p>
-      <h1 id="page-title">文書チェックや解析エンジンについて、チャットで聞いてみませんか？</h1>
+      <h1 id="page-title">R-DRについて、知りたいことや確認したいことがある方へ</h1>
 
       <div class="body-text">
-        <p>チャットは Tawk.to を使って行います。</p>
-        <p>Tawk.toは、ページを開いた人ごとに表示される1対1のチャット小窓です。</p>
-        <p>書き込んだ内容は、他の訪問者の画面には表示されません。掲示板ではありません。</p>
+        <p>R-DR｜RapasAI Document Reviewerは、文書の整合性、修正未反映、表現差、責任範囲や前提条件のずれなどを検出する文書解析エンジンです。</p>
+        <p>R-DRの仕組みをもう少し知りたい場合や、自社の文書確認に活用できるか、既存のツール・システムに組み込めるか、R-DR単体で利用できるかを確認したい場合は、以下のフォームからお問い合わせください。</p>
       </div>
 
-      <div class="body-text small-gap">
-        <p>チャットボットではありません。人が確認して返信します。</p>
-        <p>お急ぎの場合や確実な返信が必要な場合は、メールをご利用ください。</p>
-      </div>
-
-      <div class="actions" aria-label="連絡方法">
-        <a class="mail-link" href="mailto:rapasai.lab@gmail.com">メールで連絡する</a>
+      <div class="response-note" aria-label="返信について">
+        <p>いただいたお問い合わせには必ず目を通し、原則24時間以内に何らかのご返信を差し上げます。</p>
+        <p>当方の業務と明らかに関係しない内容、迷惑行為に該当する内容、返信が困難な内容については、ご返信を控える場合があります。</p>
       </div>
     </section>
 
-    <aside class="side-panel" aria-label="チャットと利用案内">
-      <section class="chat-preview" aria-labelledby="chat-preview-title">
-        <p class="preview-label">Tawk.to チャット入口</p>
-        <div class="preview-window">
-          <div class="preview-dot" aria-hidden="true"></div>
-          <div>
-            <h2 id="chat-preview-title">チャットで聞く</h2>
-            <p>右下に表示されるチャットボタンを押して、メッセージを書けます。</p>
-          </div>
-        </div>
-      </section>
+    <section class="form-card" aria-labelledby="form-title">
+      <h2 id="form-title">お問い合わせフォーム</h2>
+      <p class="form-lead">返信のため、メールアドレスの入力をお願いします。</p>
 
-      <section class="notice" aria-labelledby="notice-title">
-        <h2 id="notice-title">ご利用にあたって</h2>
-        <p>ここでのやり取りは公開しません。</p>
-        <p>note記事や公開事例として使用しません。</p>
-        <p>公開事例としての掲載をご希望の場合は、ご相談ください。</p>
-        <p>顧客名、実案件文書、ソースコード、詳細仕様などの機密情報は記載しないでください。</p>
-        <p>必要に応じて「○○社」「某サービス」「サンプル文書」などに置き換えてお書きください。</p>
-      </section>
-    </aside>
+      <!-- Formspree送信先URL設定済み: https://formspree.io/f/mkjgrzpr -->
+      <form class="contact-form" action="https://formspree.io/f/mkjgrzpr" method="POST">
+        <input type="hidden" name="_subject" value="RapasAI Lab お問い合わせフォーム">
+        <input type="text" name="_gotcha" class="hidden-field" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+        <label class="field">
+          <span>お問い合わせの種類 <strong>必須</strong></span>
+          <select name="inquiry_type" required>
+            <option value="">選択してください</option>
+            <option value="R-DRについて、もう少し詳しく知りたい">R-DRについて、もう少し詳しく知りたい</option>
+            <option value="自社のツール・システムにR-DRを組み込めるか知りたい">自社のツール・システムにR-DRを組み込めるか知りたい</option>
+            <option value="自社の業務フローでR-DRを使えるか知りたい">自社の業務フローでR-DRを使えるか知りたい</option>
+            <option value="扱っている文書とR-DRの相性を知りたい">扱っている文書とR-DRの相性を知りたい</option>
+            <option value="R-DRで解決できる課題か相談したい">R-DRで解決できる課題か相談したい</option>
+            <option value="記事やサイトを見て、理解が合っているか確認したい">記事やサイトを見て、理解が合っているか確認したい</option>
+            <option value="その他">その他</option>
+          </select>
+        </label>
+
+        <div class="field-grid">
+          <label class="field">
+            <span>お名前 <em>任意</em></span>
+            <input type="text" name="name" autocomplete="name">
+          </label>
+
+          <label class="field">
+            <span>会社名・屋号 <em>任意</em></span>
+            <input type="text" name="organization" autocomplete="organization">
+          </label>
+        </div>
+
+        <label class="field">
+          <span>メールアドレス <strong>必須</strong></span>
+          <input type="email" name="email" autocomplete="email" required>
+        </label>
+
+        <label class="field">
+          <span>お問い合わせ内容 <strong>必須</strong></span>
+          <textarea name="message" rows="8" required placeholder="例：R-DRについて詳しく知りたいです。現在扱っている文書や業務フロー、既存ツールとの関係など、確認したい内容を差し支えない範囲でお書きください。"></textarea>
+        </label>
+
+        <div class="form-notice" aria-label="記入時のお願い">
+          <p>顧客名、実案件文書、ソースコード、詳細仕様などの機密情報は記載しないでください。</p>
+          <p>必要に応じて「○○社」「某サービス」「サンプル文書」などに置き換えてお書きください。</p>
+        </div>
+
+        <button class="submit-button" type="submit">送信する</button>
+      </form>
+    </section>
   </main>
 
   <footer class="site-footer">
     <p>© 2026 RapasAI Lab</p>
   </footer>
-
-  <!-- Tawk.to Widget Code -->
-<!--Start of Tawk.to Script-->
-<script type="text/javascript">
-var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-(function(){
-var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-s1.async=true;
-s1.src='https://embed.tawk.to/6aaf8ff761a993343e09cd47/1k2usknnq';
-s1.charset='UTF-8';
-s1.setAttribute('crossorigin','*');
-s0.parentNode.insertBefore(s1,s0);
-})();
-</script>
-<!--End of Tawk.to Script-->
 </body>
 </html>
