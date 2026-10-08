@@ -291,6 +291,30 @@ h3 {
   color: var(--muted);
 }
 
+
+.article-list {
+  display: grid;
+  gap: 14px;
+  margin-top: 28px;
+}
+
+.article-link {
+  display: block;
+  padding: 18px 20px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  color: var(--heading);
+  font-weight: 700;
+  text-decoration: none;
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.04);
+}
+
+.article-link:hover {
+  border-color: #bfdbfe;
+  color: var(--accent);
+}
+
 .scope-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);

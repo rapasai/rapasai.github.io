@@ -6,11 +6,320 @@
   <title>RapasAI Lab｜お問い合わせ</title>
   <meta name="description" content="R-DR｜RapasAI Document Reviewerについて、知りたいことや確認したいことがある方向けのお問い合わせフォームです。">
   <link rel="stylesheet" href="./assets/ask.css">
+  <style id="rapasai-ask-inline-css">
+:root {
+  --bg: #f7fbfc;
+  --surface: #ffffff;
+  --surface-soft: #eef8f7;
+  --text: #25313a;
+  --muted: #6b7f89;
+  --heading: #24333d;
+  --line: #d7e8ea;
+  --accent: #4fa3a5;
+  --accent-dark: #2f7f83;
+  --accent-soft: #dff3f2;
+  --warm: #fff8e8;
+  --warm-line: #f0d9a7;
+  --warm-accent: #d89b2b;
+  --blue-soft: #eef6ff;
+  --danger-soft: #fff6f2;
+  --shadow: 0 22px 60px rgba(35, 83, 95, 0.08);
+  --radius: 26px;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at 12% 10%, rgba(223, 243, 242, 0.88), transparent 34%),
+    radial-gradient(circle at 82% 18%, rgba(238, 246, 255, 0.84), transparent 30%),
+    linear-gradient(180deg, #fbfefd 0%, var(--bg) 56%, #f2f8f9 100%);
+  color: var(--text);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", "Hiragino Sans", "Yu Gothic", "YuGothic", "Noto Sans JP", sans-serif;
+  line-height: 1.75;
+}
+
+a { color: inherit; }
+
+.site-header {
+  border-bottom: 1px solid rgba(215, 232, 234, 0.78);
+  background: rgba(247, 251, 252, 0.78);
+  backdrop-filter: blur(14px);
+}
+
+.header-inner,
+.page,
+.site-footer {
+  width: min(1080px, calc(100% - 40px));
+  margin: 0 auto;
+}
+
+.header-inner {
+  min-height: 76px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  text-decoration: none;
+}
+
+.brand-mark {
+  width: 52px;
+  height: 52px;
+  display: grid;
+  place-items: center;
+  flex: 0 0 auto;
+}
+
+.brand-logo {
+  display: block;
+  width: 52px;
+  height: 52px;
+}
+
+.brand-text { display: grid; gap: 1px; }
+
+.brand-name {
+  color: var(--heading);
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+}
+
+.brand-subtitle {
+  color: var(--muted);
+  font-size: 0.78rem;
+}
+
+.site-nav {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+.site-nav a { text-decoration: none; }
+.site-nav a:hover { color: var(--accent-dark); }
+
+.page {
+  display: grid;
+  grid-template-columns: minmax(0, 0.88fr) minmax(360px, 1.12fr);
+  gap: 22px;
+  padding: 52px 0 46px;
+  align-items: start;
+}
+
+.hero-card,
+.form-card {
+  background: rgba(255, 255, 255, 0.88);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.hero-card { padding: clamp(30px, 5vw, 54px); }
+.form-card { padding: clamp(28px, 4vw, 42px); }
+
+.eyebrow {
+  margin: 0 0 14px;
+  color: var(--accent-dark);
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+}
+
+h1 {
+  margin: 0;
+  max-width: 780px;
+  color: var(--heading);
+  font-size: clamp(1.42rem, 2.55vw, 1.95rem);
+  font-weight: 650;
+  line-height: 1.34;
+  letter-spacing: -0.035em;
+}
+
+h2 {
+  margin: 0;
+  color: var(--heading);
+  font-size: clamp(1.12rem, 1.7vw, 1.36rem);
+  line-height: 1.45;
+}
+
+.body-text {
+  margin-top: 26px;
+  color: var(--muted);
+  font-size: clamp(0.98rem, 1.35vw, 1.08rem);
+}
+
+.body-text p,
+.response-note p,
+.form-lead,
+.form-notice p,
+.site-footer p { margin: 0; }
+
+.body-text p + p,
+.response-note p + p,
+.form-notice p + p { margin-top: 8px; }
+
+.response-note {
+  margin-top: 26px;
+  padding: 18px 20px;
+  border: 1px solid var(--warm-line);
+  border-radius: 20px;
+  background: linear-gradient(180deg, #fffdf7 0%, var(--warm) 100%);
+  color: #5a4a2b;
+  font-size: 0.92rem;
+}
+
+.form-lead {
+  margin-top: 8px;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.contact-form {
+  margin-top: 24px;
+  display: grid;
+  gap: 18px;
+}
+
+.field-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.field {
+  display: grid;
+  gap: 8px;
+}
+
+.field span {
+  color: var(--heading);
+  font-size: 0.92rem;
+  font-weight: 700;
+}
+
+.field strong,
+.field em {
+  margin-left: 6px;
+  font-style: normal;
+  font-size: 0.74rem;
+  letter-spacing: 0.03em;
+}
+
+.field strong {
+  color: #9c5f13;
+}
+
+.field em {
+  color: var(--muted);
+  font-weight: 600;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  border: 1px solid #cfe4e6;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.92);
+  color: var(--text);
+  font: inherit;
+  line-height: 1.5;
+  outline: none;
+  transition: border-color 0.16s ease, box-shadow 0.16s ease, background 0.16s ease;
+}
+
+input,
+select { min-height: 48px; padding: 0 14px; }
+textarea { min-height: 180px; padding: 14px; resize: vertical; }
+
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 4px rgba(79, 163, 165, 0.15);
+  background: #ffffff;
+}
+
+textarea::placeholder { color: #8fa2aa; }
+
+.form-notice {
+  padding: 16px 18px;
+  border: 1px solid #f0dacb;
+  border-radius: 18px;
+  background: var(--danger-soft);
+  color: #6d5c50;
+  font-size: 0.9rem;
+  line-height: 1.68;
+}
+
+.submit-button {
+  justify-self: start;
+  min-height: 48px;
+  padding: 0 24px;
+  border: 0;
+  border-radius: 999px;
+  background: linear-gradient(135deg, var(--accent) 0%, var(--accent-dark) 100%);
+  color: #ffffff;
+  font: inherit;
+  font-weight: 750;
+  letter-spacing: 0.03em;
+  cursor: pointer;
+  box-shadow: 0 14px 30px rgba(47, 127, 131, 0.22);
+}
+
+.submit-button:hover { filter: brightness(0.98); }
+.submit-button:active { transform: translateY(1px); }
+
+.hidden-field {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+}
+
+.site-footer {
+  padding: 0 0 34px;
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+@media (max-width: 860px) {
+  .header-inner { flex-direction: column; align-items: flex-start; padding: 16px 0; }
+  .site-nav { flex-wrap: wrap; gap: 12px 16px; }
+  .page { grid-template-columns: 1fr; padding-top: 34px; }
+}
+
+@media (max-width: 640px) {
+  .header-inner,
+  .page,
+  .site-footer { width: min(100% - 28px, 1080px); }
+  .field-grid { grid-template-columns: 1fr; }
+  .hero-card,
+  .form-card { border-radius: 22px; }
+}
+
+  </style>
 </head>
 <body>
   <header class="site-header" aria-label="サイトヘッダー">
     <div class="header-inner">
-      <a class="brand" href="../" aria-label="RapasAI Lab トップへ戻る">
+      <a class="brand" href="../index.html" aria-label="RapasAI Lab トップへ戻る">
         <span class="brand-mark" aria-hidden="true">
           <img src="./assets/rapasai-logo-mark.png" alt="" class="brand-logo">
         </span>
@@ -20,9 +329,9 @@
         </span>
       </a>
       <nav class="site-nav" aria-label="サイトナビゲーション">
-        <a href="../#about">About</a>
-        <a href="../#dqc-core">R-DR</a>
-        <a href="../#overview">Overview</a>
+        <a href="../index.html#about">About</a>
+        <a href="../index.html#dqc-core">R-DR</a>
+        <a href="../index.html#overview">Overview</a>
         <a href="../#scope">Scope</a>
         <a href="../#contact">Contact</a>
       </nav>

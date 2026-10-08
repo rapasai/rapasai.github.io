@@ -1,26 +1,40 @@
-# RapasAI Lab site with Formspree ask page
+# RapasAI Lab site update
 
 ## 内容
 
 - 親サイト一式
 - `/ask/` フォームページ
 - `ask/assets/ask.css`
-- `assets/pdf/R-DR_overview.pdf`
 
 ## 今回の状態
 
-- 親サイトの Contact セクションに `/ask/` への問い合わせフォーム導線を戻しています。
-- `/ask/` ページは、Tawk.toチャットではなく Formspree無料運用を前提とした問い合わせフォームに差し替えています。
-- Tawk.to Widget Code は削除済みです。
-- フォーム送信先は `https://formspree.io/f/mkjgrzpr` に設定済みです。
+- 親サイトの概要PDF導線を削除し、R-DR関連記事4本へのリンクに変更しています。
+- `assets/pdf/R-DR_overview.pdf` は同梱していません。
+- 親サイト Contact セクションの表示メールアドレスを `contact@rapasai.jp` に変更しています。
+- 親サイト Contact セクションから `/ask/` への問い合わせフォーム導線は維持しています。
+- `/ask/` ページは、Formspree無料運用を前提とした問い合わせフォームのまま維持しています。
+- `/ask/index.html` の Formspree送信先URLは変更していません。
+
+## note記事リンク
+
+- 文書サービスに「完成文書の整合確認機能」を追加する――R-DRでできること  
+  https://note.com/rapasai_lab/n/necffb69677c8
+- その文書、本当に全体として整っていますか？――R-DR｜RapasAI Document Reviewer  
+  https://note.com/rapasai_lab/n/nc42816ea4f03
+- 生成AIに判断を任せない理由――R-DRの設計思想  
+  https://note.com/rapasai_lab/n/ncdd6c177af86
+- 生成AIに判断を任せない文書解析エンジン――R-DR｜RapasAI Document Reviewer  
+  https://note.com/rapasai_lab/n/nfb0725b73fef
 
 ## Formspree送信先
 
-`ask/index.html` 内のフォーム送信先は設定済みです。
+`ask/index.html` 内のフォーム送信先は変更していません。
 
 ```html
 <form class="contact-form" action="https://formspree.io/f/mkjgrzpr" method="POST">
 ```
+
+Formspreeの受信先メールアドレスは、Formspree管理画面側で `contact@rapasai.jp` に変更してください。
 
 ## フォーム項目
 
@@ -32,34 +46,11 @@
 
 ## 注意
 
-本番アップロード後、`https://rapasai.github.io/ask/` から送信テストしてください。
+本番アップロード後、`https://rapasai.jp/ask/` から送信テストしてください。
 
-
-## v15 update
-
-- `/ask/` ページの見出しを「自社の文書確認フローに、R-DRを組み込めるか確認したい方へ」に修正しました。
-- Tawk.toコードは引き続き削除済みです。
-- Formspree送信先URLは仮のままです。
-- 親サイトContactから `/ask/` へのリンクは外したままです。
-
-
-## v16 update
-
-- `/ask/` の見出しを「R-DRについて、知りたいことや確認したいことがある方へ」に変更。
-- フォーム冒頭説明を、R-DRの理解確認・自社文書確認での活用・既存ツールへの組み込み・R-DR単体利用を拾える内容に変更。
-- お問い合わせ種類に「R-DRについて、もう少し詳しく知りたい」を追加。
-- お問い合わせ内容の例文を、組み込み相談限定ではない内容に変更。
-- Tawk.toコードは削除済みのまま。Formspree送信先は仮URLのまま。親サイトContactから `/ask/` へのリンクは外したまま。
-
-
-## v17
-- /ask/index.html の Formspree送信先URLを `https://formspree.io/f/mkjgrzpr` に設定。
-- Tawk.toコードは入っていません。
-- 親サイトContactから /ask/ へのリンクは外したままです。
-
-
-## v18
-
-- 親サイト Contact セクションに `/ask/` への問い合わせフォーム導線を追加。
-- `/ask/` は Formspree送信先設定済みのフォームページです。
-- Tawk.toコードは入っていません。
+## v2補足
+- `/ask/` ページを維持しています。
+- `/ask/assets/ask.css` を同梱しています。
+- `/ask/index.html` のCSS参照は `./assets/ask.css` のままです。
+- `CNAME` は `rapasai.jp` として同梱しています。
+- `assets/pdf/R-DR_overview.pdf` は同梱していません。
