@@ -6,103 +6,75 @@
   <title>RapasAI Lab | R-DR｜RapasAI Document Reviewer</title>
   <meta
     name="description"
-    content="RapasAI Labは、専門文書レビューを支援する文書解析エンジン R-DR｜RapasAI Document Reviewer を企画・開発する個人事業です。"
+    content="RapasAI Labは、法人文書サービスに完成文書の整合確認機能を追加する文書解析エンジン R-DR｜RapasAI Document Reviewer を企画・開発する個人事業です。"
   />
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css?v=20261009-green" />
 </head>
 
 <body>
   <header class="site-header">
     <div class="container header-inner">
-      <div class="brand">
-        <div class="brand-mark" aria-hidden="true">
+      <a class="brand" href="#top" aria-label="RapasAI Lab ホーム">
+        <span class="brand-mark" aria-hidden="true">
           <img class="brand-logo" src="rapasai-logo-mark.png" alt="" />
-        </div>
-        <div>
-          <p class="brand-name">RapasAI Lab</p>
-          <p class="brand-subtitle">R-DR</p>
-        </div>
-      </div>
+        </span>
+        <span>
+          <span class="brand-name">RapasAI Lab</span>
+          <span class="brand-subtitle">R-DR｜RapasAI Document Reviewer</span>
+        </span>
+      </a>
 
       <nav class="site-nav" aria-label="ページ内ナビゲーション">
         <a href="#about">About</a>
-        <a href="#dqc-core">R-DR</a>
-        <a href="#overview">Overview</a>
-        <a href="#scope">Scope</a>
+        <a href="#rdr">R-DR</a>
+        <a href="#value">Value</a>
+        <a href="#technology">Technology</a>
+        <a href="#articles">Articles</a>
         <a href="#contact">Contact</a>
       </nav>
     </div>
   </header>
 
-  <main>
-    <section class="hero">
+  <main id="top">
+    <section class="hero section-white">
       <div class="container hero-content">
         <p class="eyebrow">R-DR｜RapasAI Document Reviewer</p>
-        <h1>専門文書レビューを支援する<br />R-DR｜RapasAI Document Reviewer</h1>
+        <h1>法人文書サービスに、<br />「完成文書の整合確認機能」を追加します</h1>
         <p class="hero-text">
-          R-DRは、分担執筆された提案書、監査文書、IR文書などにおける
-          章間不整合、欠落、責任範囲のズレ、結論回収不足を解析し、
-          レビュー責任者の確認・修正指示作成を支援する文書解析エンジンです。
+          AI校正後・人力校閲後の法人文書から、修正漏れ・関連記述のズレ・表現の強弱を確認候補として洗い出します。
         </p>
 
         <div class="hero-actions">
           <a class="button primary" href="#contact">お問い合わせ</a>
-          <a class="button secondary" href="#overview">R-DR関連記事</a>
-          <a class="button secondary" href="#disclosure">情報開示方針</a>
+          <a class="button secondary" href="#rdr">R-DRを見る</a>
+          <a class="button secondary" href="#articles">関連記事を読む</a>
         </div>
+
+        <div class="hero-tags" aria-label="提供形態">
+          <span>文書解析エンジン</span>
+          <span>レンタル提供</span>
+          <span>組み込み対応</span>
+          <span>単体アプリ商品化対応</span>
+        </div>
+
+        <p class="target-note">
+          対象例：SIer提案書／IR資料／監査関連文書／内部統制評価報告書
+        </p>
       </div>
     </section>
 
-    <section class="support-strip" aria-label="R-DRが支援すること">
-      <div class="container">
-        <div class="support-card">
-          <div class="support-heading">
-            <p class="section-label">Support</p>
-            <h2>R-DRが支援すること</h2>
-          </div>
-
-          <div class="support-grid">
-            <article class="support-item">
-              <span>01</span>
-              <h3>文書全体の構造を確認</h3>
-              <p>
-                集約後の文書全体を対象に、章構成や説明のつながりを確認します。
-              </p>
-            </article>
-
-            <article class="support-item">
-              <span>02</span>
-              <h3>章間の矛盾・欠落を検出</h3>
-              <p>
-                前提条件、責任範囲、記述粒度、結論回収のズレを検出対象にします。
-              </p>
-            </article>
-
-            <article class="support-item">
-              <span>03</span>
-              <h3>修正指示へつなげる</h3>
-              <p>
-                レビュー責任者が確認し、修正担当者へ渡しやすい形への整理を支援します。
-              </p>
-            </article>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="about" class="section">
+    <section id="about" class="section section-soft">
       <div class="container narrow">
         <p class="section-label">About</p>
         <h2>RapasAI Labについて</h2>
         <p>
           RapasAI Labは、文書レビュー支援ツール／文書解析エンジン「R-DR｜RapasAI Document Reviewer」を企画・開発する個人事業です。
-          小規模な開発主体として、提供範囲を明確に限定しながら、
-          専門文書レビューを支援するツールの開発に取り組んでいます。
+          小規模な開発主体として、提供範囲を明確に限定しながら、専門文書レビューを支援するツールの開発に取り組んでいます。
         </p>
       </div>
     </section>
 
-    <section id="dqc-core" class="section soft">
+    <section id="rdr" class="section section-white">
       <div class="container">
         <div class="section-heading">
           <p class="section-label">R-DR</p>
@@ -116,19 +88,15 @@
           <article class="feature-card">
             <h3>文書全体を対象にする</h3>
             <p>
-              単文の校正ではなく、集約後の文書全体を対象に、
-              章構成、前提条件、責任範囲、結論回収のつながりを確認します。
+              単文の校正ではなく、集約後の文書全体を対象に、章構成、前提条件、責任範囲、結論回収のつながりを確認します。
             </p>
           </article>
-
           <article class="feature-card">
             <h3>専門文書のズレを検出する</h3>
             <p>
-              SIer提案書、監査文書、IR文書など、複数人で作成される専門文書における
-              矛盾、欠落、記述粒度のズレを検出対象とします。
+              SIer提案書、監査文書、IR文書など、複数人で作成される専門文書における矛盾、欠落、記述粒度のズレを検出対象とします。
             </p>
           </article>
-
           <article class="feature-card">
             <h3>修正指示へつなげる</h3>
             <p>
@@ -139,15 +107,222 @@
       </div>
     </section>
 
+    <section class="section section-tint">
+      <div class="container">
+        <div class="section-heading">
+          <p class="section-label">Add-on</p>
+          <h2>法人文書サービスに追加できること</h2>
+          <p class="lead">
+            R-DRは、文書管理・AI校正・開示支援・校閲支援・法人向け業務アプリに、完成後の「最終整合確認」機能を追加する文書解析エンジンです。
+          </p>
+        </div>
 
-    <section id="overview" class="section">
+        <div class="three-column">
+          <article class="summary-card">
+            <span class="card-label">対象企業</span>
+            <p>文書管理、AI校正、開示支援、校閲支援、業務アプリなどを提供する企業</p>
+          </article>
+          <article class="summary-card">
+            <span class="card-label">対象業務</span>
+            <p>完成後の法人文書を確認し、修正漏れ・ズレ・表現差を洗い出す業務</p>
+          </article>
+          <article class="summary-card">
+            <span class="card-label">提供価値</span>
+            <p>既存サービスに「最終整合確認」という追加価値を載せ、提案しやすくします。</p>
+          </article>
+        </div>
+
+        <div class="service-tags" aria-label="対象サービス例">
+          <span>文書管理サービス</span>
+          <span>AI校正サービス</span>
+          <span>開示支援サービス</span>
+          <span>校閲支援サービス</span>
+          <span>業務アプリ</span>
+        </div>
+
+        <p class="section-note">
+          「文書一般」ではなく、確認漏れが問題になりやすい法人文書サービス向けに絞ります。
+        </p>
+      </div>
+    </section>
+
+    <section id="value" class="section section-white">
+      <div class="container">
+        <div class="section-heading">
+          <p class="section-label">Value</p>
+          <h2>連携企業に提供できる価値</h2>
+          <p class="lead">R-DRは、連携企業が自社顧客へ提案できる「商品価値」を増やします。</p>
+        </div>
+
+        <div class="value-list">
+          <article class="value-row">
+            <h3>追加提案材料</h3>
+            <p>既存顧客に「完成後チェック」「最終整合確認」を追加機能として提案できます。</p>
+          </article>
+          <article class="value-row">
+            <h3>差別化</h3>
+            <p>AI校正や文書管理だけでは届きにくい、章間・関連記述・表現差の確認を打ち出せます。</p>
+          </article>
+          <article class="value-row">
+            <h3>工数削減の訴求</h3>
+            <p>人が全文を読み直す前に、確認すべき候補を一覧化できます。</p>
+          </article>
+          <article class="value-row">
+            <h3>確認品質の標準化</h3>
+            <p>担当者の経験や読み落としに依存しやすい確認観点を、同じ規則で洗い出せます。</p>
+          </article>
+          <article class="value-row">
+            <h3>顧客別展開</h3>
+            <p>辞書・確認観点・会社ルールを取り込み、顧客別の高付加価値サービスにできます。</p>
+          </article>
+        </div>
+
+        <p class="section-note strong">
+          R-DRを組み込むことで、連携企業は既存サービスに「完成後の最終整合確認」機能を追加できます。
+        </p>
+      </div>
+    </section>
+
+    <section class="section section-tint">
+      <div class="container">
+        <div class="section-heading">
+          <p class="section-label">Flow</p>
+          <h2>R-DRの提供イメージ</h2>
+          <p class="lead">RapasAI Labは、R-DR文書解析エンジンをレンタル提供します。</p>
+        </div>
+
+        <div class="process-grid">
+          <article class="process-step">
+            <span>1</span>
+            <h3>RapasAI Lab</h3>
+            <p>R-DR文書解析エンジンをレンタル提供</p>
+          </article>
+          <article class="process-step">
+            <span>2</span>
+            <h3>連携企業</h3>
+            <p>UI化・既存サービス連携、販売・運用支援</p>
+          </article>
+          <article class="process-step">
+            <span>3</span>
+            <h3>導入企業</h3>
+            <p>SIer提案書・IR資料、監査関連文書などを確認</p>
+          </article>
+          <article class="process-step">
+            <span>4</span>
+            <h3>R-DRの出力</h3>
+            <p>修正漏れ・関連記述のズレ・表現の強弱を確認候補として提示</p>
+          </article>
+        </div>
+
+        <div class="benefit-card">
+          <h3>導入企業に提供できる価値</h3>
+          <ul>
+            <li>人力確認の前段で、確認すべき点を洗い出せます。</li>
+            <li>修正漏れ・関連記述のズレ・表現の強弱を確認しやすくなります。</li>
+            <li>確認結果をレポート化できます。</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-white">
+      <div class="container">
+        <div class="section-heading">
+          <p class="section-label">Use cases</p>
+          <h2>R-DRの使い方は2つあります</h2>
+          <p class="lead">既存サービスへの組み込みと、単体アプリとしての商品化に対応します。</p>
+        </div>
+
+        <div class="two-column">
+          <article class="use-card">
+            <h3>1. 既存サービスに組み込む</h3>
+            <p>文書管理、AI校正、開示支援、校閲支援、業務アプリなどに、完成後チェック機能を追加できます。</p>
+            <p>既存の画面やレポート機能に、R-DRの確認候補抽出を接続できます。</p>
+            <div class="small-tags"><span>既存顧客への追加提案に</span><span>既存UIに接続</span></div>
+          </article>
+          <article class="use-card">
+            <h3>2. 単体アプリとして商品化する</h3>
+            <p>R-DRを文書解析エンジンとして使い、法人向け文書確認アプリを開発・販売できます。</p>
+            <p>文書アップロード、確認候補一覧、確認レポート出力などの機能を構成できます。</p>
+            <div class="small-tags"><span>新規サービス化</span><span>確認レポート出力</span></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-tint">
+      <div class="container">
+        <div class="section-heading">
+          <p class="section-label">Review points</p>
+          <h2>文書全体から、確認すべき点を洗い出します</h2>
+          <p class="lead">修正漏れ・関連記述のズレ・表現の強弱を、確認候補として提示します。</p>
+        </div>
+
+        <div class="check-grid">
+          <article class="check-card">
+            <h3>修正漏れ</h3>
+            <p>直したはずの内容が、関連箇所に残っていないか。</p>
+            <p class="example">例：本文だけ修正され、概要・注記・別章に古い表現が残る。</p>
+          </article>
+          <article class="check-card">
+            <h3>関連記述のズレ</h3>
+            <p>章や段落をまたいで、前提・対象・責任範囲が食い違っていないか。</p>
+            <p class="example">例：第1章と第4章で対象範囲が異なる。</p>
+          </article>
+          <article class="check-card">
+            <h3>表現の強弱</h3>
+            <p>断定、推定、条件付き表現が混ざっていないか。</p>
+            <p class="example">例：「必ず実施する」と「実施する場合がある」が混在する。</p>
+          </article>
+          <article class="check-card">
+            <h3>反映／未反映</h3>
+            <p>AI修正・人力修正の結果が、関連箇所まで反映されているか。</p>
+          </article>
+          <article class="check-card">
+            <h3>責任・対象範囲</h3>
+            <p>担当範囲、責任範囲、前提条件が文書全体でそろっているか。</p>
+          </article>
+        </div>
+
+        <p class="section-note strong">確認候補を提示し、最終判断は人間が行う設計です。</p>
+      </div>
+    </section>
+
+    <section id="technology" class="section section-white">
+      <div class="container">
+        <div class="section-heading">
+          <p class="section-label">Technology</p>
+          <h2>embeddingで数値化し、固定ロジックで解析する</h2>
+          <p class="lead">生成AIの技術を活用し、確認工程は固定ロジックで行います。</p>
+        </div>
+
+        <div class="three-column">
+          <article class="summary-card">
+            <span class="card-label">文書を数値化</span>
+            <p>生成AIにも使われるembedding技術で文書を数値化します。表現の強弱、用語の揺れ、関連記述のズレを検出しやすくします。</p>
+          </article>
+          <article class="summary-card">
+            <span class="card-label">固定ロジックで解析</span>
+            <p>確認工程では、生成AIに判断させません。あらかじめ定めた規則・辞書・会社ルールに沿って解析します。</p>
+          </article>
+          <article class="summary-card">
+            <span class="card-label">同じ規則で確認</span>
+            <p>同じ入力・同じ規則なら、同じ条件で確認候補を抽出できます。繰り返し確認する業務に組み込みやすい仕組みです。</p>
+          </article>
+        </div>
+
+        <p class="section-note strong">
+          生成AIに“判断を委ねる”のではなく、生成AIにも使われる数値化技術を使い、規則に沿って確認候補を洗い出します。
+        </p>
+      </div>
+    </section>
+
+    <section id="articles" class="section section-tint">
       <div class="container narrow">
-        <p class="section-label">Overview</p>
-        <h2>R-DR関連記事</h2>
+        <p class="section-label">Articles</p>
+        <h2>さらに詳しく読む</h2>
         <p>
-          R-DRは、文章の校正や修正を自動で行うツールではなく、
-          統合文書を解析し、確認観点・ばらつき・修正候補を洗い出す文書解析エンジンです。
-          詳細は、RapasAI Labのnote記事で公開しています。
+          R-DRの考え方、設計思想、利用イメージは、RapasAI Labのnote記事でも公開しています。
         </p>
 
         <div class="article-list" aria-label="R-DR関連記事">
@@ -167,7 +342,7 @@
       </div>
     </section>
 
-    <section id="scope" class="section">
+    <section class="section section-white">
       <div class="container">
         <div class="section-heading">
           <p class="section-label">Scope</p>
@@ -188,7 +363,6 @@
               <li>契約で定める範囲のレンタル利用許諾</li>
             </ul>
           </article>
-
           <article class="scope-card negative">
             <h3>提供しないもの</h3>
             <ul>
@@ -204,60 +378,49 @@
       </div>
     </section>
 
-    <section id="disclosure" class="section soft">
+    <section id="disclosure" class="section section-tint">
       <div class="container narrow">
         <p class="section-label">Disclosure</p>
         <h2>情報開示について</h2>
         <p>
           本サイトでは、R-DR｜RapasAI Document Reviewerの概要のみを掲載しています。
-          詳細な仕様、連携情報、標準資産、検証手順、価格条件、契約条件は、
-          個別相談および秘密保持契約の締結後に開示します。
+          詳細な仕様、連携情報、標準資産、検証手順、価格条件、契約条件は、個別相談および秘密保持契約の締結後に開示します。
         </p>
       </div>
     </section>
 
-    <section class="section">
+    <section class="section section-white">
       <div class="container info-grid">
         <div>
           <p class="section-label">Business</p>
           <h2>事業者情報</h2>
         </div>
-
         <dl class="info-list">
-          <div>
-            <dt>事業者名</dt>
-            <dd>RapasAI Lab</dd>
-          </div>
-          <div>
-            <dt>事業形態</dt>
-            <dd>個人事業</dd>
-          </div>
-          <div>
-            <dt>開業日</dt>
-            <dd>2026年3月12日</dd>
-          </div>
-          <div>
-            <dt>所在地</dt>
-            <dd>日本国内</dd>
-          </div>
-          <div>
-            <dt>事業内容</dt>
-            <dd>文書レビュー支援ツール／文書解析エンジン「R-DR｜RapasAI Document Reviewer」の企画・開発</dd>
-          </div>
+          <div><dt>事業者名</dt><dd>RapasAI Lab</dd></div>
+          <div><dt>事業形態</dt><dd>個人事業</dd></div>
+          <div><dt>開業日</dt><dd>2026年3月12日</dd></div>
+          <div><dt>所在地</dt><dd>日本国内</dd></div>
+          <div><dt>事業内容</dt><dd>文書レビュー支援ツール／文書解析エンジン「R-DR｜RapasAI Document Reviewer」の企画・開発</dd></div>
         </dl>
       </div>
     </section>
 
-    <section id="contact" class="contact-section">
+    <section id="contact" class="contact-section section-deep">
       <div class="container contact-card">
-        <p class="section-label">Contact</p>
-        <h2>お問い合わせ</h2>
+        <p class="section-label light">Contact</p>
+        <h2>商品化・組み込みのご相談</h2>
         <p>
-          R-DR｜RapasAI Document Reviewerについて、知りたいことや確認したいことがある方は、問い合わせフォームからご連絡ください。
+          R-DRの商品化・組み込みについてご相談ください。既存サービスへの組み込み、単体アプリの商品化、対象文書への適用確認、資料・サンプル確認などを承ります。
         </p>
+        <div class="contact-options">
+          <span>既存サービスへの組み込み</span>
+          <span>単体アプリの商品化</span>
+          <span>対象文書への適用確認</span>
+          <span>資料・サンプル確認</span>
+        </div>
         <div class="contact-chat">
           <p>自社の文書確認で活用できるか、既存ツール・システムに組み込めるか、R-DR単体で利用できるかなどを確認できます。</p>
-          <a class="button primary" href="ask/index.html">問い合わせフォームへ</a>
+          <a class="button primary inverse" href="ask/index.html">問い合わせフォームへ</a>
         </div>
         <a class="contact-mail" href="mailto:contact@rapasai.jp">contact@rapasai.jp</a>
       </div>
