@@ -14,7 +14,7 @@
     "category": "infra",
     "cover": "assets/covers/article_02.webp",
     "url": "https://note.com/rapasai_lab/n/n845486f56c47",
-    "featured": true,
+    "featured": false,
     "recommendation": "AIは、半導体を増やせば強くなる？ 電力、通信、データセンターまで追うと、そう単純ではありません。"
   },
   {
@@ -88,5 +88,14 @@
     "url": "https://note.com/rapasai_lab/n/n868f874b82bc",
     "featured": true,
     "recommendation": "名前を持つと、何が変わる？ RapasAI Labのナノハが考えた、名前の意味。"
+  },
+  {
+    "id": 11,
+    "title": "Microsoftはなぜ新型半導体「Maia 300」を作るのか",
+    "category": "infra",
+    "cover": "assets/covers/article_11.webp",
+    "url": "https://note.com/rapasai_lab/n/n6c1e84a0d5db",
+    "featured": true,
+    "recommendation": "NVIDIAのGPUを買えるのに、なぜ自社で設計する？ Maia 300から見えてくる、Microsoftの狙い。"
   }
 ]
