@@ -114,7 +114,11 @@ function link(item,contents){return item.url?`<a href="${esc(item.url)}" target=
 function article(item,featured=false,idx=0){if(mode==='index'&&!featured)return `<div class="indexrow"><span class="num">${String(idx+1).padStart(2,'0')}</span>${link(item,`<div class="booktitle">${esc(item.title)}</div>`)}</div>`;return `<div class="${featured?'feature-card':'book'}">${link(item,`<img class="cover" src="${esc(item.cover)}" loading="lazy" alt="記事の表紙"><div class="booktitle">${esc(item.title)}</div>`)}</div>`}
 function featureArticle(item){return `<div class="feature-card"><div class="featured-tag">PICK UP</div>${link(item,`<img class="cover" src="${esc(item.cover)}" loading="lazy" alt="${esc(item.title)} の表紙"><div class="booktitle">${esc(item.title)}</div>`)}<p class="recommendation">${esc(item.recommendation||'')}</p></div>`}
 function render(){
-  const picks=allArticles.filter(x=>x.featured);
+  // 最新記事→読みたい過去記事→Nanohana記事。おすすめの設定は articles.json のみ。
+  const newest=allArticles[0];
+  const editorPick=allArticles.find(x=>x.recommendation_slot==='editor_pick'&&x.id!==newest?.id);
+  const nanohana=allArticles.find(x=>x.recommendation_slot==='nanohana'&&x.id!==newest?.id&&x.id!==editorPick?.id);
+  const picks=[newest,editorPick,nanohana].filter(Boolean);
   document.querySelector('#featured-items').innerHTML=picks.map(featureArticle).join('');
   document.querySelector('#article-count').textContent=`全${allArticles.length}本`;
   document.querySelector('#shelves').innerHTML=cats.map(([id,label])=>{
@@ -130,7 +134,11 @@ async function loadArticles(){
     if(!response.ok) throw new Error(`HTTP ${response.status}`);
     const data=await response.json();
     if(!Array.isArray(data)) throw new Error('articles.json の形式が不正です');
-    allArticles=data;
+    // published_at を基準に降順。ID は同日公開時の安定した補助キー。
+    const isValidDate=s=>typeof s==='string'&&/^\d{4}-\d{2}-\d{2}$/.test(s)&&!Number.isNaN(Date.parse(s+'T00:00:00Z'));
+    if(data.some(x=>!isValidDate(x.published_at))) throw new Error('published_at が未設定または不正な記事があります');
+    if(data.filter(x=>x.recommendation_slot==='editor_pick').length!==1||data.filter(x=>x.recommendation_slot==='nanohana').length!==1) throw new Error('おすすめの固定枠設定が不正です');
+    allArticles=[...data].sort((a,b)=>b.published_at.localeCompare(a.published_at)||Number(b.id)-Number(a.id));
     render();
   }catch(error){
     console.error(error);
@@ -145,4 +153,4 @@ document.addEventListener('DOMContentLoaded',()=>{
   document.querySelector('#collapse').onclick=()=>{expanded=new Set;render()};
   loadArticles();
 });
-</script></script></body></html>
+</script></body></html>

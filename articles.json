@@ -5,8 +5,8 @@
     "category": "safety",
     "cover": "assets/covers/article_01.webp",
     "url": "https://note.com/rapasai_lab/n/n6864e0d23457",
-    "featured": false,
-    "recommendation": ""
+    "recommendation": "",
+    "published_at": "2026-09-20"
   },
   {
     "id": 2,
@@ -14,8 +14,9 @@
     "category": "infra",
     "cover": "assets/covers/article_02.webp",
     "url": "https://note.com/rapasai_lab/n/n845486f56c47",
-    "featured": false,
-    "recommendation": "AIは、半導体を増やせば強くなる？ 電力、通信、データセンターまで追うと、そう単純ではありません。"
+    "recommendation": "AIは、半導体を増やせば強くなる？ 電力、通信、データセンターまで追うと、そう単純ではありません。",
+    "published_at": "2026-10-13",
+    "recommendation_slot": "editor_pick"
   },
   {
     "id": 3,
@@ -23,8 +24,8 @@
     "category": "safety",
     "cover": "assets/covers/article_03.webp",
     "url": "https://note.com/rapasai_lab/n/n71a5c15cd3e0",
-    "featured": false,
-    "recommendation": ""
+    "recommendation": "",
+    "published_at": "2026-09-14"
   },
   {
     "id": 4,
@@ -32,8 +33,8 @@
     "category": "safety",
     "cover": "assets/covers/article_04.webp",
     "url": "https://note.com/rapasai_lab/n/n2561525e6e3c",
-    "featured": false,
-    "recommendation": ""
+    "recommendation": "",
+    "published_at": "2026-09-13"
   },
   {
     "id": 5,
@@ -41,8 +42,8 @@
     "category": "safety",
     "cover": "assets/covers/article_05.webp",
     "url": "https://note.com/rapasai_lab/n/n3022012c70a9",
-    "featured": false,
-    "recommendation": ""
+    "recommendation": "",
+    "published_at": "2026-09-12"
   },
   {
     "id": 6,
@@ -50,8 +51,8 @@
     "category": "safety",
     "cover": "assets/covers/article_06.webp",
     "url": "https://note.com/rapasai_lab/n/n8e6d425363d7",
-    "featured": false,
-    "recommendation": ""
+    "recommendation": "",
+    "published_at": "2026-09-10"
   },
   {
     "id": 7,
@@ -59,8 +60,8 @@
     "category": "infra",
     "cover": "assets/covers/article_07.webp",
     "url": "https://note.com/rapasai_lab/n/n52a5c58e950a",
-    "featured": false,
-    "recommendation": ""
+    "recommendation": "",
+    "published_at": "2026-10-12"
   },
   {
     "id": 8,
@@ -68,8 +69,8 @@
     "category": "infra",
     "cover": "assets/covers/article_08.webp",
     "url": "https://note.com/rapasai_lab/n/n234b50e1a76a",
-    "featured": true,
-    "recommendation": "AIを育てたい。でも、国によって狙いも方法も違う。同じ技術なのに、なぜこんなに違うのでしょう？"
+    "recommendation": "AIを育てたい。でも、国によって狙いも方法も違う。同じ技術なのに、なぜこんなに違うのでしょう？",
+    "published_at": "2026-09-17"
   },
   {
     "id": 9,
@@ -77,8 +78,8 @@
     "category": "daily",
     "cover": "assets/covers/article_09.webp",
     "url": "https://note.com/rapasai_lab/n/n8ff4ff3d7a64",
-    "featured": false,
-    "recommendation": ""
+    "recommendation": "",
+    "published_at": "2026-10-13"
   },
   {
     "id": 10,
@@ -86,8 +87,9 @@
     "category": "daily",
     "cover": "assets/covers/article_10.webp",
     "url": "https://note.com/rapasai_lab/n/n868f874b82bc",
-    "featured": true,
-    "recommendation": "名前を持つと、何が変わる？ RapasAI Labのナノハが考えた、名前の意味。"
+    "recommendation": "名前を持つと、何が変わる？ RapasAI Labのナノハが考えた、名前の意味。",
+    "published_at": "2026-09-08",
+    "recommendation_slot": "nanohana"
   },
   {
     "id": 11,
@@ -95,7 +97,7 @@
     "category": "infra",
     "cover": "assets/covers/article_11.webp",
     "url": "https://note.com/rapasai_lab/n/n6c1e84a0d5db",
-    "featured": true,
-    "recommendation": "NVIDIAのGPUを買えるのに、なぜ自社で設計する？ Maia 300から見えてくる、Microsoftの狙い。"
+    "recommendation": "NVIDIAのGPUを買えるのに、なぜ自社で設計する？ Maia 300から見えてくる、Microsoftの狙い。",
+    "published_at": "2026-10-14"
   }
 ]
