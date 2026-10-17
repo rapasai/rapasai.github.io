@@ -99,5 +99,46 @@
     "url": "https://note.com/rapasai_lab/n/n6c1e84a0d5db",
     "recommendation": "NVIDIAのGPUを買えるのに、なぜ自社で設計する？ Maia 300から見えてくる、Microsoftの狙い。",
     "published_at": "2026-10-14"
+  },
+  {
+    "id": 12,
+    "title": "AI産業の資金と利益は、どう動くのか？――連載を始めます",
+    "category": "series",
+    "cover": "assets/covers/article_12.webp",
+    "url": "https://note.com/rapasai_lab/n/n45dfafc5f377",
+    "recommendation": "AIへの巨額投資で、本当に儲かるのは誰なのか。資金と利益の行方を連載で追います。",
+    "published_at": "2026-10-17",
+    "series_order": 0,
+    "recommendation_slot": "series_pick"
+  },
+  {
+    "id": 13,
+    "title": "第1回：AI産業を動かす巨額資金は、どこから来るのか",
+    "category": "series",
+    "cover": "assets/covers/article_13.webp",
+    "url": "https://note.com/rapasai_lab/n/n8771d8ce0a60",
+    "recommendation": "",
+    "published_at": "2026-10-17",
+    "series_order": 1
+  },
+  {
+    "id": 14,
+    "title": "第2回：AI産業の巨額設備投資は、どこへ向かうのか",
+    "category": "series",
+    "cover": "assets/covers/article_14.webp",
+    "url": "https://note.com/rapasai_lab/n/nb31084cad866",
+    "recommendation": "",
+    "published_at": "2026-10-17",
+    "series_order": 2
+  },
+  {
+    "id": 15,
+    "title": "第3回：AI産業の設備投資が増えると、利益も増えるのか",
+    "category": "series",
+    "cover": "assets/covers/article_15.webp",
+    "url": "https://note.com/rapasai_lab/n/n72774a947728",
+    "recommendation": "",
+    "published_at": "2026-10-17",
+    "series_order": 3
   }
 ]
