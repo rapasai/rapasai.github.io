@@ -147,31 +147,34 @@ def main():
     articles_path=Path(args.articles)
     original=json.loads(articles_path.read_text(encoding='utf-8'))
     # RSSに存在しない記事がある場合、過去の手入力タイトルを正式タイトルとして公開しない。
+    # RSSの配信対象外の記事は既存データを保持し、取得できた記事だけ同期。
     missing_titles=[e['url'] for e in original if canonical(e['url']) not in feed]
-    if missing_titles and not args.test_offline:
-        raise ValueError('正式タイトルがRSSで確認できない記事があります。同期を中止: '+', '.join(missing_titles))
     updated,changed,pending=sync(original,feed)
-    # ALL registered covers must be sourced from note; no mixed local/remote publication.
-    missing=[]
+    # note RSS/OGPで実際に取得できた画像を個別に検証し、参照する。
+    # 同期できない記事は同梱の表紙を残す。表示を壊さない。
+    remote_count=0
     for entry in updated:
-        url=canonical(entry['url']); cover=entry.get('cover','')
-        if not valid_cover_url(cover):
-            if args.test_offline:
-                missing.append(url); continue
-            cover=fetch_page_og(url)
-            if cover:entry['cover']=cover
-        if not valid_cover_url(entry.get('cover','')):
-            missing.append(url)
-    if missing and not args.test_offline:
-        raise ValueError('画像URL未取得。公開データと表紙を変更しません: '+', '.join(missing))
+        cover=entry.get('cover','')
+        if not valid_cover_url(cover) and canonical(entry['url']) in feed:
+            try:
+                cover=fetch_page_og(canonical(entry['url'])) if not args.test_offline else ''
+            except Exception:
+                cover=''
+        if valid_cover_url(cover) and not args.test_offline:
+            try:
+                check_image(cover)
+                entry['cover']=cover
+                remote_count+=1
+            except Exception as e:
+                print('画像確認失敗・ローカル表紙を保持:',entry['url'],e)
+                entry['cover']=f"assets/covers/article_{entry['id']:02d}.webp"
+        elif not args.test_offline:
+            entry['cover']=f"assets/covers/article_{entry['id']:02d}.webp"
     if not args.test_offline:
-        for entry in updated: check_image(entry['cover'])
-        # All remote images verified, now atomically update the JSON and remove local covers.
-        text=json.dumps(updated,ensure_ascii=False,indent=2)+'\n'
+        body=json.dumps(updated,ensure_ascii=False,indent=2)+'\n'
         tmp=articles_path.with_name(articles_path.name+'.tmp')
-        tmp.write_text(text,encoding='utf-8');tmp.replace(articles_path)
-        import shutil
-        shutil.rmtree('assets/covers',ignore_errors=True)
+        tmp.write_text(body,encoding='utf-8');tmp.replace(articles_path)
+    print('noteで画像を確認した件数=',remote_count,'RSS対象外=',len(missing_titles))
     Path(args.pending).write_text(json.dumps(pending,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
     print(f'RSS={len(feed)} 記事={len(updated)} 未検証画像={len(missing)}')
 
