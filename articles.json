@@ -163,7 +163,7 @@
   },
   {
     "id": 18,
-    "title": "第6回：電力・冷却設備メーカーは、どうやって利益を生み出すのか",
+    "title": "第6回：データセンターの電力・冷却設備メーカーは、どうやって利益を生み出すのか",
     "category": "series",
     "cover": "assets/covers/article_18.webp",
     "url": "https://note.com/rapasai_lab/n/n04fcd3cb4d40",
@@ -190,5 +190,15 @@
     "recommendation": "",
     "published_at": "2026-10-18",
     "series_order": 8
+  },
+  {
+    "id": 21,
+    "title": "第9回：データセンターの長期賃貸契約は、安定した利益を生むのか",
+    "category": "series",
+    "cover": "assets/covers/article_21.webp",
+    "url": "https://note.com/rapasai_lab/n/n3531a5020a48",
+    "recommendation": "",
+    "published_at": "2026-10-18",
+    "series_order": 9
   }
 ]
