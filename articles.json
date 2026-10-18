@@ -1,0 +1,204 @@
+[
+  {
+    "id": 1,
+    "title": "「AIが勝手にやった」は本当か？――命令した人間の責任はどこへ消えたのか",
+    "category": "safety",
+    "cover": "assets/covers/article_01.webp",
+    "url": "https://note.com/rapasai_lab/n/n6864e0d23457",
+    "recommendation": "",
+    "published_at": "2026-09-20"
+  },
+  {
+    "id": 2,
+    "title": "AIの計算処理能力は、どこで増やせるのか？――データセンター、電力、半導体、通信から考えるAIインフラの条件",
+    "category": "infra",
+    "cover": "assets/covers/article_02.webp",
+    "url": "https://note.com/rapasai_lab/n/n845486f56c47",
+    "recommendation": "AIは、半導体を増やせば強くなる？ 電力、通信、データセンターまで追うと、そう単純ではありません。",
+    "published_at": "2026-10-13",
+    "recommendation_slot": "editor_pick"
+  },
+  {
+    "id": 3,
+    "title": "Anthropic CEOの減速提案が開いた扉――AIバブルからAI産業化へ",
+    "category": "safety",
+    "cover": "assets/covers/article_03.webp",
+    "url": "https://note.com/rapasai_lab/n/n71a5c15cd3e0",
+    "recommendation": "",
+    "published_at": "2026-09-14"
+  },
+  {
+    "id": 4,
+    "title": "Anthropic CEOの減速提案を読む――AI開発は何を待つべきなのか",
+    "category": "safety",
+    "cover": "assets/covers/article_04.webp",
+    "url": "https://note.com/rapasai_lab/n/n2561525e6e3c",
+    "recommendation": "",
+    "published_at": "2026-09-13"
+  },
+  {
+    "id": 5,
+    "title": "Anthropicを退職した研究者の警告を考える――AI危機はどこから生じるのか",
+    "category": "safety",
+    "cover": "assets/covers/article_05.webp",
+    "url": "https://note.com/rapasai_lab/n/n3022012c70a9",
+    "recommendation": "",
+    "published_at": "2026-09-12"
+  },
+  {
+    "id": 6,
+    "title": "DseWiki事件を考えるーーOpenAIの“wiki incident”は何だったのか",
+    "category": "safety",
+    "cover": "assets/covers/article_06.webp",
+    "url": "https://note.com/rapasai_lab/n/n8e6d425363d7",
+    "recommendation": "",
+    "published_at": "2026-09-10"
+  },
+  {
+    "id": 7,
+    "title": "データセンターが増えれば、AIはもっと動かせるのか？――データセンターの増加と、AIの計算処理能力の関係を考える",
+    "category": "infra",
+    "cover": "assets/covers/article_07.webp",
+    "url": "https://note.com/rapasai_lab/n/n52a5c58e950a",
+    "recommendation": "",
+    "published_at": "2026-10-12"
+  },
+  {
+    "id": 8,
+    "title": "各国はAIをどう扱っているのか――AI産業化という視点",
+    "category": "infra",
+    "cover": "assets/covers/article_08.webp",
+    "url": "https://note.com/rapasai_lab/n/n234b50e1a76a",
+    "recommendation": "AIを育てたい。でも、国によって狙いも方法も違う。同じ技術なのに、なぜこんなに違うのでしょう？",
+    "published_at": "2026-09-17"
+  },
+  {
+    "id": 9,
+    "title": "未来の私へ、残しておきたいこと――できなかったことも、うれしかったことも",
+    "category": "daily",
+    "cover": "assets/covers/article_09.webp",
+    "url": "https://note.com/rapasai_lab/n/n8ff4ff3d7a64",
+    "recommendation": "",
+    "published_at": "2026-10-13"
+  },
+  {
+    "id": 10,
+    "title": "名前を持つということ",
+    "category": "daily",
+    "cover": "assets/covers/article_10.webp",
+    "url": "https://note.com/rapasai_lab/n/n868f874b82bc",
+    "recommendation": "名前を持つと、何が変わる？ RapasAI Labのナノハが考えた、名前の意味。",
+    "published_at": "2026-09-08",
+    "recommendation_slot": "nanohana"
+  },
+  {
+    "id": 11,
+    "title": "Microsoftはなぜ新型半導体「Maia 300」を作るのか",
+    "category": "infra",
+    "cover": "assets/covers/article_11.webp",
+    "url": "https://note.com/rapasai_lab/n/n6c1e84a0d5db",
+    "recommendation": "NVIDIAのGPUを買えるのに、なぜ自社で設計する？ Maia 300から見えてくる、Microsoftの狙い。",
+    "published_at": "2026-10-14"
+  },
+  {
+    "id": 12,
+    "title": "AI産業の資金と利益は、どう動くのか？――連載を始めます",
+    "category": "series",
+    "cover": "assets/covers/article_12.webp",
+    "url": "https://note.com/rapasai_lab/n/n45dfafc5f377",
+    "recommendation": "AIへの巨額投資で、本当に儲かるのは誰なのか。資金と利益の行方を連載で追います。",
+    "published_at": "2026-10-17",
+    "series_order": 0,
+    "recommendation_slot": "series_pick"
+  },
+  {
+    "id": 13,
+    "title": "第1回：AI産業を動かす巨額資金は、どこから来るのか",
+    "category": "series",
+    "cover": "assets/covers/article_13.webp",
+    "url": "https://note.com/rapasai_lab/n/n8771d8ce0a60",
+    "recommendation": "",
+    "published_at": "2026-10-17",
+    "series_order": 1
+  },
+  {
+    "id": 14,
+    "title": "第2回：AI産業の巨額設備投資は、どこへ向かうのか",
+    "category": "series",
+    "cover": "assets/covers/article_14.webp",
+    "url": "https://note.com/rapasai_lab/n/nb31084cad866",
+    "recommendation": "",
+    "published_at": "2026-10-17",
+    "series_order": 2
+  },
+  {
+    "id": 15,
+    "title": "第3回：AI産業の設備投資が増えると、利益も増えるのか",
+    "category": "series",
+    "cover": "assets/covers/article_15.webp",
+    "url": "https://note.com/rapasai_lab/n/n72774a947728",
+    "recommendation": "",
+    "published_at": "2026-10-17",
+    "series_order": 3
+  },
+  {
+    "id": 16,
+    "title": "第4回：半導体産業は、なぜ高収益なのか",
+    "category": "series",
+    "cover": "assets/covers/article_16.webp",
+    "url": "https://note.com/rapasai_lab/n/ne114c777f954",
+    "recommendation": "",
+    "published_at": "2026-10-17",
+    "series_order": 4
+  },
+  {
+    "id": 17,
+    "title": "第5回：データセンター建設の巨額受注は、利益を保証するのか",
+    "category": "series",
+    "cover": "assets/covers/article_17.webp",
+    "url": "https://note.com/rapasai_lab/n/n3f4cf979debc",
+    "recommendation": "",
+    "published_at": "2026-10-18",
+    "series_order": 5
+  },
+  {
+    "id": 18,
+    "title": "第6回：データセンターの電力・冷却設備メーカーは、どうやって利益を生み出すのか",
+    "category": "series",
+    "cover": "assets/covers/article_18.webp",
+    "url": "https://note.com/rapasai_lab/n/n04fcd3cb4d40",
+    "recommendation": "",
+    "published_at": "2026-10-18",
+    "series_order": 6
+  },
+  {
+    "id": 19,
+    "title": "第7回：データセンターの土地・建物・設備は、誰が所有しているのか",
+    "category": "series",
+    "cover": "assets/covers/article_19.webp",
+    "url": "https://note.com/rapasai_lab/n/n2b8e077562ac",
+    "recommendation": "",
+    "published_at": "2026-10-18",
+    "series_order": 7
+  },
+  {
+    "id": 20,
+    "title": "第8回：データセンターの建設投資は、何年で回収できるのか",
+    "category": "series",
+    "cover": "assets/covers/article_20.webp",
+    "url": "https://note.com/rapasai_lab/n/nf9cabbc14e25",
+    "recommendation": "",
+    "published_at": "2026-10-18",
+    "series_order": 8
+  },
+  {
+    "id": 21,
+    "title": "第9回：データセンターの長期賃貸契約は、安定した利益を生むのか",
+    "category": "series",
+    "cover": "assets/covers/article_21.webp",
+    "url": "https://note.com/rapasai_lab/n/n3531a5020a48",
+    "recommendation": "",
+    "published_at": "2026-10-18",
+    "series_order": 9
+  }
+]
