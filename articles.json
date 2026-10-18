@@ -140,5 +140,55 @@
     "recommendation": "",
     "published_at": "2026-10-17",
     "series_order": 3
+  },
+  {
+    "id": 16,
+    "title": "第4回：半導体産業は、なぜ高収益なのか",
+    "category": "series",
+    "cover": "assets/covers/article_16.webp",
+    "url": "https://note.com/rapasai_lab/n/ne114c777f954",
+    "recommendation": "",
+    "published_at": "2026-10-17",
+    "series_order": 4
+  },
+  {
+    "id": 17,
+    "title": "第5回：データセンター建設の巨額受注は、利益を保証するのか",
+    "category": "series",
+    "cover": "assets/covers/article_17.webp",
+    "url": "https://note.com/rapasai_lab/n/n3f4cf979debc",
+    "recommendation": "",
+    "published_at": "2026-10-18",
+    "series_order": 5
+  },
+  {
+    "id": 18,
+    "title": "第6回：電力・冷却設備メーカーは、どうやって利益を生み出すのか",
+    "category": "series",
+    "cover": "assets/covers/article_18.webp",
+    "url": "https://note.com/rapasai_lab/n/n04fcd3cb4d40",
+    "recommendation": "",
+    "published_at": "2026-10-18",
+    "series_order": 6
+  },
+  {
+    "id": 19,
+    "title": "第7回：データセンターの土地・建物・設備は、誰が所有しているのか",
+    "category": "series",
+    "cover": "assets/covers/article_19.webp",
+    "url": "https://note.com/rapasai_lab/n/n2b8e077562ac",
+    "recommendation": "",
+    "published_at": "2026-10-18",
+    "series_order": 7
+  },
+  {
+    "id": 20,
+    "title": "第8回：データセンターの建設投資は、何年で回収できるのか",
+    "category": "series",
+    "cover": "assets/covers/article_20.webp",
+    "url": "https://note.com/rapasai_lab/n/nf9cabbc14e25",
+    "recommendation": "",
+    "published_at": "2026-10-18",
+    "series_order": 8
   }
 ]
