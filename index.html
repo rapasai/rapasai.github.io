@@ -85,7 +85,7 @@ main{padding-top:0}
 .featured h2{color:#242D31}
 .featured-tag{color:#526B5D}
 .feature-card{background:#FFFFFF;border:1px solid #E6E7E5;border-radius:5px;padding:13px;box-shadow:0 2px 9px rgba(29,35,34,.045)}
-.feature-card .cover{border:0}
+.feature-card .cover{border:0}.cover-placeholder{background:#f3f1ec;border:1px solid #e3ddd5}
 .recommendation{color:#475051;border-left:3px solid #D7E1D8;padding-left:12px}
 .shelfbox{background:#FFFFFF;border:1px solid #E0E3E2;border-radius:5px;margin:12px 0;overflow:hidden}
 .shelfhead{background:#FFFFFF;border:0;border-left:0;border-bottom:0;color:#303638;padding:18px 19px}
@@ -111,8 +111,9 @@ let mode='covers';
 let expanded=new Set(['series']);
 const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 function link(item,contents){return item.url?`<a href="${esc(item.url)}" target="_blank" rel="noopener noreferrer">${contents}</a>`:`<div>${contents}</div>`}
-function article(item,featured=false,idx=0){if(mode==='index'&&!featured)return `<div class="indexrow"><span class="num">${String(idx+1).padStart(2,'0')}</span>${link(item,`<div class="booktitle">${esc(item.title)}</div>`)}</div>`;return `<div class="${featured?'feature-card':'book'}">${link(item,`<img class="cover" src="${esc(item.cover)}" onerror="this.onerror=null;this.src='assets/covers/article_${String(item.id).padStart(2,'0')}.webp'" loading="lazy" alt="記事の表紙"><div class="booktitle">${esc(item.title)}</div>`)}</div>`}
-function featureArticle(item){return `<div class="feature-card"><div class="featured-tag">PICK UP</div>${link(item,`<img class="cover" src="${esc(item.cover)}" onerror="this.onerror=null;this.src='assets/covers/article_${String(item.id).padStart(2,'0')}.webp'" loading="lazy" alt="${esc(item.title)} の表紙"><div class="booktitle">${esc(item.title)}</div>`)}<p class="recommendation">${esc(item.recommendation||'')}</p></div>`}
+function coverMarkup(item,alt){return item.cover?`<img class="cover" src="${esc(item.cover)}" loading="lazy" alt="${esc(alt)}">`:`<div class="cover cover-placeholder" aria-label="表紙画像はnote同期後に表示されます"></div>`}
+function article(item,featured=false,idx=0){if(mode==='index'&&!featured)return `<div class="indexrow"><span class="num">${String(idx+1).padStart(2,'0')}</span>${link(item,`<div class="booktitle">${esc(item.title)}</div>`)}</div>`;return `<div class="${featured?'feature-card':'book'}">${link(item,`${coverMarkup(item,'記事の表紙')}<div class="booktitle">${esc(item.title)}</div>`)}</div>`}
+function featureArticle(item){return `<div class="feature-card"><div class="featured-tag">PICK UP</div>${link(item,`${coverMarkup(item,item.title+' の表紙')}<div class="booktitle">${esc(item.title)}</div>`)}<p class="recommendation">${esc(item.recommendation||'')}</p></div>`}
 function render(){
   // 連載第0回→既存おすすめ記事→Nanohana記事。枠指定は articles.json で管理。
   const newest=allArticles.find(x=>x.recommendation_slot==='series_pick');
