@@ -1,19 +1,21 @@
 #!/usr/bin/env python3
 """RapasAI Lab: note metadata synchronizer.
 
-Fetch the official note RSS, then verify all curated articles against note.
+New article workflow:
+1. Add a record to articles.json with at least id/url/category and optional series_order/recommendation fields.
+2. GitHub Actions runs this script automatically.
+3. note RSS supplies title, published_at and cover for articles currently in the feed.
+4. Existing curated metadata is preserved for older articles no longer present in the feed.
+
 Only note-controlled metadata is updated:
   - title
   - published_at
   - cover
-Editorial fields (category, series_order, recommendation, etc.) are preserved.
-
-A live run is strict by default: every curated article must be present in the feed,
-must have a title/date/cover, and every cover URL must return an image.
-On any failure articles.json is left untouched.
+Editorial fields (category, series_order, recommendation, recommendation_slot, etc.) are preserved.
 """
 import argparse
 import json
+import re
 from datetime import timezone, timedelta
 from email.utils import parsedate_to_datetime
 from pathlib import Path
@@ -25,6 +27,7 @@ import xml.etree.ElementTree as ET
 FEED = 'https://note.com/rapasai_lab/rss'
 JST = timezone(timedelta(hours=9))
 NS_MEDIA = '{http://search.yahoo.com/mrss/}thumbnail'
+DATE_RE = re.compile(r'^\d{4}-\d{2}-\d{2}$')
 
 
 def canonical(url):
@@ -36,7 +39,7 @@ def canonical(url):
 
 def valid_cover_url(url):
     try:
-        u = urlparse(url)
+        u = urlparse(url or '')
         return (
             u.scheme == 'https'
             and u.hostname in (
@@ -93,8 +96,6 @@ def fetch_page_og(url):
 def check_image(url):
     if not valid_cover_url(url):
         raise ValueError(f'note画像URLとして認められません: {url}')
-    # 表紙画像の存在確認ではファイル全体をダウンロードしない。
-    # Content-Type が image/* であり、先頭バイトを取得できればよい。
     req = Request(url, headers={
         'User-Agent': 'Mozilla/5.0',
         'Accept': 'image/avif,image/webp,image/png,image/jpeg,*/*',
@@ -111,7 +112,6 @@ def extract(xmlbytes):
     items = root.findall('./channel/item')
     if not items:
         raise ValueError('RSSにitemがありません')
-
     found = {}
     for item in items:
         url = canonical(item.findtext('link'))
@@ -129,19 +129,16 @@ def extract(xmlbytes):
                     if valid_cover_url(candidate):
                         cover = candidate
                         break
-        if not title:
-            raise ValueError(f'タイトルがありません: {url}')
-        if not raw_date:
-            raise ValueError(f'投稿日がありません: {url}')
+        if not title or not raw_date:
+            continue
         dt = parsedate_to_datetime(raw_date)
         if dt.tzinfo is None:
-            raise ValueError(f'投稿日にタイムゾーンがありません: {url}')
-        published_at = dt.astimezone(JST).date().isoformat()
-        if url in found:
-            raise ValueError(f'RSS URL重複: {url}')
-        found[url] = {'title': title, 'published_at': published_at, 'cover': cover}
-    if not found:
-        raise ValueError('RSSから記事URLを取得できませんでした')
+            continue
+        found[url] = {
+            'title': title,
+            'published_at': dt.astimezone(JST).date().isoformat(),
+            'cover': cover,
+        }
     return found
 
 
@@ -149,8 +146,7 @@ def load_articles(path):
     data = json.loads(Path(path).read_text(encoding='utf-8'))
     if not isinstance(data, list) or not data:
         raise ValueError('articles.json が記事配列ではありません')
-    ids = set()
-    urls = set()
+    ids, urls = set(), set()
     for e in data:
         if e.get('id') in ids:
             raise ValueError(f'id重複: {e.get("id")}')
@@ -164,57 +160,72 @@ def load_articles(path):
     return data
 
 
-def build_sync(original, feed, live_images=True):
-    output = []
-    report = []
-    failures = []
+def complete_existing(e):
+    return bool((e.get('title') or '').strip()) and bool(DATE_RE.match((e.get('published_at') or '').strip())) and valid_cover_url(e.get('cover'))
 
+
+def build_sync(original, feed, live_images=True):
+    output, report, failures = [], [], []
     for src in original:
         entry = dict(src)
         url = canonical(src['url'])
         incoming = feed.get(url)
         row = {'id': src['id'], 'url': url}
+
         if incoming is None:
+            if complete_existing(src):
+                row['status'] = 'PRESERVED_NOT_IN_RSS'
+                output.append(entry)
+                report.append(row)
+                continue
             row['status'] = 'FAIL'
-            row['error'] = 'RSSに記事がありません'
+            row['error'] = 'RSSに未同期の記事で、既存メタデータも未完成です'
             failures.append(row['error'] + ': ' + url)
-            report.append(row)
             output.append(entry)
+            report.append(row)
             continue
 
-        cover = incoming.get('cover') or ''
+        cover = (incoming.get('cover') or '').strip()
         if not valid_cover_url(cover):
             try:
                 cover = fetch_page_og(url) if live_images else cover
             except Exception as exc:
                 row['og_error'] = str(exc)
 
-        row.update({
-            'title': incoming['title'],
-            'published_at': incoming['published_at'],
-            'cover': cover,
-        })
-
+        title = (incoming.get('title') or '').strip()
+        published_at = (incoming.get('published_at') or '').strip()
+        if not title or not DATE_RE.match(published_at):
+            row['status'] = 'FAIL'
+            row['error'] = 'RSSのタイトルまたは公開日が不正です'
+            failures.append(row['error'] + ': ' + url)
+            output.append(entry)
+            report.append(row)
+            continue
         if not valid_cover_url(cover):
             row['status'] = 'FAIL'
             row['error'] = '表紙URLを取得できません'
             failures.append(row['error'] + ': ' + url)
-        elif live_images:
+            output.append(entry)
+            report.append(row)
+            continue
+
+        changed_cover = cover != (src.get('cover') or '')
+        if live_images and changed_cover:
             try:
                 check_image(cover)
-                row['status'] = 'PASS'
             except Exception as exc:
                 row['status'] = 'FAIL'
                 row['error'] = str(exc)
                 failures.append(row['error'])
-        else:
-            row['status'] = 'PASS_OFFLINE'
+                output.append(entry)
+                report.append(row)
+                continue
 
-        if row['status'].startswith('PASS'):
-            entry['title'] = incoming['title']
-            entry['published_at'] = incoming['published_at']
-            entry['cover'] = cover
-            entry['note_metadata_source'] = 'note_rss_ogp'
+        entry['title'] = title
+        entry['published_at'] = published_at
+        entry['cover'] = cover
+        entry['note_metadata_source'] = 'note_rss_ogp'
+        row.update({'status': 'UPDATED' if (entry != src) else 'UNCHANGED', 'title': title, 'published_at': published_at, 'cover': cover})
         output.append(entry)
         report.append(row)
 
@@ -227,13 +238,10 @@ def main():
     ap.add_argument('--rss-file', help='オフライン検査用RSS XML')
     ap.add_argument('--report', default='note_fetch_report.json')
     ap.add_argument('--no-image-request', action='store_true', help='テスト用: 画像HTTP検査を省略')
-    ap.add_argument('--write', action='store_true', help='21件すべてPASS時だけarticles.jsonを更新')
+    ap.add_argument('--write', action='store_true', help='同期可能な全記事が正常な場合だけarticles.jsonを更新')
     args = ap.parse_args()
 
     original = load_articles(args.articles)
-    if len(original) != 21:
-        raise SystemExit(f'FAIL: 記事数が21ではありません: {len(original)}')
-
     if args.rss_file:
         xml = Path(args.rss_file).read_bytes()
     else:
@@ -245,9 +253,10 @@ def main():
     updated, report, failures = build_sync(original, feed, live_images=not args.no_image_request)
     Path(args.report).write_text(json.dumps(report, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
 
-    passed = sum(1 for r in report if r.get('status') == 'PASS')
-    offline_passed = sum(1 for r in report if r.get('status') == 'PASS_OFFLINE')
-    print(f'RSS記事数={len(feed)} 対象=21 PASS={passed} PASS_OFFLINE={offline_passed} FAIL={len(failures)}')
+    counts = {}
+    for r in report:
+        counts[r['status']] = counts.get(r['status'], 0) + 1
+    print(f'RSS記事数={len(feed)} 対象={len(original)} ' + ' '.join(f'{k}={v}' for k,v in sorted(counts.items())) + f' FAIL={len(failures)}')
 
     if failures:
         print('FAIL: articles.json は変更しません')
@@ -259,9 +268,9 @@ def main():
         tmp = Path(args.articles + '.tmp')
         tmp.write_text(json.dumps(updated, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
         tmp.replace(args.articles)
-        print('PASS: 21記事すべてをnote取得情報で更新しました')
+        print(f'PASS: {len(original)}記事をnote取得情報で同期しました')
     else:
-        print('PASS: 21記事すべて取得・検証済み。--write 指定時のみ articles.json を更新します')
+        print(f'PASS: {len(original)}記事を検証しました（未書き込み）')
 
 
 if __name__ == '__main__':

@@ -137,9 +137,9 @@ async function loadArticles(){
     if(!Array.isArray(data)) throw new Error('articles.json の形式が不正です');
     // published_at を基準に降順。ID は同日公開時の安定した補助キー。
     const isValidDate=s=>typeof s==='string'&&/^\d{4}-\d{2}-\d{2}$/.test(s)&&!Number.isNaN(Date.parse(s+'T00:00:00Z'));
-    if(data.some(x=>!isValidDate(x.published_at))) throw new Error('published_at が未設定または不正な記事があります');
-    if(data.filter(x=>x.recommendation_slot==='series_pick').length!==1||data.filter(x=>x.recommendation_slot==='editor_pick').length!==1||data.filter(x=>x.recommendation_slot==='nanohana').length!==1) throw new Error('おすすめの固定枠設定が不正です');
-    allArticles=[...data].sort((a,b)=>b.published_at.localeCompare(a.published_at)||Number(b.id)-Number(a.id));
+    const ready=data.filter(x=>x && x.title && x.cover && isValidDate(x.published_at));
+    if(ready.filter(x=>x.recommendation_slot==='series_pick').length!==1||ready.filter(x=>x.recommendation_slot==='editor_pick').length!==1||ready.filter(x=>x.recommendation_slot==='nanohana').length!==1) throw new Error('おすすめの固定枠設定が不正です');
+    allArticles=[...ready].sort((a,b)=>b.published_at.localeCompare(a.published_at)||Number(b.id)-Number(a.id));
     render();
   }catch(error){
     console.error(error);

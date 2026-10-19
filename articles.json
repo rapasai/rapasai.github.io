@@ -221,5 +221,15 @@
     "published_at": "2026-10-18",
     "series_order": 9,
     "note_metadata_source": "note_rss_ogp"
+  },
+  {
+    "id": 22,
+    "title": "第10回：データセンターの建設が遅れた場合、誰が損失を負担するのか",
+    "category": "series",
+    "cover": "",
+    "url": "https://note.com/rapasai_lab/n/n1fc2989a6a7c",
+    "recommendation": "",
+    "published_at": "2026-10-19",
+    "series_order": 10
   }
 ]
