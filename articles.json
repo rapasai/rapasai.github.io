@@ -226,66 +226,60 @@
     "id": 22,
     "title": "第10回：データセンターの建設が遅れた場合、誰が損失を負担するのか",
     "category": "series",
-    "cover": "https://assets.st-note.com/production/uploads/images/325992680/rectangle_large_type_2_1c91efccff7d2f7be40735c043407ad2.png?width=800",
+    "cover": "",
     "url": "https://note.com/rapasai_lab/n/n1fc2989a6a7c",
     "recommendation": "",
     "published_at": "2026-10-19",
-    "series_order": 10,
-    "note_metadata_source": "note_rss_ogp"
+    "series_order": 10
   },
   {
     "id": 23,
     "title": "第11回：AIモデルを開発する企業は儲かっているのか",
     "category": "series",
-    "cover": "https://assets.st-note.com/production/uploads/images/326065451/rectangle_large_type_2_993d9e62cc1e1f50bac23de57ff47062.png?width=800",
+    "cover": "",
     "url": "https://note.com/rapasai_lab/n/n96ae9529a864",
     "recommendation": "",
-    "published_at": "2026-10-19",
-    "series_order": 11,
-    "note_metadata_source": "note_rss_ogp"
+    "published_at": "",
+    "series_order": 11
   },
   {
     "id": 24,
     "title": "第12回：クラウド事業者は、高性能なAIほど儲かるのか？",
     "category": "series",
-    "cover": "https://assets.st-note.com/production/uploads/images/326147016/rectangle_large_type_2_5445d81a1944039be9cd21c74a6635eb.png?width=800",
+    "cover": "",
     "url": "https://note.com/rapasai_lab/n/n183ce6d449ff",
     "recommendation": "",
-    "published_at": "2026-10-19",
-    "series_order": 12,
-    "note_metadata_source": "note_rss_ogp"
+    "published_at": "",
+    "series_order": 12
   },
   {
     "id": 25,
     "title": "第13回：AI産業の利益構造は、これから変わるのか",
     "category": "series",
-    "cover": "https://assets.st-note.com/production/uploads/images/326379478/rectangle_large_type_2_49754b4ddddba67fca6347eaeb75d260.png?width=800",
+    "cover": "",
     "url": "https://note.com/rapasai_lab/n/ne1c8b9d6bec6",
     "recommendation": "",
-    "published_at": "2026-10-20",
-    "series_order": 13,
-    "note_metadata_source": "note_rss_ogp"
+    "published_at": "",
+    "series_order": 13
   },
   {
     "id": 26,
     "title": "第14回：OpenAIとAnthropicがなくなったら、ChatGPTとClaudeはどうなるのか",
     "category": "series",
-    "cover": "https://assets.st-note.com/production/uploads/images/326489914/rectangle_large_type_2_32690e38edce3cff985d92da33e0e9e7.png?width=800",
+    "cover": "",
     "url": "https://note.com/rapasai_lab/n/n42acc84e7a0d",
     "recommendation": "",
-    "published_at": "2026-10-20",
-    "series_order": 14,
-    "note_metadata_source": "note_rss_ogp"
+    "published_at": "",
+    "series_order": 14
   },
   {
     "id": 27,
     "title": "第15回：OpenAIとAnthropicは、どうすれば利益を出せるのか",
     "category": "series",
-    "cover": "https://assets.st-note.com/production/uploads/images/326566841/rectangle_large_type_2_5403fa71df49dde51eeddc1caaf6f119.png?width=800",
+    "cover": "",
     "url": "https://note.com/rapasai_lab/n/n6e965731c2d4",
     "recommendation": "",
-    "published_at": "2026-10-20",
-    "series_order": 15,
-    "note_metadata_source": "note_rss_ogp"
+    "published_at": "",
+    "series_order": 15
   }
 ]
