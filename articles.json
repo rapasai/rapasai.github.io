@@ -236,201 +236,188 @@
     "id": 22,
     "title": "第10回：データセンターの建設が遅れた場合、誰が損失を負担するのか",
     "category": "series",
-    "cover": "https://assets.st-note.com/production/uploads/images/325992680/rectangle_large_type_2_1c91efccff7d2f7be40735c043407ad2.png?width=800",
+    "cover": "",
     "url": "https://note.com/rapasai_lab/n/n1fc2989a6a7c",
     "recommendation": "",
     "published_at": "2026-10-19",
     "series_order": 10,
-    "note_money_pickup": true,
-    "note_metadata_source": "note_rss_ogp"
+    "note_money_pickup": true
   },
   {
     "id": 23,
     "title": "第11回：AIモデルを開発する企業は儲かっているのか",
     "category": "series",
-    "cover": "https://assets.st-note.com/production/uploads/images/326065451/rectangle_large_type_2_993d9e62cc1e1f50bac23de57ff47062.png?width=800",
+    "cover": "",
     "url": "https://note.com/rapasai_lab/n/n96ae9529a864",
     "recommendation": "",
-    "published_at": "2026-10-19",
+    "published_at": "",
     "series_order": 11,
-    "note_money_pickup": true,
-    "note_metadata_source": "note_rss_ogp"
+    "note_money_pickup": true
   },
   {
     "id": 24,
     "title": "第12回：クラウド事業者は、高性能なAIほど儲かるのか？",
     "category": "series",
-    "cover": "https://assets.st-note.com/production/uploads/images/326147016/rectangle_large_type_2_5445d81a1944039be9cd21c74a6635eb.png?width=800",
+    "cover": "",
     "url": "https://note.com/rapasai_lab/n/n183ce6d449ff",
     "recommendation": "",
-    "published_at": "2026-10-19",
+    "published_at": "",
     "series_order": 12,
-    "note_money_pickup": true,
-    "note_metadata_source": "note_rss_ogp"
+    "note_money_pickup": true
   },
   {
     "id": 25,
     "title": "第13回：AI産業の利益構造は、これから変わるのか",
     "category": "series",
-    "cover": "https://assets.st-note.com/production/uploads/images/326379478/rectangle_large_type_2_49754b4ddddba67fca6347eaeb75d260.png?width=800",
+    "cover": "",
     "url": "https://note.com/rapasai_lab/n/ne1c8b9d6bec6",
     "recommendation": "",
-    "published_at": "2026-10-20",
+    "published_at": "",
     "series_order": 13,
-    "note_money_pickup": true,
-    "note_metadata_source": "note_rss_ogp"
+    "note_money_pickup": true
   },
   {
     "id": 26,
     "title": "第14回：OpenAIとAnthropicがなくなったら、ChatGPTとClaudeはどうなるのか",
     "category": "series",
-    "cover": "https://assets.st-note.com/production/uploads/images/326489914/rectangle_large_type_2_32690e38edce3cff985d92da33e0e9e7.png?width=800",
+    "cover": "",
     "url": "https://note.com/rapasai_lab/n/n42acc84e7a0d",
     "recommendation": "",
-    "published_at": "2026-10-20",
+    "published_at": "",
     "series_order": 14,
-    "note_money_pickup": true,
-    "note_metadata_source": "note_rss_ogp"
+    "note_money_pickup": true
   },
   {
     "id": 27,
     "title": "第15回：OpenAIとAnthropicは、どうすれば利益を出せるのか",
     "category": "series",
-    "cover": "https://assets.st-note.com/production/uploads/images/326566841/rectangle_large_type_2_5403fa71df49dde51eeddc1caaf6f119.png?width=800",
+    "cover": "",
     "url": "https://note.com/rapasai_lab/n/n6e965731c2d4",
     "recommendation": "",
-    "published_at": "2026-10-20",
+    "published_at": "",
     "series_order": 15,
-    "note_money_pickup": true,
-    "note_metadata_source": "note_rss_ogp"
+    "note_money_pickup": true
   },
   {
     "id": 28,
     "title": "データセンターは弊害だけなのか？――印西市から考える【連載】",
     "category": "inzai_series",
-    "cover": "https://assets.st-note.com/production/uploads/images/327279189/rectangle_large_type_2_123d45a1adb883740de56f78f57a686a.png?width=800",
+    "cover": "",
     "url": "https://note.com/rapasai_lab/n/n39492304777d",
     "recommendation": "データセンターの集積によって、地域はどう変わったのか。千葉県印西市を例に、税収の増加、企業の事業展開、地域への還元を考える。",
-    "published_at": "2026-10-22",
+    "published_at": "",
     "series_order": 0,
     "recommendation_slot": "inzai_pick",
-    "note_money_pickup": true,
-    "note_metadata_source": "note_rss_ogp"
+    "note_money_pickup": true
   },
   {
     "id": 29,
     "title": "第1回：なぜ印西市にデータセンターが集まったのか？",
     "category": "inzai_series",
-    "cover": "https://assets.st-note.com/production/uploads/images/327288040/rectangle_large_type_2_85f4e983213077f2c3a2948a91d0d9d1.png?width=800",
+    "cover": "",
     "url": "https://note.com/rapasai_lab/n/na0c90b94dc6b",
     "recommendation": "",
-    "published_at": "2026-10-22",
+    "published_at": "",
     "series_order": 1,
-    "note_money_pickup": true,
-    "note_metadata_source": "note_rss_ogp"
+    "note_money_pickup": true
   },
   {
     "id": 30,
     "title": "第2回：データセンターによって印西市の税収はどう変わったのか？",
     "category": "inzai_series",
-    "cover": "https://assets.st-note.com/production/uploads/images/327370167/rectangle_large_type_2_a559c0921a5a9d36b574864511481f30.png?width=800",
+    "cover": "",
     "url": "https://note.com/rapasai_lab/n/ne0355dac0e56",
     "recommendation": "",
-    "published_at": "2026-10-23",
+    "published_at": "",
     "series_order": 2,
-    "note_money_pickup": true,
-    "note_metadata_source": "note_rss_ogp"
+    "note_money_pickup": true
   },
   {
     "id": 31,
     "title": "第3回：グッドマングループとは何者か？――印西市でどんな事業を展開しているのか",
     "category": "inzai_series",
-    "cover": "https://assets.st-note.com/production/uploads/images/327375826/rectangle_large_type_2_dcaea9f3ba3fc641b2957f31de2a1bcb.png?width=800",
+    "cover": "",
     "url": "https://note.com/rapasai_lab/n/n0a85bc86d6e1",
     "recommendation": "",
-    "published_at": "2026-10-23",
+    "published_at": "",
     "series_order": 3,
-    "note_money_pickup": true,
-    "note_metadata_source": "note_rss_ogp"
+    "note_money_pickup": true
   },
   {
     "id": 32,
     "title": "第4回：印西市のデータセンター地区にある商業施設「theGreen」の役割",
     "category": "inzai_series",
-    "cover": "https://assets.st-note.com/production/uploads/images/327385304/rectangle_large_type_2_6495605cc8679b697f60ff29bb2a752a.png?width=800",
+    "cover": "",
     "url": "https://note.com/rapasai_lab/n/n8eb1f7c391b9",
     "recommendation": "",
-    "published_at": "2026-10-23",
+    "published_at": "",
     "series_order": 4,
-    "note_money_pickup": true,
-    "note_metadata_source": "note_rss_ogp"
+    "note_money_pickup": true
   },
   {
     "id": 33,
     "title": "第5回：データセンターで増えた税収を、印西市はどう使っているのか？",
     "category": "inzai_series",
-    "cover": "https://assets.st-note.com/production/uploads/images/327389539/rectangle_large_type_2_d664b2526a890371a18aa2db9d3e38d5.png?width=800",
+    "cover": "",
     "url": "https://note.com/rapasai_lab/n/n074cb4fdb532",
     "recommendation": "",
-    "published_at": "2026-10-23",
+    "published_at": "",
     "series_order": 5,
-    "note_money_pickup": true,
-    "note_metadata_source": "note_rss_ogp"
+    "note_money_pickup": true
   },
   {
     "id": 34,
     "title": "データセンターを地域の資産にする【連載】",
     "category": "regional_assets_series",
-    "cover": "https://assets.st-note.com/production/uploads/images/327847601/rectangle_large_type_2_1ca48c33d8aeac86f1cfbff4b97e5b9c.png?width=800",
+    "cover": "",
     "url": "https://note.com/rapasai_lab/n/nc36b8bd335a6",
     "recommendation": "データセンターの電力や排熱は、すでに地域で活用され始めています。では、なぜ日本では広がらないのでしょうか？ 国内外の実例から、技術と政策の課題を探ります。",
-    "published_at": "2026-10-24",
+    "published_at": "",
     "series_order": 0,
     "recommendation_slot": "regional_assets_pick",
-    "note_metadata_source": "note_rss_ogp"
+    "note_money_pickup": true
   },
   {
     "id": 35,
-    "title": "第1回 ：電力不足のとき、データセンターは何ができるのか",
+    "title": "第1回：電力不足のとき、データセンターは何ができるのか",
     "category": "regional_assets_series",
-    "cover": "https://assets.st-note.com/production/uploads/images/327850807/rectangle_large_type_2_a0e98ad971860ed801b1880899e3a524.png?width=800",
+    "cover": "",
     "url": "https://note.com/rapasai_lab/n/n4aa8ca340376",
     "recommendation": "",
-    "published_at": "2026-10-24",
+    "published_at": "",
     "series_order": 1,
-    "note_metadata_source": "note_rss_ogp"
+    "note_money_pickup": true
   },
   {
     "id": 36,
-    "title": "第２回 ：水不足のとき、データセンターは何ができるのか",
+    "title": "第2回：水不足のとき、データセンターは何ができるのか",
     "category": "regional_assets_series",
-    "cover": "https://assets.st-note.com/production/uploads/images/327870652/rectangle_large_type_2_a58b22f0078a0c7452fa2a28b462bf0e.png?width=800",
+    "cover": "",
     "url": "https://note.com/rapasai_lab/n/n42db230a4e67",
     "recommendation": "",
-    "published_at": "2026-10-24",
+    "published_at": "",
     "series_order": 2,
-    "note_metadata_source": "note_rss_ogp"
+    "note_money_pickup": true
   },
   {
     "id": 37,
-    "title": "第3回 ：データセンターの排熱は、地域で使えるのか",
+    "title": "第3回：データセンターの排熱は、地域で使えるのか",
     "category": "regional_assets_series",
-    "cover": "https://assets.st-note.com/production/uploads/images/327878876/rectangle_large_type_2_4f3fdcc3ffd3a610041caebba63029d6.png?width=800",
+    "cover": "",
     "url": "https://note.com/rapasai_lab/n/n4bf9ada0abb4",
     "recommendation": "",
-    "published_at": "2026-10-24",
-    "series_order": 3,
-    "note_metadata_source": "note_rss_ogp"
+    "published_at": "",
+    "series_order": 3
   },
   {
     "id": 38,
-    "title": "第4回 ：データセンターの設備を、地域で活用するためには",
+    "title": "第4回：データセンターの設備を、地域で活用するためには",
     "category": "regional_assets_series",
-    "cover": "https://assets.st-note.com/production/uploads/images/327885471/rectangle_large_type_2_d899f7bbc3bcfcefc77610fd235391b6.png?width=800",
+    "cover": "",
     "url": "https://note.com/rapasai_lab/n/n888d0a8ebb7a",
     "recommendation": "",
-    "published_at": "2026-10-24",
+    "published_at": "",
     "series_order": 4,
-    "note_metadata_source": "note_rss_ogp"
+    "note_money_pickup": true
   }
 ]
