@@ -124,8 +124,8 @@ function article(item,featured=false,idx=0){if(mode==='index'&&!featured)return 
 function featureArticle(item){return `<div class="feature-card"><div class="featured-tag">PICK UP</div>${link(item,`${coverWithPop(item,item.title+' の表紙')}<div class="booktitle">${esc(item.title)}</div>`)}<p class="recommendation">${esc(item.recommendation||'')}</p></div>`}
 function render(){
   // おすすめ記事は3枠維持し、note公開日で降順表示。未同期の記事は末尾に置く。
-  const picks=allArticles.filter(x=>['gmo_pick','editor_pick','inzai_pick','regional_assets_pick'].includes(x.recommendation_slot))
-    .sort((a,b)=>(a.recommendation_slot==='gmo_pick'?-1:0)-(b.recommendation_slot==='gmo_pick'?-1:0)||(b.published_at||'').localeCompare(a.published_at||'')||Number(b.id)-Number(a.id));
+  const picks=allArticles.filter(x=>['gmo_pick','editor_pick','ai_security_pick','regional_assets_pick'].includes(x.recommendation_slot))
+    .sort((a,b)=>(a.recommendation_slot==='ai_security_pick'?-1:0)-(b.recommendation_slot==='ai_security_pick'?-1:0)||(b.published_at||'').localeCompare(a.published_at||'')||Number(b.id)-Number(a.id));
   document.querySelector('#featured-items').innerHTML=picks.map(featureArticle).join('');
   document.querySelector('#article-count').textContent=`全${allArticles.length}本`;
   document.querySelector('#shelves').innerHTML=cats.map(([id,label])=>{
@@ -144,7 +144,7 @@ async function loadArticles(){
     // published_at を基準に降順。ID は同日公開時の安定した補助キー。
     const isValidDate=s=>typeof s==='string'&&/^\d{4}-\d{2}-\d{2}$/.test(s)&&!Number.isNaN(Date.parse(s+'T00:00:00Z'));
     const ready=data.filter(x=>x && x.title && x.url && (!x.published_at || isValidDate(x.published_at)));
-    if(ready.filter(x=>x.recommendation_slot==='gmo_pick').length!==1||ready.filter(x=>x.recommendation_slot==='regional_assets_pick').length!==1||ready.filter(x=>x.recommendation_slot==='inzai_pick').length!==1) throw new Error('おすすめの固定枠設定が不正です');
+    if(ready.filter(x=>x.recommendation_slot==='gmo_pick').length!==1||ready.filter(x=>x.recommendation_slot==='regional_assets_pick').length!==1||ready.filter(x=>x.recommendation_slot==='ai_security_pick').length!==1) throw new Error('おすすめの固定枠設定が不正です');
     allArticles=[...ready].sort((a,b)=>b.published_at.localeCompare(a.published_at)||Number(b.id)-Number(a.id));
     render();
   }catch(error){
