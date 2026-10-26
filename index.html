@@ -111,7 +111,7 @@ button:focus-visible,a:focus-visible{outline:3px solid #526B5D;outline-offset:3p
 .note-money-inline{position:static;margin-left:8px;vertical-align:middle;white-space:normal;box-shadow:none}
 @media(max-width:740px){.note-money-pop{font-size:10px;padding:2px 5px;right:4px;top:4px}.note-money-inline{margin-left:5px}}
 </style></head><body><header class="site-header"><nav aria-label="主要ナビゲーション"><a href="#top" class="brand" aria-label="RapasAI Lab トップ"><img src="assets/rapasai-logo-mark.png" alt="RapasAI Lab ロゴ"><span>RapasAI Lab</span></a><div class="navlinks"><a href="#featured">おすすめ記事</a><a href="#books">記事の本棚</a><a href="ask/index.html">お問い合わせ</a></div></nav></header><main id="top"><section class="intro" aria-label="RapasAI Labについて"><p>RapasAI Labでは、興味を持ったことや疑問に思ったことを、さまざまな角度から調べ、記事にしています。</p><div class="service-notice"><p class="service-notice-heading"><strong>市場調査・競合分析、調査レポート・記事制作を承っています。</strong></p><p>公開情報をもとに調査・分析し、根拠を明示した資料を制作します。</p><p>ご相談は、ページ右上の「<a href="ask/index.html">お問い合わせ</a>」からお願いいたします。</p></div><p>このホームページでは、公開した記事をテーマ別に整理し、本棚のように並べています。</p><p>気になる記事を見つけたら、ぜひ手に取ってみてください。</p></section><section class="featured" id="featured"><div class="sectionheading"><h2>おすすめ記事</h2><span class="subtitle">記事の内容紹介付き</span></div><div id="featured-items" class="feature-grid"></div></section><section id="books"><div class="sectionheading"><h2>記事の本棚</h2><span class="subtitle" id="article-count">記事を読み込み中</span></div><div class="controls"><div class="switch" role="group" aria-label="本棚の表示方法"><button type="button" data-mode="covers">表紙で見る</button><button type="button" data-mode="index">目次で見る</button></div><div class="allbuttons"><button id="expand" type="button">すべて開く</button><button id="collapse" type="button">すべて閉じる</button></div></div><div id="shelves"></div></section><section class="contact" id="contact"><h2>お問い合わせ</h2><p>取り上げてほしいテーマや、調査・記事作成に関するご相談などがありましたら、お問い合わせフォームよりご連絡ください。</p><p><a class="contact-link" href="ask/index.html">お問い合わせフォームへ →</a></p></section></main><footer class="footer">© 2026 RapasAI Lab</footer><script>
-const cats=[['regional_assets_series','連載｜データセンターを地域の資産にする'],['inzai_series','連載｜データセンターは弊害だけなのか？――印西市から考える'],['series','連載｜AI産業の資金と利益'],['infra','AIインフラ・産業'],['safety','AI開発・安全性'],['daily','ハナとナノハ']];
+const cats=[['regional_assets_series','連載｜データセンターを地域の資産にする'],['inzai_series','連載｜データセンターは弊害だけなのか？――印西市から考える'],['series','連載｜AI産業の資金と利益'],['infra','AIインフラ・産業'],['cyber_security','サイバー攻撃・セキュリティ'],['safety','AI開発・安全性'],['daily','ハナとナノハ']];
 let allArticles=[];
 let mode='covers';
 let expanded=new Set(['regional_assets_series']);
@@ -124,8 +124,8 @@ function article(item,featured=false,idx=0){if(mode==='index'&&!featured)return 
 function featureArticle(item){return `<div class="feature-card"><div class="featured-tag">PICK UP</div>${link(item,`${coverWithPop(item,item.title+' の表紙')}<div class="booktitle">${esc(item.title)}</div>`)}<p class="recommendation">${esc(item.recommendation||'')}</p></div>`}
 function render(){
   // おすすめ記事は3枠維持し、note公開日で降順表示。未同期の記事は末尾に置く。
-  const picks=allArticles.filter(x=>['series_pick','editor_pick','inzai_pick','regional_assets_pick'].includes(x.recommendation_slot))
-    .sort((a,b)=>(a.recommendation_slot==='regional_assets_pick'?-1:0)-(b.recommendation_slot==='regional_assets_pick'?-1:0)||(b.published_at||'').localeCompare(a.published_at||'')||Number(b.id)-Number(a.id));
+  const picks=allArticles.filter(x=>['gmo_pick','editor_pick','inzai_pick','regional_assets_pick'].includes(x.recommendation_slot))
+    .sort((a,b)=>(a.recommendation_slot==='gmo_pick'?-1:0)-(b.recommendation_slot==='gmo_pick'?-1:0)||(b.published_at||'').localeCompare(a.published_at||'')||Number(b.id)-Number(a.id));
   document.querySelector('#featured-items').innerHTML=picks.map(featureArticle).join('');
   document.querySelector('#article-count').textContent=`全${allArticles.length}本`;
   document.querySelector('#shelves').innerHTML=cats.map(([id,label])=>{
@@ -143,8 +143,8 @@ async function loadArticles(){
     if(!Array.isArray(data)) throw new Error('articles.json の形式が不正です');
     // published_at を基準に降順。ID は同日公開時の安定した補助キー。
     const isValidDate=s=>typeof s==='string'&&/^\d{4}-\d{2}-\d{2}$/.test(s)&&!Number.isNaN(Date.parse(s+'T00:00:00Z'));
-    const ready=data.filter(x=>x && x.title && x.url && ((x.cover && isValidDate(x.published_at)) || (['inzai_series','regional_assets_series'].includes(x.category) && !x.cover && !x.published_at)));
-    if(ready.filter(x=>x.recommendation_slot==='series_pick').length!==1||ready.filter(x=>x.recommendation_slot==='regional_assets_pick').length!==1||ready.filter(x=>x.recommendation_slot==='inzai_pick').length!==1) throw new Error('おすすめの固定枠設定が不正です');
+    const ready=data.filter(x=>x && x.title && x.url && (!x.published_at || isValidDate(x.published_at)));
+    if(ready.filter(x=>x.recommendation_slot==='gmo_pick').length!==1||ready.filter(x=>x.recommendation_slot==='regional_assets_pick').length!==1||ready.filter(x=>x.recommendation_slot==='inzai_pick').length!==1) throw new Error('おすすめの固定枠設定が不正です');
     allArticles=[...ready].sort((a,b)=>b.published_at.localeCompare(a.published_at)||Number(b.id)-Number(a.id));
     render();
   }catch(error){
