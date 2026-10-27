@@ -110,7 +110,27 @@ button:focus-visible,a:focus-visible{outline:3px solid #526B5D;outline-offset:3p
 .note-money-pop{position:absolute;right:7px;top:7px;max-width:calc(100% - 14px);white-space:nowrap;z-index:1;display:inline-flex;align-items:center;gap:4px;background:#fffaf6;color:#744d54;border:1px solid #deb8bd;border-radius:16px;padding:3px 8px;font-size:11px;font-weight:700;line-height:1.45;box-shadow:0 1px 4px rgba(0,0,0,.12)}
 .note-money-inline{position:static;margin-left:8px;vertical-align:middle;white-space:normal;box-shadow:none}
 @media(max-width:740px){.note-money-pop{font-size:10px;padding:2px 5px;right:4px;top:4px}.note-money-inline{margin-left:5px}}
-</style></head><body><header class="site-header"><nav aria-label="主要ナビゲーション"><a href="#top" class="brand" aria-label="RapasAI Lab トップ"><img src="assets/rapasai-logo-mark.png" alt="RapasAI Lab ロゴ"><span>RapasAI Lab</span></a><div class="navlinks"><a href="#featured">おすすめ記事</a><a href="#books">記事の本棚</a><a href="ask/index.html">お問い合わせ</a></div></nav></header><main id="top"><section class="intro" aria-label="RapasAI Labについて"><p>RapasAI Labでは、興味を持ったことや疑問に思ったことを、さまざまな角度から調べ、記事にしています。</p><div class="service-notice"><p class="service-notice-heading"><strong>市場調査・競合分析、調査レポート・記事制作を承っています。</strong></p><p>公開情報をもとに調査・分析し、根拠を明示した資料を制作します。</p><p>ご相談は、ページ右上の「<a href="ask/index.html">お問い合わせ</a>」からお願いいたします。</p></div><p>このホームページでは、公開した記事をテーマ別に整理し、本棚のように並べています。</p><p>気になる記事を見つけたら、ぜひ手に取ってみてください。</p></section><section class="featured" id="featured"><div class="sectionheading"><h2>おすすめ記事</h2><span class="subtitle">記事の内容紹介付き</span></div><div id="featured-items" class="feature-grid"></div></section><section id="books"><div class="sectionheading"><h2>記事の本棚</h2><span class="subtitle" id="article-count">記事を読み込み中</span></div><div class="controls"><div class="switch" role="group" aria-label="本棚の表示方法"><button type="button" data-mode="covers">表紙で見る</button><button type="button" data-mode="index">目次で見る</button></div><div class="allbuttons"><button id="expand" type="button">すべて開く</button><button id="collapse" type="button">すべて閉じる</button></div></div><div id="shelves"></div></section><section class="contact" id="contact"><h2>お問い合わせ</h2><p>取り上げてほしいテーマや、調査・記事作成に関するご相談などがありましたら、お問い合わせフォームよりご連絡ください。</p><p><a class="contact-link" href="ask/index.html">お問い合わせフォームへ →</a></p></section></main><footer class="footer">© 2026 RapasAI Lab</footer><script>
+
+/* Book search */
+.book-search{margin:0 0 38px;background:#FFFFFF;border:1px solid #DDE2DF;border-radius:6px;padding:22px 24px}
+.book-search-head{display:flex;align-items:baseline;justify-content:space-between;gap:14px;margin-bottom:13px}
+.book-search h2{font-size:22px;margin:0;letter-spacing:.025em}
+.book-search-note{font-size:12px;color:#6B7270}
+.searchbox{position:relative}
+.searchbox input{width:100%;border:1px solid #C9D1CD;border-radius:5px;background:#FAFBFA;color:#252B29;padding:13px 44px 13px 15px;font:inherit;font-size:15px;line-height:1.5}
+.searchbox input:focus{outline:3px solid rgba(72,107,88,.22);border-color:#486B58;background:#fff}
+.search-clear{position:absolute;right:8px;top:50%;transform:translateY(-50%);width:32px;height:32px;border:0;border-radius:50%;background:transparent;color:#6A716D;font-size:20px;line-height:1;display:none;align-items:center;justify-content:center}
+.search-clear:hover{background:#EEF2EF}
+.search-clear.visible{display:flex}
+.search-status{margin:11px 0 0;font-size:13px;color:#626A66;min-height:1.6em}
+.search-results{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-top:12px}
+.search-result{display:block;text-decoration:none;background:#F8F9F7;border:1px solid #E3E6E3;border-radius:5px;padding:12px 14px}
+.search-result:hover{background:#F0F4F1;border-color:#CBD6D0}
+.search-result-title{font-weight:700;font-size:14px;line-height:1.55}
+.search-result-shelf{font-size:11px;color:#6D746F;margin-top:4px}
+.search-empty{grid-column:1/-1;margin:0;padding:13px 0;color:#6B7270;font-size:14px}
+@media(max-width:740px){.book-search{padding:18px 14px;margin-bottom:28px}.book-search-head{display:block}.book-search h2{font-size:20px}.book-search-note{display:block;margin-top:3px}.search-results{grid-template-columns:1fr}.searchbox input{font-size:16px}}
+</style></head><body><header class="site-header"><nav aria-label="主要ナビゲーション"><a href="#top" class="brand" aria-label="RapasAI Lab トップ"><img src="assets/rapasai-logo-mark.png" alt="RapasAI Lab ロゴ"><span>RapasAI Lab</span></a><div class="navlinks"><a href="#featured">おすすめ記事</a><a href="#books">記事の本棚</a><a href="ask/index.html">お問い合わせ</a></div></nav></header><main id="top"><section class="intro" aria-label="RapasAI Labについて"><p>RapasAI Labでは、興味を持ったことや疑問に思ったことを、さまざまな角度から調べ、記事にしています。</p><div class="service-notice"><p class="service-notice-heading"><strong>市場調査・競合分析、調査レポート・記事制作を承っています。</strong></p><p>公開情報をもとに調査・分析し、根拠を明示した資料を制作します。</p><p>ご相談は、ページ右上の「<a href="ask/index.html">お問い合わせ</a>」からお願いいたします。</p></div><p>このホームページでは、公開した記事をテーマ別に整理し、本棚のように並べています。</p><p>気になる記事を見つけたら、ぜひ手に取ってみてください。</p></section><section class="book-search" id="book-search" aria-labelledby="book-search-title"><div class="book-search-head"><h2 id="book-search-title">読みたい本を見つける</h2><span class="book-search-note">記事タイトルやキーワードから探せます</span></div><div class="searchbox"><input id="book-search-input" type="search" inputmode="search" autocomplete="off" placeholder="例：印西市　税収 / データセンター / AI" aria-label="読みたい本を検索" aria-controls="book-search-results"><button id="book-search-clear" class="search-clear" type="button" aria-label="検索語を消す">×</button></div><p id="book-search-status" class="search-status" aria-live="polite">本のタイトルや気になる言葉を入力してください。</p><div id="book-search-results" class="search-results"></div></section><section class="featured" id="featured"><div class="sectionheading"><h2>おすすめ記事</h2><span class="subtitle">記事の内容紹介付き</span></div><div id="featured-items" class="feature-grid"></div></section><section id="books"><div class="sectionheading"><h2>記事の本棚</h2><span class="subtitle" id="article-count">記事を読み込み中</span></div><div class="controls"><div class="switch" role="group" aria-label="本棚の表示方法"><button type="button" data-mode="covers">表紙で見る</button><button type="button" data-mode="index">目次で見る</button></div><div class="allbuttons"><button id="expand" type="button">すべて開く</button><button id="collapse" type="button">すべて閉じる</button></div></div><div id="shelves"></div></section><section class="contact" id="contact"><h2>お問い合わせ</h2><p>取り上げてほしいテーマや、調査・記事作成に関するご相談などがありましたら、お問い合わせフォームよりご連絡ください。</p><p><a class="contact-link" href="ask/index.html">お問い合わせフォームへ →</a></p></section></main><footer class="footer">© 2026 RapasAI Lab</footer><script>
 const cats=[['regional_assets_series','連載｜データセンターを地域の資産にする'],['inzai_series','連載｜データセンターは弊害だけなのか？――印西市から考える'],['series','連載｜AI産業の資金と利益'],['infra','AIインフラ・産業'],['cyber_security','サイバー攻撃・セキュリティ'],['safety','AI開発・安全性'],['daily','ハナとナノハ']];
 let allArticles=[];
 let mode='covers';
@@ -122,6 +142,25 @@ function noteMoneyPop(item,inline=false){return item.note_money_pickup===true?`<
 function coverWithPop(item,alt){return `<span class="pickup-cover-wrap">${coverMarkup(item,alt)}${noteMoneyPop(item)}</span>`}
 function article(item,featured=false,idx=0){if(mode==='index'&&!featured)return `<div class="indexrow"><span class="num">${String(idx+1).padStart(2,'0')}</span>${link(item,`<div class="booktitle">${esc(item.title)}${noteMoneyPop(item,true)}</div>`)}</div>`;return `<div class="${featured?'feature-card':'book'}">${link(item,`${coverWithPop(item,'記事の表紙')}<div class="booktitle">${esc(item.title)}</div>`)}</div>`}
 function featureArticle(item){return `<div class="feature-card"><div class="featured-tag">PICK UP</div>${link(item,`${coverWithPop(item,item.title+' の表紙')}<div class="booktitle">${esc(item.title)}</div>`)}<p class="recommendation">${esc(item.recommendation||'')}</p></div>`}
+function normalizeSearchText(value){return String(value||'').normalize('NFKC').toLowerCase().replace(/[\s　]+/g,' ').trim()}
+function categoryLabel(id){const found=cats.find(x=>x[0]===id);return found?found[1]:''}
+function renderBookSearch(){
+  const input=document.querySelector('#book-search-input');
+  const results=document.querySelector('#book-search-results');
+  const status=document.querySelector('#book-search-status');
+  const clear=document.querySelector('#book-search-clear');
+  if(!input||!results||!status||!clear)return;
+  const q=normalizeSearchText(input.value);
+  clear.classList.toggle('visible',Boolean(q));
+  if(!q){results.innerHTML='';status.textContent='本のタイトルや気になる言葉を入力してください。';return}
+  const terms=q.split(' ').filter(Boolean);
+  const matches=allArticles.filter(item=>{
+    const hay=normalizeSearchText([item.title,categoryLabel(item.category),item.recommendation||''].join(' '));
+    return terms.every(term=>hay.includes(term));
+  });
+  status.textContent=matches.length?`${matches.length}冊見つかりました`:'該当する本は見つかりませんでした';
+  results.innerHTML=matches.length?matches.map(item=>`<a class="search-result" href="${esc(item.url)}" target="_blank" rel="noopener noreferrer"><div class="search-result-title">${esc(item.title)}</div><div class="search-result-shelf">${esc(categoryLabel(item.category))}</div></a>`).join(''):'<p class="search-empty">別の言葉でも探してみてください。</p>';
+}
 function render(){
   // おすすめ記事は記事データの設定から選ぶ。特定の枠名に依存しない。
   const picks=allArticles.filter(x=>typeof x.recommendation_slot==='string'&&x.recommendation_slot.trim()&&typeof x.recommendation==='string'&&x.recommendation.trim())
@@ -148,6 +187,7 @@ async function loadArticles(){
     if(pickSlots.length!==3 || new Set(pickSlots.map(x=>x.recommendation_slot)).size!==3) throw new Error('おすすめ記事は重複しない3件で設定してください');
     allArticles=[...ready].sort((a,b)=>b.published_at.localeCompare(a.published_at)||Number(b.id)-Number(a.id));
     render();
+    renderBookSearch();
   }catch(error){
     console.error(error);
     document.querySelector('#article-count').textContent='記事データを読み込めませんでした';
@@ -159,6 +199,10 @@ document.addEventListener('DOMContentLoaded',()=>{
   document.querySelectorAll('[data-mode]').forEach(b=>b.onclick=()=>{mode=b.dataset.mode;render()});
   document.querySelector('#expand').onclick=()=>{expanded=new Set(cats.map(x=>x[0]));render()};
   document.querySelector('#collapse').onclick=()=>{expanded=new Set;render()};
+  const searchInput=document.querySelector('#book-search-input');
+  const searchClear=document.querySelector('#book-search-clear');
+  searchInput.addEventListener('input',renderBookSearch);
+  searchClear.addEventListener('click',()=>{searchInput.value='';renderBookSearch();searchInput.focus()});
   loadArticles();
 });
 </script><script src="assets/analytics.js"></script></body></html>
