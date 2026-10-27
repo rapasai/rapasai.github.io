@@ -123,9 +123,9 @@ function coverWithPop(item,alt){return `<span class="pickup-cover-wrap">${coverM
 function article(item,featured=false,idx=0){if(mode==='index'&&!featured)return `<div class="indexrow"><span class="num">${String(idx+1).padStart(2,'0')}</span>${link(item,`<div class="booktitle">${esc(item.title)}${noteMoneyPop(item,true)}</div>`)}</div>`;return `<div class="${featured?'feature-card':'book'}">${link(item,`${coverWithPop(item,'記事の表紙')}<div class="booktitle">${esc(item.title)}</div>`)}</div>`}
 function featureArticle(item){return `<div class="feature-card"><div class="featured-tag">PICK UP</div>${link(item,`${coverWithPop(item,item.title+' の表紙')}<div class="booktitle">${esc(item.title)}</div>`)}<p class="recommendation">${esc(item.recommendation||'')}</p></div>`}
 function render(){
-  // おすすめ記事は3枠維持し、note公開日で降順表示。未同期の記事は末尾に置く。
-  const picks=allArticles.filter(x=>['gmo_pick','editor_pick','ai_security_pick','regional_assets_pick'].includes(x.recommendation_slot))
-    .sort((a,b)=>(a.recommendation_slot==='ai_security_pick'?-1:0)-(b.recommendation_slot==='ai_security_pick'?-1:0)||(b.published_at||'').localeCompare(a.published_at||'')||Number(b.id)-Number(a.id));
+  // おすすめ記事は記事データの設定から選ぶ。特定の枠名に依存しない。
+  const picks=allArticles.filter(x=>typeof x.recommendation_slot==='string'&&x.recommendation_slot.trim()&&typeof x.recommendation==='string'&&x.recommendation.trim())
+    .sort((a,b)=>(b.published_at||'').localeCompare(a.published_at||'')||Number(b.id)-Number(a.id));
   document.querySelector('#featured-items').innerHTML=picks.map(featureArticle).join('');
   document.querySelector('#article-count').textContent=`全${allArticles.length}本`;
   document.querySelector('#shelves').innerHTML=cats.map(([id,label])=>{
@@ -144,7 +144,8 @@ async function loadArticles(){
     // published_at を基準に降順。ID は同日公開時の安定した補助キー。
     const isValidDate=s=>typeof s==='string'&&/^\d{4}-\d{2}-\d{2}$/.test(s)&&!Number.isNaN(Date.parse(s+'T00:00:00Z'));
     const ready=data.filter(x=>x && x.title && x.url && (!x.published_at || isValidDate(x.published_at)));
-    if(ready.filter(x=>x.recommendation_slot==='gmo_pick').length!==1||ready.filter(x=>x.recommendation_slot==='regional_assets_pick').length!==1||ready.filter(x=>x.recommendation_slot==='ai_security_pick').length!==1) throw new Error('おすすめの固定枠設定が不正です');
+    const pickSlots=ready.filter(x=>typeof x.recommendation_slot==='string'&&x.recommendation_slot.trim()&&typeof x.recommendation==='string'&&x.recommendation.trim());
+    if(pickSlots.length!==3 || new Set(pickSlots.map(x=>x.recommendation_slot)).size!==3) throw new Error('おすすめ記事は重複しない3件で設定してください');
     allArticles=[...ready].sort((a,b)=>b.published_at.localeCompare(a.published_at)||Number(b.id)-Number(a.id));
     render();
   }catch(error){
