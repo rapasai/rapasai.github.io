@@ -9,3 +9,9 @@ html{scroll-behavior:smooth}body{margin:0;background:var(--ground);color:var(--i
 /* 表紙の全体とPOPの双方を表示 */
 .book img.cover[src*="330193720"]{object-fit:contain;background:#fff}
 .cover-wrap .pickup{position:static;display:inline-block;margin-top:7px;max-width:100%;white-space:normal}
+
+/* 全記事の表紙を切り抜かず表示 */
+.book img.cover,.cover-wrap img.cover{object-fit:contain!important;background:#fff}
+
+/* 画像比率を保持し、枠の固定比率を解除 */
+.book img.cover,.cover-wrap img.cover{width:100%!important;height:auto!important;aspect-ratio:auto!important;object-fit:contain!important;background:transparent!important}
