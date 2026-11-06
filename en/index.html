@@ -57,6 +57,12 @@ main{max-width:1150px;margin:auto;padding:0 28px 68px}.intro{margin:0 -28px 42px
 .site-footer .footer-description{font-size:13px;color:#536779}
 .site-footer .footer-copyright{margin-top:12px}
 .site-footer .footer-citation{max-width:720px;margin:3px auto 0;font-size:12px}
+
+/* Language switch: same role as Japanese homepage's blue English button. */
+.navlinks .japanese-switch{display:inline-flex;align-items:center;justify-content:center;gap:7px;white-space:nowrap;background:#315D47;border:1px solid #315D47;color:#fff;font-weight:700;padding:8px 13px;border-radius:9px;text-decoration:none;line-height:1.35;min-height:38px}
+.navlinks .japanese-switch:hover{background:#244B39;border-color:#244B39;color:#fff;text-decoration:none}
+.navlinks .japanese-switch:focus-visible{outline:3px solid #7BA78B;outline-offset:3px}
+.japanese-switch-icon{height:17px;width:17px;flex:none}
 </style>
 </head>
 <body>
@@ -70,7 +76,7 @@ main{max-width:1150px;margin:auto;padding:0 28px 68px}.intro{margin:0 -28px 42px
       <a href="#featured">Featured Research</a>
       <a href="#about">About</a>
       <a href="contact/index.html">Contact</a>
-      <a href="../index.html">日本語</a>
+      <a class="japanese-switch" href="../" lang="ja" hreflang="ja" aria-label="Switch to Japanese"><svg class="japanese-switch-icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c-3 3-4.5 6-4.5 9s1.5 6 4.5 9M12 3c3 3 4.5 6 4.5 9S15 18 12 21"/></svg><span>日本語</span></a>
     </div>
   </nav>
 </header>
