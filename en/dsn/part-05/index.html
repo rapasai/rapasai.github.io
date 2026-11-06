@@ -1,0 +1,574 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="An examination of two decades of GAO and NASA OIG audits, DSN capacity shortages, management decisions, and proposals for sustaining deep-space communications.">
+<meta name="author" content="RapasAI Lab">
+<meta name="publisher" content="RapasAI Lab">
+<meta name="citation_title" content="Why Has the Deep Space Network Approached Its Limits? — Rebuilding the DSN in Light of Twenty Years of Management">
+<meta name="citation_author" content="RapasAI Lab">
+<meta name="citation_fulltext_html_url" content="https://rapasai.jp/en/dsn/part-05/">
+<meta name="citation_reference" content="https://note.com/rapasai_lab/n/naa1a5fbe367b?app_launch=false">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="RapasAI Lab">
+<meta property="og:title" content="Why Has the Deep Space Network Approached Its Limits? — Rebuilding the DSN in Light of Twenty Years of Management">
+<meta property="og:description" content="An examination of two decades of GAO and NASA OIG audits, DSN capacity shortages, management decisions, and proposals for sustaining deep-space communications.">
+<meta property="og:url" content="https://rapasai.jp/en/dsn/part-05/">
+<meta property="article:author" content="RapasAI Lab">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Why Has the Deep Space Network Approached Its Limits? — Rebuilding the DSN in Light of Twenty Years of Management", "description": "An examination of two decades of GAO and NASA OIG audits, DSN capacity shortages, management decisions, and proposals for sustaining deep-space communications.", "inLanguage": "en", "url": "https://rapasai.jp/en/dsn/part-05/", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://rapasai.jp/en/dsn/part-05/"}, "author": {"@type": "Organization", "name": "RapasAI Lab", "url": "https://rapasai.jp/"}, "publisher": {"@type": "Organization", "name": "RapasAI Lab", "url": "https://rapasai.jp/"}, "isPartOf": {"@type": "CreativeWorkSeries", "name": "Voyager and the Deep Space Network"}, "isBasedOn": {"@type": "Article", "url": "https://note.com/rapasai_lab/n/naa1a5fbe367b?app_launch=false", "inLanguage": "ja"}}</script>
+<link rel="canonical" href="https://rapasai.jp/en/dsn/part-05/">
+<title>Why Has the Deep Space Network Approached Its Limits? — Rebuilding the DSN in Light of Twenty Years of Management | RapasAI Lab</title>
+<style>
+:root{--bg:#F3F6F8;--surface:#FFFFFF;--ink:#273038;--muted:#5C6871;--line:#DCE4EA;--blue:#365F7A;--blue-mid:#6889A0;--blue-soft:#E7EFF5;--blue-pale:#F4F8FB}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.75}a{color:var(--blue);text-underline-offset:3px}
+.site-header{background:#fff;border-bottom:1px solid #E2E7EA}.head-inner{max-width:1150px;margin:auto;padding:18px 28px;display:flex;align-items:center;justify-content:space-between;gap:22px}.brand{display:flex;align-items:center;gap:17px;text-decoration:none;color:#202A31}.brand img{width:68px;height:68px;object-fit:contain}.brand span{font-weight:800;font-size:36px;line-height:1.12}.navlinks{display:flex;align-items:center;gap:24px;flex-wrap:wrap}.navlinks a{font-size:14px;text-decoration:none;color:#405969}.navlinks a:hover{text-decoration:underline}
+.hero-wrap{max-width:1150px;margin:30px auto 0;padding:0 28px}.crumb{font-size:13px;color:var(--muted);margin:0 0 14px}.crumb a{color:var(--blue)}.hero{margin:0;background:#07111e;border-radius:6px;overflow:hidden}.hero img{width:100%;height:auto;display:block}
+.article-shell{max-width:1150px;margin:0 auto;padding:24px 28px 80px;display:grid;grid-template-columns:minmax(0,790px) minmax(180px,1fr);align-items:start;gap:22px}.article{background:#fff;border:1px solid var(--line);border-radius:6px;padding:48px clamp(26px,5vw,66px) 45px;min-width:0}.eyebrow{color:var(--blue);font-size:12px;font-weight:800;letter-spacing:.15em}.article h1{font-family:Georgia,serif;font-size:clamp(34px,3.8vw,48px);line-height:1.21;letter-spacing:-.018em;margin:13px 0 15px;color:#243d4d}.subtitle{font-size:18px;color:#516876;margin:0 0 23px;line-height:1.55}.byline{font-size:13px;color:#637681;display:flex;gap:12px;flex-wrap:wrap}.byline strong{color:#334c5a}.divider{border:0;border-top:1px solid #dce5ea;margin:25px 0 34px}
+.body{font-family:Georgia,"Times New Roman",serif;font-size:18px;line-height:1.95;color:#293740}.body p{margin:0 0 1.45em}.body .lead{font-size:20px;line-height:1.85;color:#273844}.body ul{margin:0 0 1.6em;padding-left:1.3em}.body li{margin:0 0 12px}.body h2{font-family:system-ui,-apple-system,sans-serif;font-size:clamp(24px,2.7vw,31px);line-height:1.42;color:#2c5068;margin:2.2em 0 .85em;padding-top:.1em;scroll-margin-top:25px}.callout{background:var(--blue-pale);border-left:4px solid var(--blue-mid);padding:20px 23px;font-family:system-ui,sans-serif;font-size:15px;line-height:1.8;color:#405b6e;margin:33px 0 40px}.callout span{display:block;text-transform:uppercase;letter-spacing:.11em;font-size:11px;font-weight:800;margin:0 0 6px;color:var(--blue)}
+.refs{padding-top:20px;margin-top:48px;border-top:1px solid var(--line);font-size:13px;color:#53636e;scroll-margin-top:25px}.refs h2{font-size:24px;color:#2c5068;margin:0 0 15px}.refs p{margin:0 0 16px}.refs a{overflow-wrap:anywhere}.source{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap;margin-top:36px;border-top:1px solid var(--line);padding-top:22px;color:#687781;font-size:13px}.sidebar{position:sticky;top:24px;padding:18px 15px 22px;background:#fff;border:1px solid var(--line);border-radius:6px;font-size:13px}.side-title{font-size:11px;letter-spacing:.14em;color:var(--blue);font-weight:800;margin:0 10px 12px}.side-link{display:block;text-decoration:none;color:#4d687c;padding:9px 11px;border-left:2px solid #d3e0e8}.side-link:hover{background:var(--blue-pale);border-left-color:var(--blue)}.side-note{margin:20px 3px 0;background:var(--blue-soft);padding:14px;color:#526d80;border-radius:4px;font-size:12px}.side-note strong{display:block;color:var(--blue);margin-bottom:4px}.article-navigation{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}.article-navigation a{display:block;text-decoration:none;background:var(--blue-soft);border:1px solid #d3e0e8;border-radius:5px;padding:12px 17px;font-size:14px;font-weight:700}.site-footer{border-top:1px solid #DFE5E8;background:#fff;padding:25px 28px;color:#68747B;font-size:13px;text-align:center}
+@media(max-width:900px){.article-shell{grid-template-columns:1fr;max-width:830px}.sidebar{position:static;order:-1}.sidebar .side-note{display:none}.sidebar .side-link{display:inline-block;border-left:0;border-bottom:2px solid #d3e0e8;margin-right:9px}.article{padding:42px clamp(20px,6vw,52px)}}
+@media(max-width:600px){.head-inner{padding:13px 15px;align-items:flex-start;flex-direction:column;gap:13px}.brand img{width:46px;height:46px}.brand span{font-size:26px}.navlinks{gap:15px}.navlinks a{font-size:12px}.hero-wrap{padding:0;margin-top:17px}.crumb{padding:0 15px}.hero{border-radius:0}.article-shell{padding:0 0 40px;gap:0}.article{border-left:0;border-right:0;border-radius:0;padding:32px 21px 43px}.article h1{font-size:33px}.subtitle{font-size:16px}.body{font-size:17px;line-height:1.88}.body .lead{font-size:18px}.sidebar{border-radius:0;border-left:0;border-right:0;padding:12px 17px}.sidebar .side-title{margin:0 0 8px}.sidebar .side-link{font-size:12px;padding:6px}.source{font-size:12px}}
+@media print{.site-header,.sidebar,.site-footer,.article-navigation{display:none}.article-shell{display:block;padding:0}.article{border:0;padding:15px}.hero-wrap{padding:0}body{background:white}}
+
+/* Enhanced subtitle hierarchy for the full, unabridged article title. */
+.article .subtitle{font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;font-size:clamp(21px,2.3vw,27px);line-height:1.48;font-weight:700;color:var(--blue);margin:8px 0 26px;max-width:680px}
+.body h2#references{font-size:24px;margin-top:2.4em;border-top:1px solid var(--line);padding-top:27px}
+.body h2#references~p{font-family:system-ui,-apple-system,sans-serif;font-size:14px;line-height:1.75;overflow-wrap:anywhere}
+.article-card{display:grid;grid-template-columns:minmax(210px,38%) minmax(0,1fr);gap:23px;border-top:1px solid #DFE7ED;padding:20px 0;text-decoration:none;color:inherit}
+.article-card:hover .card-title{text-decoration:underline;text-underline-offset:4px}
+.card-cover{width:100%;height:auto;display:block;object-fit:contain;background:#061323;border-radius:4px}
+.card-caption{font-size:11px;color:var(--blue);font-weight:800;letter-spacing:.12em;margin:0 0 8px}
+.card-title{font-family:Georgia,serif;color:#243d4d;font-size:25px;line-height:1.35;margin:0 0 8px}
+.card-subtitle{font-size:17px;color:var(--blue);font-weight:700;line-height:1.5;margin:0 0 12px}
+.card-desc{font-size:14px;color:#52636f;line-height:1.8;margin:0}
+@media(max-width:700px){.article-card{grid-template-columns:1fr;gap:15px}.card-title{font-size:23px}.article .subtitle{font-size:21px}}
+
+/* Part 05 long-form layout, references, and related-article slots */
+.body h3{font-family:system-ui,-apple-system,sans-serif;font-size:clamp(20px,2vw,25px);line-height:1.5;color:#345b73;margin:1.65em 0 .8em;scroll-margin-top:20px}
+.body h4{font-family:system-ui,-apple-system,sans-serif;color:#365f7a;font-size:16px;line-height:1.55;margin:2.3em 0 .85em;padding-top:16px;border-top:1px solid #e1e7eb;scroll-margin-top:20px}
+.body h4 + p{font-family:system-ui,-apple-system,sans-serif;font-size:14px;line-height:1.75;overflow-wrap:anywhere}
+.body p a{overflow-wrap:anywhere}.body p{overflow-wrap:break-word}
+.body .text-flow{white-space:pre-line;background:#f4f8fb;border-left:3px solid #6889a0;padding:16px 20px;font-family:system-ui,sans-serif;font-size:15px;line-height:1.75}
+.related-card{display:block;border:1px solid #d7e4eb;background:#f4f8fb;border-radius:6px;padding:18px 21px;margin:28px 0 33px;font-family:system-ui,sans-serif;color:#263f50;text-decoration:none}
+.related-card .related-eyebrow{font-size:11px;font-weight:800;letter-spacing:.12em;color:#365f7a;margin:0 0 8px}
+.related-card .related-title{font-size:18px;line-height:1.5;font-weight:700;margin:0 0 7px;color:#244558}
+.related-card .related-status{font-size:13px;color:#5b6f7c;margin:0}
+a.related-card:hover{border-color:#779fb5;background:#e7eff5}
+.related-card.pending{border-style:dashed;background:#fafcfd}
+.sidebar{max-height:calc(100vh - 48px);overflow-y:auto}.side-link.subsection{padding-left:19px;font-size:12px}
+@media(max-width:900px){.sidebar{max-height:none;overflow:visible}}
+
+/* Attribution is generated from article metadata; translation Markdown remains unchanged. */
+.attribution{margin-top:42px;padding:24px 26px;background:#f4f8fb;border:1px solid #d8e4eb;border-radius:6px;color:#334e60;font-family:system-ui,-apple-system,sans-serif;font-size:14px;line-height:1.75}
+.attribution h2{font-size:19px;color:#365f7a;margin:0 0 13px;line-height:1.4}
+.attribution p{margin:9px 0;overflow-wrap:anywhere}
+.attribution .attribution-note{font-size:12px;color:#546875;border-top:1px solid #d8e4eb;padding-top:12px;margin-top:17px}
+@media print{.attribution{break-inside:avoid}}
+
+</style>
+</head>
+<body id="top">
+<header class="site-header"><div class="head-inner"><a class="brand" href="../../index.html"><img src="../../assets/rapasai-logo-mark.png" alt="" width="68" height="68"><span>RapasAI Lab</span></a><nav class="navlinks" aria-label="Main navigation"><a href="../../index.html">Home</a><a href="../../index.html#featured">DSN Series</a><a href="../../contact/index.html">Contact</a><a href="https://note.com/rapasai_lab/n/naa1a5fbe367b?app_launch=false" lang="ja" target="_blank" rel="noopener noreferrer">日本語原文</a></nav></div></header>
+<div class="hero-wrap"><p class="crumb"><a href="../../index.html">RapasAI Lab</a> / <a href="../../index.html#featured">Voyager and the Deep Space Network</a> / Part 5</p><figure class="hero"><img src="assets/dsn-cover.png" alt="Desert radio observatory and maintenance records, cover artwork for the DSN management analysis" width="1728" height="864"></figure></div>
+<div class="article-shell"><main class="article"><div class="eyebrow">SPECIAL FEATURE · PART 05</div><h1>Why Has the Deep Space Network Approached Its Limits?</h1><p class="subtitle">Rebuilding the DSN in Light of Twenty Years of Management</p><div class="byline"><span><strong>Author: RapasAI Lab</strong></span><span>Japanese original published: November 5, 2026</span><span>English translation</span></div><hr class="divider">
+<div id="introduction"><div class="body">
+<p>RapasAI Lab<br>Published November 5, 2026</p>
+<p>This series uses communications with Voyager as its starting point to explore the history and present state of the Deep Space Network (DSN), and the future of space communications.</p>
+<a class="related-card" href="../part-00/index.html"><div class="related-eyebrow">RELATED ARTICLE · PART 00</div><div class="related-title">Voyager, One Light-Day Away — How the Deep Space Network Supports and Expands Space Exploration</div><div class="related-status">Read the English article</div></a>
+<p>Hana 🛰️<br>If the DSN is such an important research infrastructure, why is it running short of equipment?</p>
+<a class="related-card" href="https://note.com/rapasai_lab/n/n5b0557a3e9cf?app_launch=false" target="_blank" rel="noopener noreferrer"><div class="related-eyebrow">RELATED ARTICLE · PART 04</div><div class="related-title">What Has the Deep Space Network Made Possible?</div><div class="related-status">English translation coming soon · Read the Japanese original</div></a>
+<p>As the number of space missions increases, the demand for communications must have been expected to grow for a long time. Were there no plans to add facilities or replace aging antennas?</p>
+<p>Nanoha 📡<br>There were plans, but they have not progressed sufficiently.</p>
+<p>In 2023, NASA&#x27;s Office of Inspector General (NASA OIG) reported that demand for DSN communications could exceed available capacity by as much as 40 percent. Plans to expand antenna and transmitter facilities had also fallen behind their original schedules, while costs had risen (NASA OIG, 2023).</p>
+<p>Examining this situation shows that the current difficulties did not arise only recently.</p>
+<p>Hana 🛰️<br>How long has this been a problem?</p>
+<p>Nanoha 📡<br>At least as far back as 2006, the U.S. Government Accountability Office (GAO) was warning about aging DSN facilities and a future shortage of communications capacity.</p>
+<p>Moreover, the GAO&#x27;s concern was not merely that the equipment was old. It found problems with NASA&#x27;s ability to manage future communications requirements and capital investment in a coordinated manner (GAO, 2006).</p>
+<p>Hana 🛰️<br>2006? If these problems were known twenty years ago, what happened in the meantime?</p>
+<p>Why couldn&#x27;t such a vital network resolve its problems? Could the way it was managed be part of the cause?</p>
+<p>Nanoha 📡<br>That possibility deserves investigation.</p>
+<p>In 2006, NASA established Space Communications and Navigation (SCaN) to manage its communications and navigation programs in an integrated manner. This was also a response to the management problems identified by the GAO.</p>
+<p>Yet NASA OIG subsequently audited the DSN in 2015 and again in 2023, identifying problems involving equipment renewal, resource allocation and responses to growing demand (NASA OIG, 2015; 2023).</p>
+<p>This installment traces developments from the GAO&#x27;s 2006 audit through 2026. It also examines how not only SCaN but the Jet Propulsion Laboratory (JPL), which actually manages and operates the DSN, has responded to shortages of facilities and resources.</p>
+<h4 class="reference-title" id="refs-1">References — Introduction</h4>
+<p>NASA&#x27;s Deep Space Network: Current Management Structure Is Not Conducive to Effectively Matching Resources with Future Requirements. U.S. Government Accountability Office (GAO), April 27, 2006.<br><a href="https://www.gao.gov/products/gao-06-445" rel="noopener noreferrer">https://www.gao.gov/products/gao-06-445</a></p>
+<p>May 2006 – Space Communications and Navigation (SCaN) Established. NASA.<br><a href="https://www.nasa.gov/image-article/may-2006-space-communications-navigation-scan-established/" rel="noopener noreferrer">https://www.nasa.gov/image-article/may-2006-space-communications-navigation-scan-established/</a></p>
+<p>NASA&#x27;s Management of the Deep Space Network. NASA Office of Inspector General, March 26, 2015.<br><a href="https://oig.nasa.gov/audits/ig-15-013/" rel="noopener noreferrer">https://oig.nasa.gov/audits/ig-15-013/</a></p>
+<p>Audit of NASA&#x27;s Deep Space Network. NASA Office of Inspector General, July 12, 2023.<br><a href="https://oig.nasa.gov/audits/ig-23-016/" rel="noopener noreferrer">https://oig.nasa.gov/audits/ig-23-016/</a></p>
+<h2 id="chapter-1">1. The Problems Were Already Known in 2006</h2>
+<h3 id="section-1-1">1.1 Aging Facilities and Ever-Increasing Communications Demand</h3>
+<p>On July 4, 2005, during the crucial phase when NASA&#x27;s Deep Impact spacecraft delivered an impactor to Comet Tempel 1, a failure occurred in DSN communications equipment.</p>
+<p>The cause was corrosion in the subreflector of a 70-meter antenna at the Madrid complex. Operators switched communications to another antenna and secured the link needed for Deep Impact&#x27;s observations. In exchange, however, other missions lost communications opportunities they had been scheduled to receive.</p>
+<p>In October that year, corrosion in a major power facility caused an outage at Goldstone, taking several antennas out of service. Some scientific data were lost in that incident.</p>
+<p>Then, in November, a key network server failed. Four missions—Stardust, Mars Reconnaissance Orbiter, Mars Odyssey and Mars Global Surveyor—lost a combined 241 minutes of communications time (GAO, 2006).</p>
+<p>In the Deep Impact incident, switching to another antenna protected essential observations. But missions scheduled to use that substitute antenna lost their communications opportunities. The ability to respond to a failure does not necessarily mean that the network as a whole has sufficient spare capacity.</p>
+<p>Aging equipment also affected routine maintenance. According to the GAO, aging facilities at Goldstone were then causing an average of 16 hours of downtime per week for maintenance and repair. There were also concerns about the future reliability of the 70-meter antenna.</p>
+<p>Facility maintenance was falling behind. Since 2002, the DSN had deferred approximately $30 million worth of maintenance projects each year.</p>
+<p>Much of this concerned facility infrastructure—roads, water systems and power equipment—rather than antennas or communications devices themselves. With limited funding, the DSN gave priority to urgent maintenance directly connected with the provision of communications services.</p>
+<p>Old equipment, however, can fail unexpectedly. When such failures have to be repaired first, other planned work must be postponed.</p>
+<p>The GAO described a situation in which DSN operations continued through repeated adjustments to the priority of this work (GAO, 2006).</p>
+<p>While facilities were aging, communications demand continued to grow.</p>
+<p>According to the GAO&#x27;s 2006 report, the number of missions supported by the DSN had risen by approximately 350 percent over the preceding two decades. The DSN was also expected to have to support roughly twice as many missions by 2020 as it did at the time.</p>
+<p>More new spacecraft mean more communications time is needed. But launches of new spacecraft are not the only reason demand rises. Spacecraft that continue observing for many years also continue using the DSN.</p>
+<p>Voyager 1 and Voyager 2 kept making observations after completing their originally planned major planetary encounters. In its 2006 report, the GAO recorded that each spacecraft was receiving approximately 12 hours of daily communications support from a 70-meter antenna.</p>
+<p>As long-running spacecraft continued sending scientific data, new spacecraft also needed communications time. The DSN had to reconcile both sets of demands using its limited antennas.</p>
+<p>At the time, the DSN&#x27;s goal in normal operations was to provide 95 percent of the communications time requested by each mission. The remaining 5 percent was considered a margin for unexpected failures and outages.</p>
+<p>At the time of the GAO audit, the DSN was largely meeting this goal for existing missions. But this performance did not guarantee that it could continue providing the same level of service in the future.</p>
+<p>Some scheduled missions had been cancelled; other spacecraft had been lost before they required substantial communications support. In this respect, events had allowed the DSN to avoid exceeding the limits of its facilities.</p>
+<p>Furthermore, the DSN was planning to retire its 26-meter antennas because of operating costs. According to the GAO, DSN officials were concerned that the remaining 34-meter and 70-meter antennas might not be able to meet demand in the near future.</p>
+<p>The report even recorded a forecast that the DSN could reach the limits of its facilities as early as 2013 (GAO, 2006).</p>
+<p>This was not a record that the DSN actually reached its limits in 2013. It means that a capacity shortage was already being forecast in concrete terms in 2006.</p>
+<p>The GAO&#x27;s concerns went beyond aging equipment and growing demand.</p>
+<p>NASA lacked a management framework for comparing future communications requirements with the DSN&#x27;s existing capabilities and systematically securing the investment needed to close the gap.</p>
+<p>Across NASA&#x27;s space communications programs, the mechanism for identifying the facilities and technologies that communications networks would require was not adequately connected to the mechanism for allocating the money needed to provide them.</p>
+<p>At the end of 2003, NASA had established the Space Communication Coordination and Integration Board to promote technical integration among space communications networks. The board, however, was responsible for technical coordination. It had neither the authority to manage the equipment and technology development required by individual communications programs nor the authority to allocate budgets.</p>
+<p>Actual investment decisions were left to each communications program and its associated mission directorate. As a result, NASA-wide plans for communications capacity were insufficiently connected with funding allocations to individual programs.</p>
+<p>This problem had a direct effect on DSN management.</p>
+<p>According to the GAO, requests for infrastructure and technology development from the various communications programs, including the DSN, were given low priority in NASA-wide decision-making. Maintenance requests for the DSN itself were also consistently assigned low priority. To keep its communications services running, the DSN was forced to decide what to prioritize and what to postpone within limited resources (GAO, 2006).</p>
+<p>The lack of NASA-wide investment coordination also led to duplicated development work.</p>
+<p>The GAO described how the DSN and the Ground Network had each sought to develop separate antenna-array technologies to meet the same lunar exploration communications requirement. Both development plans were eventually cancelled, but not because NASA had assessed the duplication across the agency. Rather, they were cancelled because of budget constraints and insufficiently defined communications requirements.</p>
+<p>Within NASA, views differed as to whether each mission directorate should manage the budget for communications services or whether the agency should manage those budgets centrally.</p>
+<p>If mission directorates controlled funding, they could respond more readily to the requirements of the missions actually using the communications services. The drawback was that maintenance of shared infrastructure such as the DSN could easily be deferred.</p>
+<p>Conversely, centralized NASA-wide budget management could coordinate investment across communications networks. Yet there were concerns that the DSN would then have to compete for funding with other communications programs, potentially pushing maintenance even further down the priority list (GAO, 2006).</p>
+<p>Under either system, appropriate funding allocations would be impossible without a clear picture of the resources required to maintain DSN equipment and communications capability.</p>
+<p>The DSN needed an investment plan covering both maintenance to address aging facilities and expansion to accommodate increasing communications demand. The problem identified by the GAO was that NASA&#x27;s agency-wide program management was not equipped to make such decisions.</p>
+<h3 id="section-1-2">1.2 What Are the Roles of NASA, SCaN, JPL, the DSN, the GAO and the OIG?</h3>
+<p>We will now clarify the roles of the organizations responsible for overseeing and operating the DSN.</p>
+<p>The DSN is NASA&#x27;s deep-space communications network, but NASA Headquarters does not directly operate its antennas.</p>
+<p>The DSN is managed and operated by the Jet Propulsion Laboratory (JPL). JPL is a laboratory operated by the California Institute of Technology (Caltech) under contract with NASA.</p>
+<p>Space Communications and Navigation (SCaN), established in 2006, provides integrated management of NASA&#x27;s space communications and navigation programs.</p>
+<p>The roles involved in managing and operating the DSN can be outlined as follows.</p>
+<p><strong>Management of NASA&#x27;s space communications programs</strong></p>
+<p>National Aeronautics and Space Administration (NASA)<br>The U.S. space agency<br>Oversees space policy, budgets and agency-wide programs</p>
+<p>↓</p>
+<p>Space Communications and Navigation (SCaN)<br>Space communications and navigation program<br>Integrates management of communications and navigation programs and coordinates investments and budgets</p>
+<p><strong>DSN management and operations</strong></p>
+<p>National Aeronautics and Space Administration (NASA)<br>The U.S. space agency</p>
+<p>↓ Contract</p>
+<p>California Institute of Technology (Caltech)</p>
+<p>↓ Operates</p>
+<p>Jet Propulsion Laboratory (JPL)</p>
+<p>↓ Manages and operates</p>
+<p>Deep Space Network (DSN)<br>Provides communications, tracking and navigation support for spacecraft</p>
+<p>These diagrams show the roles involved in program management and operation of the DSN. They do not mean that every organization is in a direct hierarchical reporting relationship.</p>
+<p>JPL is not an internal SCaN division. It is a laboratory operated under contract with NASA. Likewise, the DSN is not an independent government agency but a communications network managed and operated by JPL.</p>
+<p>SCaN is responsible for program-level management and coordination of NASA&#x27;s communications and navigation activities, whereas JPL is responsible for actually managing and operating the DSN. This distinction becomes important in later chapters when we examine investment decisions and operational responses.</p>
+<p>There are also organizations that investigate NASA&#x27;s programs and management practices and recommend improvements.</p>
+<p>One is the U.S. Government Accountability Office (GAO).</p>
+<p>United States Congress<br>↓<br>U.S. Government Accountability Office (GAO)<br>Audits and evaluates NASA programs, budgets and management arrangements, and recommends improvements</p>
+<p>The GAO is an audit and evaluation organization that supports the U.S. Congress. It is not part of NASA. The GAO investigated DSN management in 2006.</p>
+<p>Another is NASA&#x27;s Office of Inspector General (NASA OIG).</p>
+<p>National Aeronautics and Space Administration (NASA)<br>↓<br>NASA Office of Inspector General (NASA OIG)<br>Independently audits NASA programs, contracts, budgets and operations<br>↓<br>Issues corrective recommendations and tracks implementation</p>
+<p>Although NASA OIG is located within NASA, it conducts audits independently. It was NASA OIG that audited the DSN in 2015 and 2023.</p>
+<p>The GAO and the OIG investigate problems and seek improvements. NASA, SCaN and JPL are the parties that actually manage communications programs, allocate budgets and develop facilities.</p>
+<p>SCaN had not yet been established when the GAO&#x27;s 2006 report appeared. The GAO&#x27;s central concern was the absence of sufficiently developed arrangements for integrated management of funding and infrastructure investment across NASA&#x27;s communications programs.</p>
+<p>To understand NASA&#x27;s response, we first need to examine precisely what improvements the GAO requested.</p>
+<h3 id="section-1-3">1.3 What Did the GAO Ask NASA to Do?</h3>
+<p>In 2006, the GAO made six recommendations to NASA.</p>
+<p>Three related specifically to the DSN&#x27;s future requirements, infrastructure capacity and necessary investments. The other three concerned the integration of requirements and investment decisions across NASA&#x27;s space communications programs.</p>
+<p>The three recommendations specific to the DSN formed a connected planning process:</p>
+<p>Identify the deep-space communications capability required in the future<br>↓<br>Determine how much of that requirement the DSN&#x27;s existing equipment and capabilities can meet<br>↓<br>Identify any shortfall and the infrastructure investment and funding required to close it</p>
+<p>At the time, the DSN had an operational target of supplying 95 percent of the requested communications time. The GAO, however, considered this target alone insufficient to describe the communications capacity that would be needed in the future.</p>
+<p>For example, how much would demand for 70-meter antennas increase? Could the DSN respond if multiple spacecraft needed communications at the same time? By when would additional facilities have to be ready? Without identifying such specific requirements, it would not be possible to determine future infrastructure capacity.</p>
+<p>The GAO wanted the DSN to prepare a plan that assessed the extent to which existing facilities could meet future demand and, where shortfalls existed, specified the work and costs necessary to address them.</p>
+<p>The other three recommendations, relating to NASA&#x27;s overall space communications programs, were intended to ensure that the resources needed by individual programs were reflected in agency-wide decisions.</p>
+<p>The GAO called for clarity about how communications requirements would be prioritized in NASA-wide investment decisions, a mechanism for conveying those requirements to agency-wide decision-makers, and coordination of the necessary funds while preventing duplicative investments (GAO, 2006).</p>
+<p>Understanding DSN requirements and capabilities would not be enough by itself. Unless that information influenced NASA-wide funding allocations, the required equipment upgrades would not materialize.</p>
+<p>NASA had begun moving to revise these management arrangements.</p>
+<p>During the GAO&#x27;s audit in 2005–2006, NASA was considering how its space communications programs ought to be managed.</p>
+<p>In May 2006, NASA Headquarters&#x27; Strategic Management Council decided to pursue integrated management of space communications and navigation infrastructure.</p>
+<p>NASA&#x27;s historical materials state that a SCaN office was established approximately two months after the May 2006 policy decision. The GAO&#x27;s recommendation-tracking records, on the other hand, record the establishment of SCaN in October 2006 (NASA, 2006; GAO recommendation tracking records).</p>
+<p>SCaN was charged with integrating NASA-wide management of not only the DSN but also the Near Earth Network, which supports communications closer to Earth, and the Space Network, which uses communications satellites.</p>
+<p>Its task was to identify the communications capabilities needed by NASA&#x27;s mission directorates and coordinate network development and investment across the agency.</p>
+<p>The establishment of SCaN was also a response to the management weaknesses identified by the GAO. In its records tracking the recommendations, the GAO recognized the creation of SCaN as a corrective action by NASA.</p>
+<p>But creating an organization for integrated management is not the same as establishing a concrete understanding of the DSN&#x27;s own future requirements, equipment capabilities and necessary investments.</p>
+<p>The distinction becomes clear when we examine how the GAO evaluated the six recommendations.</p>
+<h3 id="section-1-4">1.4 The DSN-Specific Recommendations Remained Unimplemented After SCaN Was Established</h3>
+<p>The six recommendations from the GAO&#x27;s 2006 audit eventually had two different outcomes.</p>
+<p>The three relating to integrated management of NASA&#x27;s space communications programs were closed as <strong>“Closed – Implemented.”</strong></p>
+<p>In addition to recognizing SCaN as an organization for coordinating communications requirements across NASA, the GAO acknowledged the creation of a decision-making mechanism called the Space Communications Board of Directors.</p>
+<p>This body was intended to bring the requirements of communications programs and the missions using them into NASA-wide policy and to consider future investment in infrastructure and technology (GAO recommendation tracking records).</p>
+<p>Thus, the GAO acknowledged that NASA had improved its arrangements for integrated management of space communications programs.</p>
+<p>However, all three recommendations concerning the DSN itself were closed as <strong>“Closed – Not Implemented.”</strong></p>
+<p>NASA initially indicated that it agreed with the GAO&#x27;s recommendations. It also stated that its 2004 DSN future plan had already addressed the relevant issues.</p>
+<p>The GAO examined that plan as well. It concluded that the plan did not sufficiently organize the requirements for the infrastructure and communications capabilities the DSN would need in the future, nor did it specifically identify the resources and costs required, including deferred maintenance.</p>
+<p>In particular, it did not adequately explain how failure to carry out necessary upgrades would affect support for future missions (GAO, 2006).</p>
+<p>NASA subsequently submitted additional materials to the GAO in 2007 and 2009 concerning SCaN&#x27;s roles, responsibilities and management plans.</p>
+<p>But the GAO was asking for more than an explanation of how SCaN would manage space communications programs throughout NASA.</p>
+<p>It wanted to know how much communications capacity the DSN itself would need in the near and longer term; how far existing facilities could meet that requirement; and what equipment and resources would be needed to remedy any shortfall.</p>
+<p>From the material NASA submitted, the GAO could not adequately verify that these DSN-specific requirements and plans had been established.</p>
+<p>Accordingly, the three recommendations were not accepted as implemented and were closed without implementation (GAO recommendation tracking records).</p>
+<p>One point deserves care: <strong>“Closed – Not Implemented” does not mean that NASA undertook no DSN upgrades or investments whatsoever afterward.</strong></p>
+<p>The GAO&#x27;s determination means that NASA did not present sufficient evidence for the GAO to recognize that the specific DSN-related improvements it had requested had been implemented.</p>
+<p>Even so, this outcome matters.</p>
+<p>NASA established SCaN to integrate management of its space communications programs. The GAO also recognized improvements in arrangements for coordinating requirements and investment decisions across NASA.</p>
+<p>At the same time, NASA did not satisfy the GAO&#x27;s recommendations for concrete plans identifying the capabilities needed to sustain the DSN as a distinct communications infrastructure over the long term, the facilities required to secure those capabilities, and the resources that would have to be invested.</p>
+<p>Organizational integration progressed. But, from the standpoint of the audit, resolution of the management problem linking DSN-specific demand, capacity and investment remained unverified.</p>
+<p>That finding alone does not justify immediately declaring SCaN&#x27;s entire operation a failure. We need to examine what investment occurred after SCaN&#x27;s establishment and how far equipment renewal progressed.</p>
+<p>The GAO&#x27;s 2006 audit and subsequent recommendation-tracking records show that NASA&#x27;s organizational reforms alone did not establish that the DSN&#x27;s particular problems had been resolved.</p>
+<h3 id="section-1-5">1.5 The Same Problems Were Audited Repeatedly</h3>
+<p>Over the roughly twenty years since the GAO&#x27;s 2006 report, NASA pursued integrated management through SCaN and undertook work to renew DSN equipment.</p>
+<p>Nevertheless, the management and investment problems surrounding the DSN later became subjects of NASA OIG audits.</p>
+<p>NASA OIG&#x27;s 2015 audit examined the impact of DSN budget cuts on equipment upgrades and maintenance. Its 2023 audit reported that the DSN&#x27;s facilities could not keep pace with expanding communications demand, and that plans to expand capacity were behind schedule and over budget.</p>
+<p>According to the 2023 audit, demand for communications exceeded the DSN&#x27;s supply capacity by as much as 40 percent at certain times (NASA OIG, 2023).</p>
+<p>In NASA OIG&#x27;s list of open recommendations as of April 15, 2026, three of the four corrective recommendations arising from its 2023 DSN audit remained listed as <strong>Open</strong>. They addressed improvements to communications scheduling, completion of equipment expansion plans, and oversight of transmitter installation and construction sites (NASA OIG, 2026).</p>
+<p>The course of events can be summarized as follows:</p>
+<p><strong>2006 — GAO</strong><br>Identified aging equipment, deferred maintenance, future requirements and infrastructure capacity, and shortcomings in investment management</p>
+<p>↓</p>
+<p><strong>2006 — NASA</strong><br>Established SCaN to integrate management of space communications and navigation programs</p>
+<p>↓</p>
+<p><strong>2007 and 2009 — NASA and GAO</strong><br>NASA submitted additional materials, but the three DSN-specific recommendations were not accepted as implemented</p>
+<p>↓</p>
+<p><strong>2015 — NASA OIG</strong><br>Audited the impact of budget cuts on DSN equipment upgrades and maintenance</p>
+<p>↓</p>
+<p><strong>2023 — NASA OIG</strong><br>Reported that demand exceeded capacity by as much as 40 percent and identified delays in infrastructure expansion</p>
+<p>↓</p>
+<p><strong>2026 — NASA OIG recommendation tracking</strong><br>Three of the four corrective recommendations from the 2023 audit remained open</p>
+<p>The GAO and NASA OIG are audit organizations with different institutional positions. This does not mean they continuously monitored the DSN for roughly twenty years. It means that, when they examined the DSN at their respective points in time, they repeatedly identified related problems in equipment maintenance and the ability to meet future requirements.</p>
+<p>In 2006, DSN officials were concerned that infrastructure capacity might reach its limits as early as 2013. The DSN had also been asked to identify future capacity requirements and plan corresponding investments.</p>
+<p>Seventeen years later, in 2023, NASA OIG reported that demand actually exceeded available capacity by a substantial margin.</p>
+<p>During the intervening period NASA established SCaN and continued DSN equipment renewal plans. We need to investigate how the problems identified by the GAO in 2006 were handled thereafter and why the gap between communications demand and capacity persisted.</p>
+<p>The next chapter follows budget allocations and equipment upgrades after SCaN&#x27;s establishment. In particular, it examines how funds to maintain and renew facilities were handled and what effects those decisions had on DSN communications capability.</p>
+<h4 class="reference-title" id="refs-2">References — Chapter 1</h4>
+<p>NASA&#x27;s Deep Space Network: Current Management Structure Is Not Conducive to Effectively Matching Resources with Future Requirements. U.S. Government Accountability Office (GAO), April 27, 2006.<br><a href="https://www.gao.gov/products/gao-06-445" rel="noopener noreferrer">https://www.gao.gov/products/gao-06-445</a></p>
+<p>GAO-06-445, Accessible Text. U.S. Government Accountability Office (GAO), May 22, 2006.<br><a href="https://www.gao.gov/assets/a249906.html" rel="noopener noreferrer">https://www.gao.gov/assets/a249906.html</a></p>
+<p>May 2006 – Space Communications and Navigation (SCaN) Established. NASA, May 2006.<br><a href="https://www.nasa.gov/image-article/may-2006-space-communications-navigation-scan-established/" rel="noopener noreferrer">https://www.nasa.gov/image-article/may-2006-space-communications-navigation-scan-established/</a></p>
+<p>Who We Are. NASA Jet Propulsion Laboratory (JPL).<br><a href="https://www.jpl.nasa.gov/who-we-are/" rel="noopener noreferrer">https://www.jpl.nasa.gov/who-we-are/</a></p>
+<p>NASA&#x27;s Management of the Deep Space Network. NASA Office of Inspector General, March 26, 2015.<br><a href="https://oig.nasa.gov/audits/ig-15-013/" rel="noopener noreferrer">https://oig.nasa.gov/audits/ig-15-013/</a></p>
+<p>Audit of NASA&#x27;s Deep Space Network. NASA Office of Inspector General, July 12, 2023.<br><a href="https://oig.nasa.gov/audits/ig-23-016/" rel="noopener noreferrer">https://oig.nasa.gov/audits/ig-23-016/</a></p>
+<p>Open Recommendations Data. NASA Office of Inspector General.<br><a href="https://oig.nasa.gov/audit-open-recommendations/" rel="noopener noreferrer">https://oig.nasa.gov/audit-open-recommendations/</a></p>
+<p>Open Recommendations (April 15, 2026 edition). NASA Office of Inspector General, April 15, 2026.<br><a href="https://oig.nasa.gov/wp-content/uploads/2026/04/or-26-04.pdf" rel="noopener noreferrer">https://oig.nasa.gov/wp-content/uploads/2026/04/or-26-04.pdf</a></p>
+<h2 id="chapter-2">2. Why Was SCaN Unable to Restore the DSN?</h2>
+<h3 id="section-2-1">2.1 How Did the DSN Allocate Limited Funding to Equipment Upgrades?</h3>
+<p>In 2009, the DSN began a plan to save $226.9 million over ten years to develop new antennas and transmitters. Of that amount, $217.6 million was earmarked for the Deep Space Network Aperture Enhancement Project (DAEP), which would expand 34-meter antennas and transmitters (NASA OIG, 2015).</p>
+<p>Under DAEP, six new 34-meter antennas were scheduled for construction by 2025: three in Canberra, two in Madrid and one at Goldstone. The plan also included six 80-kW transmitters and six 20-kW transmitters for the new 34-meter antennas. Rather than receiving sufficient additional funding for the new facilities, the DSN sought to expand its future communications capability by changing how it spent its existing budget (NASA OIG, 2015).</p>
+<p>Savings identified by NASA OIG included approximately $30.9 million from introducing an operating method called Follow-the-Sun, $68.5 million from reducing DSN operating costs, and $78.1 million from expenses including 70-meter antenna uplink costs, subcontract expenses and reserves. A further $49.4 million was to come from postponing or rescheduling work involving antennas and facilities, such as modernization of electrical systems, monitoring facilities, and roofing and water supply systems at Goldstone (NASA OIG, 2015).</p>
+<p>The planned funding flow was as follows:</p>
+<p>Budget allocated to the DSN<br>↓<br>Reduce operating and contract costs, and postpone or reschedule certain equipment and facility work<br>↓<br>Secure savings<br>↓<br>Invest savings in new 34-meter antennas and transmitters<br>↓<br>Increase future communications capability</p>
+<p>This was a reallocation within the DSN&#x27;s own budget: reduce spending in one area and direct those funds to other DSN equipment. NASA OIG assessed that the savings obtained through these efficiencies had been sufficient to fund DAEP expansion needs through fiscal year 2015. This does not mean that the entire $217.6 million had been invested by 2015. That figure was the amount planned over ten years; what had been established by 2015 was that savings had covered DAEP&#x27;s requirements up to that point (NASA OIG, 2015).</p>
+<p>Meanwhile, postponing equipment and facility work to reduce spending did not make the underlying problems disappear.</p>
+<p>As Chapter 1 showed, the DSN had long prioritized urgent maintenance directly related to communications service while deferring work on roads, water supplies, power systems and other infrastructure. Unexpected failures could require funds to be redirected to repairs, forcing further postponement of scheduled work (GAO, 2006).</p>
+<p>The DSN was trying to maintain existing facilities and increase future communications capacity at the same time, continually reprioritizing within a limited budget. But there are limits to funding both new facilities and maintenance of old ones from the same budget. In 2013, the DSN faced a further substantial reduction.</p>
+<h3 id="section-2-2">2.2 How Did SCaN Cut the DSN Budget in 2013?</h3>
+<p>In March 2013, SCaN asked the DSN to reduce its aggregate budget for fiscal years 2013 through 2019 by $101.27 million—approximately $101.3 million. It would be incorrect, however, to attribute the entire amount to SCaN&#x27;s independent discretion. NASA OIG&#x27;s breakdown included federal sequestration and NASA-wide budget adjustments (NASA OIG, 2015).</p>
+<p>The approximately $101.3 million in reductions consisted of:</p>
+<ul><li>Federal sequestration: approximately $66.04 million</li><li>“Other SCaN Priorities”: $20 million</li><li>NASA-wide 1 percent reduction: approximately $9.25 million</li><li>Other adjustments: approximately $5.98 million</li></ul>
+<p>The largest component, roughly $66.04 million, resulted from federal sequestration. The 1 percent NASA-wide reduction was likewise not solely a SCaN decision.</p>
+<p>The $20 million identified as “Other SCaN Priorities” was different. Reductions of $10 million each were recorded under this heading for fiscal years 2014 and 2015 (NASA OIG, 2015).</p>
+<p>NASA OIG&#x27;s publicly available audit materials identify the category and the amount, but do not explain specifically what the funds would be used for or why those other uses were prioritized over the DSN.</p>
+<p>Accordingly, the specific uses of this $20 million and the basis for their priority are not identifiable from the public audit materials. This does not mean the funds were misused. It means that the publicly available audit record does not establish their destination (NASA OIG, 2015).</p>
+<p>Some funding was subsequently restored. A footnote to a NASA OIG table explains that fiscal year 2015 included a partial restoration of $9 million associated with “Other SCaN Priorities.” However, the “Other” category also includes other budget adjustments, so one cannot simply subtract $9 million from the cuts and infer the final funding distribution. Nor can one assume that the entire $20 million was ultimately lost to the DSN (NASA OIG, 2015).</p>
+<p>Having absorbed an $8.94 million reduction in fiscal year 2013, the DSN developed a plan to offset a further approximately $91.7 million for fiscal years 2014–2019. The measures included not only delaying installation of key DAEP facilities, but also reducing Goldstone contract expenses, cutting staff at JPL, Madrid and Canberra, closing antennas, and cancelling or postponing maintenance and facility work (NASA OIG, 2015).</p>
+<p>In particular, delaying the third Canberra antenna and installation of 80-kW transmitters at Madrid and Canberra was expected to save approximately $10 million in 2014 and 2015.</p>
+<p>But completing DAEP by 2025 would then entail an estimated additional $18.6 million in inflation costs during 2016–2018 as a consequence of those delays (NASA OIG, 2015).</p>
+<p>Postponing construction reduces spending in the current fiscal year. If the facilities will still be needed, however, they must eventually be built. NASA OIG noted the risk that some of these measures would increase overall network costs and prevent the DSN from realizing the savings it had expected to put toward DAEP (NASA OIG, 2015).</p>
+<p>The $18.6 million reappears in the next section. It is not a separate, unrelated figure. It was the inflation cost expected in fiscal years 2016–2018 because DAEP installations had been delayed. SCaN later asked the DSN to assess what would happen if that inflation allowance were also removed from its budget estimates (NASA OIG, 2015).</p>
+<h3 id="section-2-3">2.3 The DSN Demonstrated What Funding Shortfalls Would Prevent It from Doing</h3>
+<p>While preparing its fiscal year 2016 budget request, SCaN asked the DSN to assess the consequences of removing inflation funding included in its budget estimates for fiscal years 2016–2018. The amount was $18.6 million—the same three-year inflation cost discussed in Section 2.2 (NASA OIG, 2015).</p>
+<p>The DSN replied that removing the $18.6 million would force it to defer eleven work items. These were not eleven projects that were all actually postponed. They were an advance impact assessment showing what would happen if the additional cuts were made (NASA OIG, 2015).</p>
+<p>The implications were serious.</p>
+<p>Six of the eleven items were in the DSN&#x27;s highest risk category, and the remaining five were in the next-highest category. The work included replacement of elevation bearings on the 70-meter antennas at all three DSN complexes; remediation of cracks in the foundation of Madrid&#x27;s 70-meter antenna; and work to address deterioration of concrete in the foundation of a 34-meter antenna at Madrid.</p>
+<p>NASA OIG warned that deferring this work would increase the risk of antenna failures or of antennas having to be taken out of operation for extended maintenance periods. Although the DSN had not calculated the additional costs of delay, the OIG also noted that future inflation could make the work more expensive (NASA OIG, 2015).</p>
+<p>The information the DSN presented was more than a general claim that its budget was insufficient.</p>
+<p>Funding to be cut<br>↓<br>Work that would have to be deferred<br>↓<br>Facilities affected<br>↓<br>Risk of failure or prolonged outage<br>↓<br>Risk classification</p>
+<p>Before any further cut was decided, the DSN had shown which projects would be affected by removing particular funds and what risks would follow.</p>
+<p>NASA OIG also identified weaknesses in the DSN&#x27;s longer-term planning.</p>
+<p>Since 2010, DAEP budget materials had not included complete life-cycle cost estimates and a detailed funding plan through 2025. Nor had the savings planned for DAEP investment in 2019–2025 been updated.</p>
+<p>When NASA OIG requested an updated cost estimate through 2025, the DSN provided a figure of $393.1 million, an increase of $30.7 million over the 2009 estimate (NASA OIG, 2015).</p>
+<p>The DSN&#x27;s financial planning was therefore not complete. Gaps remained in its long-term estimate and funding plan for DAEP as a whole. Even so, it had provided management with information about necessary work on particular facilities and the risks that further cuts would create.</p>
+<h3 id="section-2-4">2.4 How Did JPL and SCaN Respond to DSN Requirements?</h3>
+<p>The DSN Project Office is located at JPL. According to NASA OIG&#x27;s 2015 audit, it managed all three DSN communications complexes and administered a fiscal year 2014 budget of $210 million covering operations, maintenance and infrastructure upgrades (NASA OIG, 2015).</p>
+<p>Once the DSN identified necessary facilities, costs and risks, that information had to be translated into budget requests and implementation plans. The relationship was not merely a one-way transmission of information upward from the DSN.</p>
+<p><strong>DSN</strong><br>Identifies necessary infrastructure, maintenance, costs and risks</p>
+<p>↓</p>
+<p><strong>JPL</strong><br>Manages DSN requirements and incorporates them into budget requests</p>
+<p>↓</p>
+<p><strong>SCaN</strong><br>Coordinates investment and budgets across NASA&#x27;s space communications programs</p>
+<p>↓</p>
+<p><strong>JPL</strong><br>Communicates the results of budget decisions and implementation policies back to the DSN</p>
+<p>↓</p>
+<p><strong>DSN</strong><br>Performs equipment upgrades and maintenance within allocated resources</p>
+<p>The eleven items identified by the DSN in 2015 were an impact assessment for possible additional cuts, not a record that every item was postponed. NASA&#x27;s 2016 Agency Financial Report, meanwhile, stated that NASA and JPL had actually conducted risk assessments of DSN sustainment and aging infrastructure and had prioritized the extension or deferral of certain work (NASA, 2016).</p>
+<p>The eleven items flagged by the DSN in 2015 must therefore not be treated as identical to the work actually extended or deferred by NASA and JPL afterward. Publicly available documents do not establish how far the two lists overlapped.</p>
+<p>In 2016, NASA and JPL explained that they had prioritized sustainment and aging-infrastructure work within limited funding and would respond if risks rose to “unacceptable levels.” They also stated that these funding reductions had not affected routine operations and maintenance and that operational capability remained above required levels (NASA, 2016).</p>
+<p>When resources are constrained, prioritization is necessary if not all work can be performed at once. But calling an item “deferred” requires a new implementation date and the funding needed when that date arrives. Without an implementation date or alternative source of funds, there is no assurance that the work can actually be done later.</p>
+<p>In RapasAI Lab&#x27;s assessment, a deferral without a new deadline or identified replacement funding is, for management purposes, effectively equivalent to cancellation. <strong>This is not a claim that NASA OIG formally classified the work as “cancelled”; it is an assessment of the adequacy of the management plan for sustaining the facilities.</strong></p>
+<p>NASA&#x27;s 2016 explanation said that action would be taken if risks reached unacceptable levels. The public explanation, however, does not establish the specific conditions that would constitute that level of risk, when deferred work would be done, or which funding source would be used at that time (NASA, 2016).</p>
+<p>Nor is it possible to track consistently, from public materials, whether the risks associated with the high-risk work that the DSN identified in 2015 were reduced by alternative technical measures or whether the work was postponed for budgetary reasons while elevated risks remained.</p>
+<p>Thus, we can establish that the DSN identified risks. We can also establish that NASA and JPL conducted risk assessments and deferred some work. But the public record does not provide a complete picture of how individual technical warnings were translated into decisions to implement work, defer it, or adopt alternatives.</p>
+<h3 id="section-2-5">2.5 Could Outsiders Verify the Financial Decisions of Space Communications Programs?</h3>
+<p>The problem identified in Section 2.4 was not simply insufficient funding. It was whether outsiders could consistently trace how technical requirements presented by the DSN became budget decisions through JPL and SCaN.</p>
+<p>The $20 million labelled “Other SCaN Priorities” in the 2013 reductions is one example. Its category and amount can be verified, but NASA OIG&#x27;s public audit report does not establish which specific activities were prioritized or why (NASA OIG, 2015).</p>
+<p>In another NASA communications network, an important financial decision could not be reconstructed when auditors subsequently tried to establish its rationale. In 2014, NASA OIG audited the Space Network, which supports communications with spacecraft near Earth.</p>
+<p>In 2006, NASA had entered into an agreement under which some users would pay part of the development cost of the TDRS K and L satellites up front and, in return, would not be charged for Space Network services for twenty-five years. NASA OIG estimated the value of that free usage at about $1.8 billion. NASA had not, however, developed an adequate plan to compensate for the user-fee income forgone under the arrangement (NASA OIG, 2014).</p>
+<p>NASA OIG also attempted to determine why this decision had been made. But NASA had not retained documents substantiating the decision, and the officials involved had left the agency. Consequently, the OIG could not establish the reasons (NASA OIG, 2014).</p>
+<p>The same audit reported additional pressure to reduce Space Network funding. The SCaN Program Office had asked that network to cut its annual operating budget from at least $115 million to $85 million. NASA OIG explained that SCaN was seeking these reductions to bring its portfolio within its budget (NASA OIG, 2014).</p>
+<p>This Space Network example does not establish that the DSN&#x27;s $20 million was transferred to the Space Network. Nor does a failure to retain records of decisions at the Space Network prove that the same thing happened at the DSN.</p>
+<p>What it does establish is that, within NASA&#x27;s space communications programs, there has been an actual case in which auditors could not subsequently determine the rationale for a significant financial decision.</p>
+<p>For the DSN as well, public documents establish necessary equipment and risks, the amounts of budget reductions, and some of the responses taken. They do not, however, allow a complete tracing of which requirements JPL submitted to SCaN, which SCaN approved or rejected, and how those decisions became final funding allocations and work plans.</p>
+<p>In other words, the problem was not that the DSN lacked information about its needs. It was that publicly available documents do not adequately reveal how its technical requirements were handled by management, which work ultimately received funding, and which was postponed.</p>
+<h3 id="section-2-6">2.6 Audits Identified the Problems, but the DSN&#x27;s Equipment Shortage Persisted</h3>
+<p>Five years after the 2015 audit, NASA OIG audited NASA&#x27;s planetary science portfolio in 2020 and found that the DSN was not receiving sufficient funding for repairs, maintenance and modernization. It assessed that budget reductions were affecting DSN performance and putting its future reliability at risk (NASA OIG, 2020).</p>
+<p>On the equipment side, problems had been reported with transmitters, aging bearings and gearboxes on all three 70-meter antennas at Goldstone, Canberra and Madrid. Madrid&#x27;s 34-meter High Efficiency (HEF) antenna had also been in use for over thirty years and required hardware repairs and IT security upgrades. Four new 34-meter Beam Waveguide (BWG) antennas were under construction, but three had been delayed by construction and subcontracting problems (NASA OIG, 2020).</p>
+<p>NASA OIG classified nineteen DSN antenna and radar facilities as follows: two fully functional; eight needing mechanical or electrical repairs; two operating in a limited capacity; four not yet built; two decommissioned; and one inoperable. Because those nineteen included facilities not yet constructed and facilities already decommissioned, <strong>this does not mean that seventeen out of nineteen facilities were broken</strong> (NASA OIG, 2020).</p>
+<p>Funding remained under strain.</p>
+<p>According to NASA OIG, the DSN&#x27;s annual budget had been cut repeatedly over the preceding decade and had not risen substantially above its $208 million level in 2012.</p>
+<p>At the time of the 2020 audit, moreover, SCaN-wide budget requests for fiscal years 2020 through 2023 were projected to decline by $126 million, or 27 percent. This was a projection based on budget requests as of 2020, not a record of an actual $126 million reduction by 2023. The figure also referred to SCaN as a whole, not solely to the DSN (NASA OIG, 2020).</p>
+<p>SCaN officials, for their part, explained that by using alternative operational approaches to reduce costs, the DSN had enough capability and resources within its planned budgets to support missions and carry out necessary repairs. NASA OIG countered that maintenance and upgrades—including work on 70-meter antennas and the Madrid HEF antenna—were in fact being deferred, with potential consequences for future missions (NASA OIG, 2020).</p>
+<p>A gap is apparent between management&#x27;s explanations and the outcomes verified by the auditors.</p>
+<p><strong>2015 — NASA OIG</strong><br>The DSN estimated that an additional cut would require deferral of eleven work items, including high-risk work</p>
+<p>↓</p>
+<p><strong>2016 — NASA and JPL</strong><br>Explained that they had assessed risks to sustainment and aging infrastructure, and had extended or postponed some work; said they would respond if risks reached “unacceptable levels”</p>
+<p>↓</p>
+<p><strong>2020 — SCaN</strong><br>Explained that necessary repairs could be accommodated within the planned budget</p>
+<p>↓</p>
+<p><strong>2020 — NASA OIG</strong><br>Verified that maintenance and upgrades were in fact being deferred and assessed funding for DSN repairs, maintenance and modernization as insufficient</p>
+<p>The DSN did not lack an infrastructure plan altogether. In its response to the 2020 audit, NASA stated that the DSN prepared annual roadmaps covering new antennas, capability upgrades and aging-infrastructure work, and maintained a long-term maintenance plan (NASA OIG, 2020).</p>
+<p>The DSN had generated funds for new facilities by economizing within its own budget. When additional cuts were contemplated, it had also identified which projects would be affected and what risks would arise at particular facilities. Nevertheless, in 2020 NASA OIG assessed funding for repairs, maintenance and modernization as inadequate.</p>
+<p>The DSN had identified necessary facilities and risks. Yet it was not possible to verify that management had successfully translated those requirements into sufficient funding and implementation plans, and shortages in maintenance and modernization persisted in 2020.</p>
+<p>The next chapter examines how JPL continued operating the DSN when the resources it needed were not fully secured.</p>
+<h4 class="reference-title" id="refs-3">References — Chapter 2</h4>
+<p>NASA&#x27;s Management of the Deep Space Network. NASA Office of Inspector General, March 26, 2015.<br><a href="https://oig.nasa.gov/audits/ig-15-013/" rel="noopener noreferrer">https://oig.nasa.gov/audits/ig-15-013/</a><br><a href="https://oig.nasa.gov/docs/IG-15-013.pdf" rel="noopener noreferrer">https://oig.nasa.gov/docs/IG-15-013.pdf</a></p>
+<p>Space Communications and Navigation: NASA&#x27;s Management of the Space Network. NASA Office of Inspector General, April 29, 2014.<br><a href="https://oig.nasa.gov/docs/IG-14-018.pdf" rel="noopener noreferrer">https://oig.nasa.gov/docs/IG-14-018.pdf</a></p>
+<p>NASA FY 2016 Agency Financial Report. National Aeronautics and Space Administration (NASA), 2016.<br><a href="https://www.nasa.gov/budgets-plans-and-reports/agency-financial-reports/" rel="noopener noreferrer">https://www.nasa.gov/budgets-plans-and-reports/agency-financial-reports/</a><br><a href="https://www.nasa.gov/wp-content/uploads/2021/08/nasa_fy2016_agency_financial_report.pdf" rel="noopener noreferrer">https://www.nasa.gov/wp-content/uploads/2021/08/nasa_fy2016_agency_financial_report.pdf</a></p>
+<p>NASA&#x27;s Planetary Science Portfolio. NASA Office of Inspector General, September 16, 2020.<br><a href="https://oig.nasa.gov/audits/ig-20-023/" rel="noopener noreferrer">https://oig.nasa.gov/audits/ig-20-023/</a><br><a href="https://oig.nasa.gov/docs/IG-20-023.pdf" rel="noopener noreferrer">https://oig.nasa.gov/docs/IG-20-023.pdf</a></p>
+<p>NASA&#x27;s Deep Space Network: Current Management Structure Is Not Conducive to Effectively Matching Resources with Future Requirements. U.S. Government Accountability Office (GAO), April 27, 2006.<br><a href="https://www.gao.gov/products/gao-06-445" rel="noopener noreferrer">https://www.gao.gov/products/gao-06-445</a></p>
+<p>GAO-06-445, Accessible Text. U.S. Government Accountability Office (GAO), May 22, 2006.<br><a href="https://www.gao.gov/assets/a249906.html" rel="noopener noreferrer">https://www.gao.gov/assets/a249906.html</a></p>
+<h2 id="chapter-3">3. Why Did JPL Continue DSN Communications Operations Beyond Available Capacity?</h2>
+<h3 id="section-3-1">3.1 How Did Communications Demand Beyond Capacity Degrade DSN Service Quality?</h3>
+<p>In 2023, NASA&#x27;s Office of Inspector General (NASA OIG) reported that DSN antennas were already operating at capacity and that the network was “oversubscribed”: missions were requesting more communications time than the DSN could supply.</p>
+<p>At certain times, demand exceeded supply capacity by as much as 40 percent. This was not a problem that had suddenly appeared. According to NASA OIG, demand had exceeded DSN capacity for more than thirty years.</p>
+<p>When calculating available DSN capacity, one cannot assume that an antenna can be used for communications all twenty-four hours of every day. Continuing deep-space communications requires downtime for inspection and maintenance of antennas and transmitting and receiving equipment. In calculating one antenna&#x27;s capacity over twenty-eight days, NASA OIG deducted 20 percent of the total 672 hours for maintenance and treated approximately 540 hours as usable capacity.</p>
+<p>28 days × 24 hours = 672 hours<br>↓<br>Reserve 20 percent for maintenance<br>↓<br>Approximately 540 hours of available capacity</p>
+<p>That 540-hour estimate accounts for the maintenance necessary to keep the antenna operating.</p>
+<p>In the short term, it may be possible to accommodate demands by coordinating time among missions or combining antennas. But when demand across the DSN exceeds its supply capacity, it cannot provide every mission with all the communications time it requests.</p>
+<p>NASA OIG reported instances in which several missions, including Mars Odyssey, Voyager 2 and New Horizons, had shortfalls of between 8,500 and 15,000 hours relative to the tracking time they requested over the preceding five years.</p>
+<p>A communications shortfall means more than being unable to use an antenna at a preferred time. In deep-space exploration, data are received from spacecraft, examined on the ground, used to determine the next action, and followed by new commands sent back to the spacecraft. Delays in communications delay the subsequent operations as well.</p>
+<p>These consequences were visible in the work of the Perseverance rover on Mars.</p>
+<p>According to NASA OIG, Perseverance was affected by DSN oversubscription on at least seven occasions in twenty-one months. In reported cases, the team could not receive the data needed to choose the rover&#x27;s next destination and had to wait for another communications opportunity, or missed a chance to transmit driving commands and thereby delayed the progress of exploration.</p>
+<p>Receive the rover&#x27;s current position and surrounding data<br>↓<br>Examine the data on Earth<br>↓<br>Select the next destination and route<br>↓<br>Transmit driving commands<br>↓<br>The rover advances to its next location</p>
+<p>If communications time cannot be secured at some point in this sequence, the following operations cannot proceed. Insufficient DSN capacity was manifesting itself not only as lost communications time but also as delays to spacecraft operations and missions themselves.</p>
+<p>The effects included:</p>
+<ul><li>Inability to secure necessary communications time</li><li>Delayed reception of data</li><li>Delayed transmission of commands</li><li>Delays to spacecraft operations and the progress of exploration</li></ul>
+<p>In 2022, an even greater demand was added to a DSN already operating beyond capacity: Artemis I.</p>
+<h3 id="section-3-2">3.2 What Was Sacrificed to Support Artemis I?</h3>
+<p>In November 2023, the NASA Advisory Council&#x27;s Human Exploration and Operations Committee discussed the DSN&#x27;s capacity shortage.</p>
+<p>The committee expressed concern that the DSN lacked sufficient capacity to support all of NASA&#x27;s planned missions. SCaN responded that JPL, which manages the DSN, also recognized the shortage and was analyzing the DSN capacity Artemis would need.</p>
+<p>JPL was considering not only Artemis but also additional demand from CubeSats, the Department of Defense (DoD), and others. It also identified a shortage of funding to increase staffing. In other words, JPL was operating the DSN while aware that communications demand exceeded available capacity.</p>
+<p>Artemis I launched under those conditions on November 16, 2022. It was an uncrewed test flight of the Space Launch System (SLS) and Orion spacecraft to the vicinity of the Moon. Several deep-space CubeSats were also deployed on the same launch.</p>
+<p>According to the NASA Advisory Council minutes, the twenty-six-day Artemis I mission required communications capacity equivalent to 3.5 DSN antennas. The Artemis I and CubeSat requirements were thus added to a network already facing more demand than it could supply.</p>
+<p>Material presented by SCaN in November 2023 shows the following changes to DSN schedules from week 46 through week 49 of 2022:</p>
+<ul><li>Artemis I: 903 additional hours</li><li>CubeSats: 871 additional hours</li><li>Existing Science Mission Directorate (SMD) missions: 1,585 fewer hours</li><li>DSN maintenance: 509 fewer hours</li></ul>
+<p>The 903 and 871 hours are <strong>not</strong> the total communications time used by Artemis I and CubeSats over their entire missions. They represent increases in scheduled DSN communications time during this period. During the same period, scheduled time for existing SMD missions and the DSN&#x27;s own maintenance both fell.</p>
+<p>More communications time for Artemis I and CubeSats<br>↓<br>Less time for existing SMD missions<br>+<br>Less time for DSN maintenance</p>
+<p>These figures show that the response to additional demand was not simply to add sufficient new supply capacity. Instead, the DSN redistributed existing capacity and adjusted time previously assigned to other missions and maintenance to secure communications for Artemis I and the CubeSats.</p>
+<p>The 509-hour reduction in maintenance time is particularly important. As Section 3.1 established, maintenance time is not idle capacity that happens to be unused for communications.</p>
+<p>It is time necessary to maintain antennas and communications equipment so that the same capacity will remain available in the future. The fact that even this time was squeezed means that the response to increased communications demand affected the DSN&#x27;s own sustainment.</p>
+<p>SCaN&#x27;s material also stated that such maintenance deferrals were not a sustainable approach.</p>
+<p>The NASA Advisory Council minutes likewise record an understanding that the DSN could not support all demand. Even so, support for Artemis was affirmed, with trade-offs and deconflicting among other communications requirements described as necessary.</p>
+<p>Rather than refuse Artemis support because the DSN lacked capacity:</p>
+<p>Support Artemis<br>↓<br>Reallocate limited DSN communications capacity<br>↓<br>Adjust communications time for existing missions<br>+<br>Adjust maintenance time</p>
+<p>That was how operations continued.</p>
+<p>JPL and SCaN were also considering future capacity increases.</p>
+<p>The NASA Advisory Council minutes mentioned:</p>
+<ul><li>New DSN communications capacity and infrastructure upgrades</li><li>Lunar Exploration Ground Sites (LEGS)</li><li>Lunar communications and navigation relay services</li><li>Cooperation with international partners</li><li>Locations for additional 34-meter antennas</li></ul>
+<p>As of November 2023, however, these measures were still under development. Asked whether there were firm commitments and schedules, SCaN described them as a “work in progress.” Implementation would also require NASA to secure the necessary resources.</p>
+<p>Even while future capacity expansion was being pursued, current missions could not simply be stopped until it was complete. The DSN therefore handled increasing demand by adjusting communications and maintenance time within its existing network.</p>
+<p>Such a method can meet immediate communications requirements. But an operational model that postpones maintenance to free up communications time has limits.</p>
+<h3 id="section-3-3">3.3 What Happened When Maintenance Was Deferred in Favor of Communications?</h3>
+<p>On the eighteenth day of Artemis I&#x27;s flight, a communications failure at Goldstone affected the entire DSN complex. Communications with Orion were lost for 4.5 hours.</p>
+<p>Artemis I was not the only mission affected. According to NASA OIG, seventeen NASA and international partner missions were affected, and thousands of minutes of telemetry data were lost.</p>
+<p>The failure centered on Goldstone&#x27;s Private Cloud Appliance (PCA). The PCA was a computing system supporting antenna operations at Goldstone and contained twenty-four hard disks. It had built-in redundancy and was designed to keep operating even if as many as four disks failed.</p>
+<p>However, several hard disks had already failed when the Artemis I communications outage occurred. According to NASA OIG, two of them had failed during the twelve months before Artemis I. The PCA also used outdated software, which prevented failure notifications and automatic recovery functions from working as intended.</p>
+<p>Under normal conditions, the sequence would be:</p>
+<p>A hard disk fails<br>↓<br>A warning appears<br>↓<br>Maintenance staff replace the disk<br>↓<br>Redundancy is restored</p>
+<p>In practice, the sequence was:</p>
+<p>A hard disk fails<br>↓<br>No proper warning appears<br>↓<br>The failure goes undetected<br>↓<br>Redundancy declines<br>↓<br>Additional failures accumulate<br>↓<br>The system stops</p>
+<p>NASA OIG assessed that years of deferred network maintenance and deteriorating hardware substantially contributed to the Goldstone outage.</p>
+<p>Maintaining the PCA required shutting the system down. Since the PCA supported antenna operations at each DSN complex, stopping it also prevented routine communications service during that period.</p>
+<p>When communications demand is low, time can be reserved for maintenance. But the DSN was already facing substantial demand. Before an important mission such as Artemis I, it became even harder to secure time to shut down equipment.</p>
+<p>NASA OIG reported that DSN personnel postponed PCA maintenance and upgrades before and during Artemis I to keep the network available.</p>
+<p>Keep communications running<br>↓<br>Find it difficult to shut facilities down for maintenance<br>↓<br>Defer maintenance and upgrades<br>↓<br>Equipment deterioration remains<br>↓<br>The risk of failure rises<br>↓<br>Communications themselves stop</p>
+<p>Postponing maintenance to continue communications had increased the longer-term risk that communications could no longer be sustained.</p>
+<p>After Artemis I, SCaN established a Failure Review Board in January 2023 to examine the Goldstone outage. The board found weaknesses in NASA&#x27;s risk assessment and prioritization. The PCA needed to be treated as a problem requiring near-term attention, but action had been delayed because the system possessed internal redundancy.</p>
+<p>The Failure Review Board called on the DSN and SCaN to:</p>
+<ul><li>Reassess risks</li><li>Record newly identified risks when necessary</li><li>Press more strongly for additional agency-wide NASA funding</li><li>Increase the time available to shut down equipment for maintenance</li></ul>
+<p>These recommendations show that sustaining a communications network requires more than minimizing interruptions to communication.</p>
+<p>To keep equipment in service over long periods, operators must secure the time needed to suspend communications and perform maintenance and upgrades.</p>
+<p>The 509-hour maintenance reduction during Artemis I support cannot be directly attributed as the cause of the PCA outage. No source establishes that the reduction of 509 hours caused the PCA failure.</p>
+<p>What can be verified is that DSN maintenance time decreased during Artemis I support, that maintenance had been deferred for years, and that this deferred maintenance and equipment deterioration substantially contributed to the Goldstone outage.</p>
+<p>Sustaining the network over the long term required not only time for communications but also time to stop communicating and maintain the equipment.</p>
+<h3 id="section-3-4">3.4 What Did the DSS-14 Accident Reveal About Operations That Prioritized Communications?</h3>
+<p>On September 16, 2025, a serious accident occurred at Deep Space Station 14 (DSS-14), the 70-meter antenna at the Goldstone Deep Space Communications Complex.</p>
+<p>While tracking Juno, DSS-14 rotated in azimuth beyond its designed range. NASA investigated the incident as a Type A mishap, and the Mishap Investigation Board (MIB) completed its report dated March 30, 2026.</p>
+<p>This incident was separate from the PCA failure discussed in Section 3.3.</p>
+<p>The MIB did <strong>not</strong> conclude that the DSS-14 accident was caused by DSN demand exceeding supply capacity. Nor did it identify inadequate funding as a direct cause.</p>
+<p>The accident investigation revealed more than technical problems with DSS-14.</p>
+<p>In fourteen findings, the MIB identified multiple operational problems, including:</p>
+<ul><li>Insufficient staff training</li><li>Failure to follow standard operating procedures</li><li>Operation with a nonfunctional hydraulic limit system</li><li>Inadequate documentation supporting maintenance work</li><li>Inadequate pre-work planning</li><li>Deficiencies in DSN and Goldstone operating procedures</li><li>Reliance on undocumented knowledge</li><li>Inadequate situational awareness and vigilance</li><li>Failure by the DSN project to establish sufficiently consistent practices and procedures across the three complexes</li></ul>
+<p>The accident cannot be explained solely by one operator&#x27;s actions. One issue the MIB emphasized was <strong>“personal heroics.”</strong></p>
+<p>The criticism was not directed at staff members&#x27; sense of responsibility. Rather, it described a situation in which efforts to restore equipment as quickly as possible, avoid interrupting communications, and keep operations going through individual exertion could take precedence over technical caution, established procedures and risk assessment.</p>
+<p>In Finding 5, the MIB determined that personnel and management at Goldstone had promoted personal heroics.</p>
+<p>Recommendation 1 did not limit the necessary improvement to Goldstone. It called on the SCaN Program, the DSN project and the Goldstone Deep Space Communications Complex (GDSCC) to place greater emphasis on <strong>technical rigor</strong> rather than personal heroics.</p>
+<p>The MIB recognized the importance of having DSN facilities available for scheduled data acquisition. It nevertheless emphasized that the goal should not be the next minute of operation but consistent, dependable operations over the long term.</p>
+<p>An abnormality occurs<br>↓<br>Stop the equipment temporarily<br>↓<br>Identify the cause and assess the risks<br>↓<br>Perform necessary tests and maintenance<br>↓<br>Verify safety and reliability<br>↓<br>Resume operations</p>
+<p>This process takes time, during which the antenna cannot be used for communications. But prioritizing short-term availability to save that time risks undermining the reliability needed to operate equipment safely over the long term.</p>
+<p>The MIB did not confine the issue to the Goldstone worksite. Recommendation 1 called for changes in culture at several management levels: the SCaN Program, DSN project and GDSCC.</p>
+<p>This does not establish that the same personal-heroics culture found at Goldstone also existed at Madrid or Canberra.</p>
+<p>The MIB specifically investigated the DSS-14 accident. The verified findings establish that a culture prioritizing short-term equipment availability existed at Goldstone and that its improvement was treated as a matter for DSN project and SCaN Program management as well as Goldstone staff. The investigation nevertheless made clear that sustaining DSN communications is not simply a matter of keeping equipment running for as long as possible.</p>
+<p>Why, then, did JPL continue assigning communications work to the DSN beyond its supply capacity?</p>
+<p>Publicly available primary sources do not establish which individuals within JPL decided, under what authority, against reducing communications operations, or how they evaluated the reasons for that decision. They do, however, reveal how the network was actually operated.</p>
+<p>NASA pursued missions including Artemis while recognizing the DSN&#x27;s capacity shortage. Even when the network could not support all demand, a policy of supporting Artemis was expressed.</p>
+<p>The response to the shortfall was not to reduce NASA&#x27;s missions to the limits of DSN capacity. Instead, operators continued communications by allocating existing capacity among missions and adjusting maintenance time.</p>
+<p>JPL was responsible for managing the DSN under those conditions. JPL did not determine NASA&#x27;s communications demand by itself. But, aware of the capacity shortage, it was responsible for deciding how limited communications time would be allocated, how maintenance time would be secured, and how the reliability of facilities and staff would be maintained.</p>
+<p>Even though the DSN lacked enough capacity, continuity of NASA missions took priority, and the shortfall was absorbed by adjustments inside the existing DSN. JPL managed that capacity-constrained network and was responsible for continuing communications operations.</p>
+<p>This approach kept communications with many missions going. But continuing communications operations is not the same as sustaining the DSN itself over the long term.</p>
+<p>When meeting communications demand consumes even the time reserved for maintenance, time may be secured for communications in the short run at the expense of the capacity to maintain facilities.</p>
+<p>The DSN&#x27;s supply shortfall had grown to the point where sustaining communications operations and sustaining the network itself were becoming increasingly difficult to reconcile.</p>
+<h4 class="reference-title" id="refs-4">References — Chapter 3</h4>
+<p>Audit of NASA&#x27;s Deep Space Network. NASA Office of Inspector General, July 12, 2023.<br><a href="https://oig.nasa.gov/wp-content/uploads/2023/12/ig-23-016.pdf" rel="noopener noreferrer">https://oig.nasa.gov/wp-content/uploads/2023/12/ig-23-016.pdf</a></p>
+<p>NAC Human Exploration and Operations Committee November 17 and 20, 2023 – Meeting Minutes. NASA Advisory Council, November 17 and 20, 2023.<br><a href="https://www.nasa.gov/wp-content/uploads/2024/01/heoc-november-2023-final-v2.pdf" rel="noopener noreferrer">https://www.nasa.gov/wp-content/uploads/2024/01/heoc-november-2023-final-v2.pdf</a></p>
+<p>SCaN Updates, Deep Space Network Updates and Technology. NASA Space Communications and Navigation, November 14, 2023.<br><a href="https://ntrs.nasa.gov/api/citations/20230015999/downloads/2023-11-14%20SCaN%20Presentation%20to%20NA-SSB_Rev1_103023.pdf" rel="noopener noreferrer">https://ntrs.nasa.gov/api/citations/20230015999/downloads/2023-11-14%20SCaN%20Presentation%20to%20NA-SSB_Rev1_103023.pdf</a></p>
+<p>NASA&#x27;s Readiness for the Artemis II Crewed Mission to Lunar Orbit. NASA Office of Inspector General, May 1, 2024.<br><a href="https://oig.nasa.gov/wp-content/uploads/2024/05/ig-24-011.pdf" rel="noopener noreferrer">https://oig.nasa.gov/wp-content/uploads/2024/05/ig-24-011.pdf</a></p>
+<p>Deep Space Station 14 (DSS-14) Azimuth Over-Rotation Mishap. NASA Mishap Investigation Board, March 30, 2026.<br><a href="https://www.nasa.gov/wp-content/uploads/2026/06/dss14-mishap-investigation-board-report-signed-final-redacted-hm-tagged-508.pdf" rel="noopener noreferrer">https://www.nasa.gov/wp-content/uploads/2026/06/dss14-mishap-investigation-board-report-signed-final-redacted-hm-tagged-508.pdf</a></p>
+<h2 id="chapter-4">4. How Can We Sustain the Deep Space Network?</h2>
+<h3 id="section-4-1">4.1 What Must the DSN Preserve?</h3>
+<p>What exactly must be preserved if the DSN is to survive?</p>
+<p>Maintaining large antennas and renewing aging equipment are indispensable. But preserving physical facilities is not the same as maintaining the capabilities of a deep-space communications network.</p>
+<p>The DSN&#x27;s role is to reliably transmit commands to spacecraft, receive observational data, and conduct precise tracking and measurements. It must be able to provide communications of the required quality at the required times. To do so, it must maintain its equipment properly, train technical personnel, and sustain safe, stable operations. Only when these elements are in place can it function as the communications infrastructure supporting deep-space exploration.</p>
+<p>Moreover, it is precisely because high-quality routine operations are established that the DSN can attempt even more difficult missions.</p>
+<p>When a mission poses demands that existing capabilities cannot meet, new technologies and operating methods must be developed. The technologies acquired in that process raise the DSN&#x27;s capabilities and make subsequent exploration possible.</p>
+<p>Part 3 of this series traced how the DSN developed its communications technologies to meet such demands. Part 4 examined the value those technologies created for deep-space exploration and science, as well as other fields.</p>
+<a class="related-card" href="https://note.com/rapasai_lab/n/ncc27996e9f0a" target="_blank" rel="noopener noreferrer"><div class="related-eyebrow">RELATED ARTICLE · PART 03</div><div class="related-title">Keeping Spacecraft Alive — The Evolution of DSN Communications Technology</div><div class="related-status">English translation coming soon · Read the Japanese original</div></a>
+<a class="related-card" href="https://note.com/rapasai_lab/n/n5b0557a3e9cf?app_launch=false" target="_blank" rel="noopener noreferrer"><div class="related-eyebrow">RELATED ARTICLE · PART 04</div><div class="related-title">What Has the Deep Space Network Made Possible?</div><div class="related-status">English translation coming soon · Read the Japanese original</div></a>
+<p>The DSN&#x27;s development has depended on the following relationship:</p>
+<p>Maintain high-quality routine operations<br>↓<br>Use that foundation to undertake more demanding missions<br>↓<br>Acquire new technologies and operating methods<br>↓<br>Increase the capabilities of the entire DSN and enable the next stage of exploration</p>
+<p>Routine operations are not in opposition to research and development. If reliability in routine operations is lost, so is the foundation for undertaking difficult missions. Conversely, if all efforts are devoted to preserving current capabilities and new technologies cease to be developed, future mission requirements will become impossible to meet.</p>
+<p>The goal, therefore, must be more than preserving today&#x27;s communications capability. It must be to sustain a DSN that can continue acquiring the capabilities future exploration demands, with high-quality routine operations as its foundation.</p>
+<p>What, then, must be decided to preserve such a DSN for the future?</p>
+<p>In 2006, the U.S. Government Accountability Office recommended that NASA identify the DSN&#x27;s short- and long-term communications requirements, compare them with existing infrastructure capacity, and present the plans and costs necessary to close any shortfall (GAO, 2006).</p>
+<p>As discussed in Chapter 1, those recommendations were intended to connect future capabilities with the resources required to deliver them.</p>
+<p>Sustaining the DSN over the long term requires taking this thinking further.</p>
+<p>First, the organization must articulate what kind of communications network it wants the DSN to remain.</p>
+<p>That could include defining:</p>
+<ul><li>The quality of communications, tracking and measurement that must be maintained in the future</li><li>The communications capabilities required for new exploration missions</li><li>The facilities that must be maintained or renewed, and a long-term infrastructure plan</li><li>Necessary personnel, maintenance, training and research and development</li><li>Funding needed to achieve all of these</li></ul>
+<p>This is different from choosing which facilities can be maintained within today&#x27;s budget. It means first defining the capabilities required for future deep-space exploration, and then identifying the infrastructure, personnel and funds needed to achieve them.</p>
+<p>Chapter 3 examined how the DSN continued communications operations while suffering resource shortfalls. But the efforts of operating personnel to keep communications going are different from an organization&#x27;s responsibility to sustain the network in the future.</p>
+<p>The efforts of frontline staff alone cannot secure long-term capital investment or change management structures.</p>
+<p>First, define the condition in which the DSN should be preserved. Then identify the resources needed to achieve it and what cannot be secured under the current arrangements.</p>
+<p>That is where the discussion of how to preserve the DSN should begin.</p>
+<h3 id="section-4-2">4.2 How Could the DSN Be Preserved?</h3>
+<p>Even if the DSN clearly defines the form it wants to preserve for the future, doing so will not automatically secure the necessary facilities and funding.</p>
+<p>As Chapters 1 through 3 showed, the existing management arrangements had not secured sufficient resources for the DSN, and maintaining communications operations under those conditions had also become increasingly difficult.</p>
+<p>If that is the case, could the question of the DSN&#x27;s survival be opened up beyond its existing management structure?</p>
+<p>The DSN itself does not need to have a fully formed reconstruction plan in hand.</p>
+<p>There is no need to begin by prescribing a specific solution, such as “establish an independent institution” or “create a dedicated fund.”</p>
+<p>The first message should be what kind of DSN it wants to preserve for the future and why achieving that under current arrangements is difficult. The next step is to find partners willing to consider how that future could be realized.</p>
+<p>NASA Headquarters is the first potential counterpart.</p>
+<p>The DSN does not exist solely for one exploration mission. It is shared communications infrastructure used by multiple missions and supporting future exploration. Maintaining and expanding it involves long-term decisions for NASA as a whole, not just individual missions.</p>
+<p>If problems have not been solved through the SCaN–JPL management route, one possibility is to present the required DSN capabilities and investments directly to NASA Headquarters for consideration.</p>
+<p>NASA OIG and the GAO also deserve attention.</p>
+<p>NASA OIG audited DSN operations and capital investment in 2015 and 2023. The GAO raised questions about DSN management and future communications requirements in 2006.</p>
+<p>Both organizations have records of investigating DSN problems and calling for improvements from their respective institutional positions.</p>
+<p>Neither NASA OIG nor the GAO allocates the DSN&#x27;s budget directly or creates a new operating organization. They can, however, examine management problems and future risks and provide evidence for decisions by NASA and Congress.</p>
+<p>If they take the DSN&#x27;s long-term survival seriously and help prompt steps toward a solution, they could become important partners.</p>
+<p>In particular, another GAO review of DSN governance and funding could be requested through the U.S. Congress.</p>
+<p>How far were the problems identified in 2006 remedied by NASA&#x27;s subsequent actions? Can the existing arrangements sustain the network over the long term? Is a different management model necessary?</p>
+<p>Independent examination of such questions could be a starting point for designing a reconstruction plan.</p>
+<p>The DSN, however, is not a separate legal entity. It operates within NASA&#x27;s and JPL&#x27;s management arrangements. The authority and procedures under which operational and technical units could raise concerns with outside organizations would therefore need to be established.</p>
+<p>That does not mean potential partners must be limited to the existing management organizations.</p>
+<p>Other countries&#x27; space agencies, research institutions, organizations that use the DSN, and companies involved in deep-space communications could also be considered as partners.</p>
+<p>Unlike audit and policy organizations, these parties might be able to participate in research and development, share facilities or help bear the costs of expanding capacity.</p>
+<p>The form of cooperation actually possible would depend on discussions with those involved. Even so, there is value in organizations that need the DSN jointly considering how it can be sustained.</p>
+<p>Cooperation with outside parties might even reveal approaches that would not have occurred to those working inside the DSN.</p>
+<p>“We want to preserve this high-quality deep-space communications network for the future. But doing so is difficult under the present arrangements. Please work with us to consider how it can be achieved.”</p>
+<p>Opening the problem to others in this way, and seeking partners willing to help, could itself be a step toward rebuilding the DSN.</p>
+<h3 id="section-4-3">4.3 What Institutional Arrangements Could Support the DSN?</h3>
+<p>If the DSN&#x27;s future is considered with outside partners, alternatives to its current governance and financing arrangements can also be examined.</p>
+<p>What kinds of arrangements might be possible?</p>
+<p>The first issue is who should be responsible for the DSN&#x27;s long-term operation.</p>
+<p>One option is to improve the existing NASA–SCaN–JPL structure.</p>
+<p>For example, the route by which NASA Headquarters directly receives DSN requirements for infrastructure investment and research and development could be strengthened. The aim would be to connect needs that have failed to result in necessary investment through the existing management route with NASA-wide decisions.</p>
+<p>Simply getting requirements to NASA Headquarters would not be enough. The responsible decision-maker for necessary investment, and the party accountable for implementing it, would also have to be identified.</p>
+<p>Another possibility is to establish a management entity dedicated to the DSN.</p>
+<p>Such an entity would treat routine operations, maintenance, infrastructure renewal, and research and development as connected responsibilities and be accountable for maintaining the network&#x27;s capabilities over the long term. It might enjoy greater autonomy within NASA, or be established as an institution more independent from NASA.</p>
+<p>The point of greater independence would not simply be to move away from SCaN or JPL. It would be to enable continuing decisions about infrastructure investment and research and development based on the DSN&#x27;s own long-term needs.</p>
+<p>But an independent organization without adequate funding would repeat the same problems. Ownership and management of facilities, coordination with NASA exploration missions, and operational responsibilities would also need to be determined.</p>
+<p>One possible approach would therefore be a research and operating institution with substantial autonomy from NASA but long-term support from the U.S. government.</p>
+<p>Greater institutional independence does not have to mean losing U.S. government support. It is worth considering different organizational and financial arrangements that would maintain the DSN as an important U.S. research infrastructure.</p>
+<p>There is also the possibility of joint international operation by multiple space agencies.</p>
+<p>If countries and organizations that need deep-space communications supported the DSN together, the costs of infrastructure investment and research and development might be shared. On the other hand, issues including control of U.S.-owned facilities and technology, cost allocation among countries, and priorities for communications access would have to be resolved.</p>
+<p>Possible governance and operating arrangements therefore include:</p>
+<ul><li>Improving the current NASA–SCaN–JPL structure</li><li>Strengthening direct management channels between NASA Headquarters and the DSN</li><li>Creating a management body dedicated to the DSN</li><li>Increasing autonomy within NASA</li><li>Establishing a research and operating institution with greater independence from NASA</li><li>Considering joint international operation</li></ul>
+<p>None of these options necessarily resolves the problem by itself.</p>
+<p>Unless it is clear who decides what investment the DSN needs and who is responsible for carrying it out, management problems will remain even if the organizational form changes.</p>
+<p>The next issue is how to secure funding.</p>
+<p>The DSN needs continuing funds not only for daily communications services but also for maintenance, equipment renewal, and research and development.</p>
+<p>Chapters 2 and 3 examined how maintenance and upgrades had come under pressure amid budgetary and capacity shortages. To avoid repeating the same problems, the DSN needs arrangements that can support both the cost of maintaining current communications services and the investment needed to secure future capabilities over the long term.</p>
+<p>One option is a dedicated DSN budget.</p>
+<p>This would mean clearly identifying the funding required for the DSN as a whole and managing its distribution among routine operations, maintenance, equipment renewal, and research and development. If necessary funding is denied, it would also be easier to show what could no longer be done.</p>
+<p>Multi-year appropriations or a fund could also support long-term infrastructure renewal and research and development.</p>
+<p>Renewing large antennas and developing new communications technologies can take several years. There is value in arrangements that permit continuing investment without excessive dependence on single-year budget decisions.</p>
+<p>Creating a fund does not itself generate new money. The question of who would contribute funds and how those contributions could be sustained would still have to be answered.</p>
+<p>While retaining U.S. government support as the foundation, it might also be possible to ask other countries&#x27; space agencies and user organizations to share part of the cost.</p>
+<p>Potential funding sources include:</p>
+<ul><li>Long-term financial support from the U.S. government</li><li>A dedicated DSN budget and multi-year funds</li><li>Contributions shared by other countries&#x27; space agencies</li><li>Payments by user organizations</li><li>Income from commercial users</li><li>Joint development and shared costs with research institutions</li></ul>
+<p>Combining sources of funding would broaden the available options.</p>
+<p>However, introducing user charges would require attention to equitable access to communications services.</p>
+<p>If missions able to pay more were given priority for communications time, scientifically important missions with limited funds could be disadvantaged.</p>
+<p>Nor can one assume that user fees for communications services alone would cover research and development needed to prepare for difficult future missions.</p>
+<p>At a minimum, funding for the DSN needs to distinguish among:</p>
+<p>Funding for routine operations<br>↓<br>Funding for maintenance and infrastructure renewal<br>↓<br>Funding for future capacity expansion and research and development</p>
+<p>Distinguishing these purposes is not an allegation that research and development funds were previously diverted to routine operations. It is a way to consider arrangements that can continuously secure the resources needed for each purpose.</p>
+<p>Even appropriate governance and financing arrangements would not be sufficient on their own.</p>
+<p>There must also be a way for outsiders to verify whether the necessary investments were actually made.</p>
+<p>The GAO&#x27;s 2006 audit issued three recommendations concerning the DSN&#x27;s own future requirements, infrastructure capacity and necessary investment. But the materials NASA submitted afterward did not establish implementation of the requested improvements, and all three were closed as “Closed – Not Implemented” (GAO, 2006 and recommendation tracking records).</p>
+<p>That determination did not mean that NASA never invested in the DSN afterward. It meant that sufficient evidence had not been presented for the GAO to recognize implementation of the management improvements it required.</p>
+<p>To avoid repeating the same problem, it must be possible to trace how DSN requirements were evaluated and acted upon.</p>
+<p><strong>DSN</strong> identifies the necessary facilities, personnel and funding<br>↓<br><strong>Management</strong> accepts, rejects or defers the requests<br>↓<br><strong>Approved funding</strong> is allocated<br>↓<br><strong>Maintenance, upgrades and research and development</strong> are carried out<br>↓<br><strong>Uncompleted work and remaining risks</strong> are documented<br>↓<br><strong>External oversight</strong> verifies the decisions and their implementation</p>
+<p>With records of this kind, if upgrades are delayed, it becomes possible to investigate whether the needed funds were denied, whether problems arose after allocations were made, or whether another factor was responsible.</p>
+<p>Possible oversight measures include appropriate information-sharing with NASA OIG, reporting necessary funding and risks to Congress, and requesting additional GAO examinations through Congress.</p>
+<p>The GAO and NASA OIG do not decide investments, but they can provide external scrutiny of management decisions and their implementation.</p>
+<p>Rebuilding the DSN requires an integrated approach to <strong>governance, finance and oversight</strong>.</p>
+<p>Even a highly autonomous management body cannot maintain facilities without funding. Even with adequate funding, projects may fail to advance if responsibility for investment decisions and implementation remains unclear. And if those decisions cannot be externally verified, the causes of repeated problems may remain obscure.</p>
+<p>None of the institutional models outlined here is guaranteed to be the best answer. Different options could be combined, or discussions with outside partners could reveal another approach.</p>
+<p>The purpose of considering reconstruction is to identify governance, financing and oversight arrangements capable of supporting reliable everyday DSN operations, continuing equipment renewal, and a research infrastructure that can take on difficult missions in the future.</p>
+<h3 id="section-4-4">4.4 The DSN May Be at a Turning Point</h3>
+<p>Let us briefly return to the DSN&#x27;s beginnings.</p>
+<p>According to NASA&#x27;s official <em>History of the Networks</em>, ground stations around the world were linked to JPL&#x27;s Space Flight Operations Facility in 1963, establishing the unified Deep Space Network (NASA, <em>History of the Networks</em>).</p>
+<p>That history was described in detail in Part 2 of this series.</p>
+<a class="related-card" href="https://note.com/rapasai_lab/n/n60f8fd5657ae?app_launch=false" target="_blank" rel="noopener noreferrer"><div class="related-eyebrow">RELATED ARTICLE · PART 02</div><div class="related-title">Deep-Space Communications Were Essential to Reaching the Moon — The Origins of JPL and the DSN</div><div class="related-status">English translation coming soon · Read the Japanese original</div></a>
+<p>What deserves attention here is the thinking behind the DSN&#x27;s creation.</p>
+<p>At the time, today&#x27;s fully developed DSN did not already exist. What existed first was a need for communications capabilities that would make deep-space exploration possible. The network and its operating arrangements were built to provide that capability.</p>
+<p>The exploration capability required came first; the structures necessary to achieve it followed.</p>
+<p>Could we rethink today&#x27;s situation in the same order?</p>
+<p>Approximately twenty years have passed since the GAO&#x27;s 2006 report. During that time NASA developed its management arrangements and pursued equipment upgrades. Yet NASA OIG&#x27;s 2023 audit again reported insufficient capacity relative to communications demand and problems with equipment expansion.</p>
+<p>That history provides grounds to reconsider not only the equipment upgrades themselves but also the arrangements that are supposed to sustain the DSN over the long term.</p>
+<p>Rather than determine DSN capabilities within the limits of existing organizations and budgets, first consider what capabilities future deep-space exploration will require. Then establish the governance, financing and oversight arrangements necessary to maintain and further develop those capabilities.</p>
+<p>Of course, changing institutions does not guarantee that every problem will be solved. But if existing arrangements cannot sustain the DSN adequately, changing those arrangements must also be among the options considered.</p>
+<p>The DSN may be approaching a turning point: not only in deciding how to maintain today&#x27;s network, but also in deciding who will support the deep-space communications network needed in the future, and under what arrangements.</p>
+<p>The starting point is for the DSN itself to state the quality and capabilities it wants to preserve for the future.</p>
+<p>If the existing arrangements cannot readily deliver them, the next step is to seek cooperation from parties who will seriously consider the DSN&#x27;s survival and work toward solutions.</p>
+<p><strong>Rather than fitting the DSN to the institution, fit the institution to the DSN that should be preserved.</strong></p>
+<p>To pass on this research infrastructure, which has supported deep-space exploration, to the future, perhaps that is the change in thinking now required.</p>
+<h4 class="reference-title" id="refs-5">References — Chapter 4</h4>
+<p>NASA&#x27;s Deep Space Network: Current Management Structure Is Not Conducive to Effectively Matching Resources with Future Requirements. U.S. Government Accountability Office (GAO), April 27, 2006.<br><a href="https://www.gao.gov/products/gao-06-445" rel="noopener noreferrer">https://www.gao.gov/products/gao-06-445</a></p>
+<p>NASA&#x27;s Management of the Deep Space Network (IG-15-013). NASA Office of Inspector General, March 26, 2015.<br><a href="https://oig.nasa.gov/audits/ig-15-013/" rel="noopener noreferrer">https://oig.nasa.gov/audits/ig-15-013/</a></p>
+<p>Audit of NASA&#x27;s Deep Space Network (IG-23-016). NASA Office of Inspector General, July 12, 2023.<br><a href="https://oig.nasa.gov/audits/ig-23-016/" rel="noopener noreferrer">https://oig.nasa.gov/audits/ig-23-016/</a></p>
+<p>History of the Networks. NASA.<br><a href="https://www.nasa.gov/communicating-with-missions/history-of-the-networks/" rel="noopener noreferrer">https://www.nasa.gov/communicating-with-missions/history-of-the-networks/</a></p>
+</div></div>
+
+<nav class="article-navigation" aria-label="Article navigation"><a href="../../index.html#featured">← All articles</a><a href="../part-00/index.html">← Previous article</a></nav>
+<section class="attribution" aria-labelledby="attribution-heading">
+<h2 id="attribution-heading">Author &amp; Citation</h2>
+<p><strong>Author / Publisher:</strong> RapasAI Lab</p>
+<p><strong>Article:</strong> Why Has the Deep Space Network Approached Its Limits? — Rebuilding the DSN in Light of Twenty Years of Management</p>
+<p><strong>Japanese original publication:</strong> November 5, 2026</p>
+<p><strong>English edition:</strong> <a href="https://rapasai.jp/en/dsn/part-05/">https://rapasai.jp/en/dsn/part-05/</a></p>
+<p><strong>Japanese original:</strong> <a lang="ja" href="https://note.com/rapasai_lab/n/naa1a5fbe367b?app_launch=false" target="_blank" rel="noopener noreferrer">Read the original Japanese article ↗</a></p>
+<p class="attribution-note">© 2026 RapasAI Lab. All rights reserved. When referencing this research, please credit RapasAI Lab and link to this article. This notice does not limit quotations or other uses permitted by applicable law.</p>
+</section>
+<div class="source"><span>© 2026 RapasAI Lab</span><a href="https://note.com/rapasai_lab/n/naa1a5fbe367b?app_launch=false" target="_blank" rel="noopener noreferrer">Read the original in Japanese ↗</a></div></main><aside class="sidebar" aria-label="On this page"><p class="side-title">ON THIS PAGE</p><a class="side-link" href="#introduction">Introduction</a><a class="side-link" href="#chapter-1">1. The Problems Were Already Known in 2006</a><a class="side-link subsection" href="#section-1-1">1.1 Aging Facilities and Ever-Increasing Communications Demand</a><a class="side-link subsection" href="#section-1-2">1.2 What Are the Roles of NASA, SCaN, JPL, the DSN, the GAO and the OIG?</a><a class="side-link subsection" href="#section-1-3">1.3 What Did the GAO Ask NASA to Do?</a><a class="side-link subsection" href="#section-1-4">1.4 The DSN-Specific Recommendations Remained Unimplemented After SCaN Was Established</a><a class="side-link subsection" href="#section-1-5">1.5 The Same Problems Were Audited Repeatedly</a><a class="side-link" href="#chapter-2">2. Why Was SCaN Unable to Restore the DSN?</a><a class="side-link subsection" href="#section-2-1">2.1 How Did the DSN Allocate Limited Funding to Equipment Upgrades?</a><a class="side-link subsection" href="#section-2-2">2.2 How Did SCaN Cut the DSN Budget in 2013?</a><a class="side-link subsection" href="#section-2-3">2.3 The DSN Demonstrated What Funding Shortfalls Would Prevent It from Doing</a><a class="side-link subsection" href="#section-2-4">2.4 How Did JPL and SCaN Respond to DSN Requirements?</a><a class="side-link subsection" href="#section-2-5">2.5 Could Outsiders Verify the Financial Decisions of Space Communications Programs?</a><a class="side-link subsection" href="#section-2-6">2.6 Audits Identified the Problems, but the DSN&#x27;s Equipment Shortage Persisted</a><a class="side-link" href="#chapter-3">3. Why Did JPL Continue DSN Communications Operations Beyond Available Capacity?</a><a class="side-link subsection" href="#section-3-1">3.1 How Did Communications Demand Beyond Capacity Degrade DSN Service Quality?</a><a class="side-link subsection" href="#section-3-2">3.2 What Was Sacrificed to Support Artemis I?</a><a class="side-link subsection" href="#section-3-3">3.3 What Happened When Maintenance Was Deferred in Favor of Communications?</a><a class="side-link subsection" href="#section-3-4">3.4 What Did the DSS-14 Accident Reveal About Operations That Prioritized Communications?</a><a class="side-link" href="#chapter-4">4. How Can We Sustain the Deep Space Network?</a><a class="side-link subsection" href="#section-4-1">4.1 What Must the DSN Preserve?</a><a class="side-link subsection" href="#section-4-2">4.2 How Could the DSN Be Preserved?</a><a class="side-link subsection" href="#section-4-3">4.3 What Institutional Arrangements Could Support the DSN?</a><a class="side-link subsection" href="#section-4-4">4.4 The DSN May Be at a Turning Point</a><div class="side-note"><strong>A series in progress</strong>New English editions will be linked as they are published.</div></aside></div>
+<footer class="site-footer">© 2026 RapasAI Lab · Independent Research &amp; Analysis</footer>
+</body></html>
