@@ -295,8 +295,7 @@
     "recommendation": "",
     "published_at": "2026-10-20",
     "series_order": 15,
-    "note_money_pickup": true,
-    "note_metadata_source": "note_rss_ogp"
+    "note_money_pickup": true
   },
   {
     "id": 28,
@@ -307,8 +306,7 @@
     "recommendation": "データセンターの集積によって、地域はどう変わったのか。千葉県印西市を例に、税収の増加、企業の事業展開、地域への還元を考える。",
     "published_at": "2026-10-22",
     "series_order": 0,
-    "note_money_pickup": true,
-    "note_metadata_source": "note_rss_ogp"
+    "note_money_pickup": true
   },
   {
     "id": 29,
@@ -319,8 +317,7 @@
     "recommendation": "",
     "published_at": "2026-10-22",
     "series_order": 1,
-    "note_money_pickup": true,
-    "note_metadata_source": "note_rss_ogp"
+    "note_money_pickup": true
   },
   {
     "id": 30,
@@ -331,8 +328,7 @@
     "recommendation": "",
     "published_at": "2026-10-23",
     "series_order": 2,
-    "note_money_pickup": true,
-    "note_metadata_source": "note_rss_ogp"
+    "note_money_pickup": true
   },
   {
     "id": 31,
@@ -343,8 +339,7 @@
     "recommendation": "",
     "published_at": "2026-10-23",
     "series_order": 3,
-    "note_money_pickup": true,
-    "note_metadata_source": "note_rss_ogp"
+    "note_money_pickup": true
   },
   {
     "id": 32,
@@ -355,8 +350,7 @@
     "recommendation": "",
     "published_at": "2026-10-23",
     "series_order": 4,
-    "note_money_pickup": true,
-    "note_metadata_source": "note_rss_ogp"
+    "note_money_pickup": true
   },
   {
     "id": 33,
@@ -367,8 +361,7 @@
     "recommendation": "",
     "published_at": "2026-10-23",
     "series_order": 5,
-    "note_money_pickup": true,
-    "note_metadata_source": "note_rss_ogp"
+    "note_money_pickup": true
   },
   {
     "id": 34,
@@ -379,55 +372,50 @@
     "recommendation": "データセンターの電力や排熱は、すでに地域で活用され始めています。では、なぜ日本では広がらないのでしょうか？ 国内外の実例から、技術と政策の課題を探ります。",
     "published_at": "2026-10-24",
     "series_order": 0,
-    "note_money_pickup": true,
-    "note_metadata_source": "note_rss_ogp"
+    "note_money_pickup": true
   },
   {
     "id": 35,
-    "title": "第1回 ：電力不足のとき、データセンターは何ができるのか",
+    "title": "第1回：電力不足のとき、データセンターは何ができるのか",
     "category": "regional_assets_series",
     "cover": "https://assets.st-note.com/production/uploads/images/327850807/rectangle_large_type_2_a0e98ad971860ed801b1880899e3a524.png?width=800",
     "url": "https://note.com/rapasai_lab/n/n4aa8ca340376",
     "recommendation": "",
     "published_at": "2026-10-24",
     "series_order": 1,
-    "note_money_pickup": true,
-    "note_metadata_source": "note_rss_ogp"
+    "note_money_pickup": true
   },
   {
     "id": 36,
-    "title": "第２回 ：水不足のとき、データセンターは何ができるのか",
+    "title": "第2回：水不足のとき、データセンターは何ができるのか",
     "category": "regional_assets_series",
     "cover": "https://assets.st-note.com/production/uploads/images/327870652/rectangle_large_type_2_a58b22f0078a0c7452fa2a28b462bf0e.png?width=800",
     "url": "https://note.com/rapasai_lab/n/n42db230a4e67",
     "recommendation": "",
     "published_at": "2026-10-24",
     "series_order": 2,
-    "note_money_pickup": true,
-    "note_metadata_source": "note_rss_ogp"
+    "note_money_pickup": true
   },
   {
     "id": 37,
-    "title": "第3回 ：データセンターの排熱は、地域で使えるのか",
+    "title": "第3回：データセンターの排熱は、地域で使えるのか",
     "category": "regional_assets_series",
     "cover": "https://assets.st-note.com/production/uploads/images/327878876/rectangle_large_type_2_4f3fdcc3ffd3a610041caebba63029d6.png?width=800",
     "url": "https://note.com/rapasai_lab/n/n4bf9ada0abb4",
     "recommendation": "",
     "published_at": "2026-10-24",
-    "series_order": 3,
-    "note_metadata_source": "note_rss_ogp"
+    "series_order": 3
   },
   {
     "id": 38,
-    "title": "第4回 ：データセンターの設備を、地域で活用するためには",
+    "title": "第4回：データセンターの設備を、地域で活用するためには",
     "category": "regional_assets_series",
     "cover": "https://assets.st-note.com/production/uploads/images/327885471/rectangle_large_type_2_d899f7bbc3bcfcefc77610fd235391b6.png?width=800",
     "url": "https://note.com/rapasai_lab/n/n888d0a8ebb7a",
     "recommendation": "",
     "published_at": "2026-10-24",
     "series_order": 4,
-    "note_money_pickup": true,
-    "note_metadata_source": "note_rss_ogp"
+    "note_money_pickup": true
   },
   {
     "id": 39,
@@ -438,8 +426,7 @@
     "recommendation": "",
     "published_at": "2026-10-25",
     "series_order": 5,
-    "note_money_pickup": true,
-    "note_metadata_source": "note_rss_ogp"
+    "note_money_pickup": true
   },
   {
     "id": 40,
@@ -448,8 +435,7 @@
     "cover": "https://assets.st-note.com/production/uploads/images/328667894/rectangle_large_type_2_3e548db0ac07fc4c2a7dafd620023558.png?width=800",
     "url": "https://note.com/rapasai_lab/n/n895c7ff226d6",
     "recommendation": "攻撃されたのはFX会社ではなく、取引ツールが動くクラウドでした。なぜFX口座の不正操作につながったのか。攻撃の経緯と、GMOが選んだ復旧方法を追います。",
-    "published_at": "2026-10-26",
-    "note_metadata_source": "note_rss_ogp"
+    "published_at": "2026-10-26"
   },
   {
     "id": 41,
@@ -458,8 +444,7 @@
     "cover": "https://assets.st-note.com/production/uploads/images/328811301/rectangle_large_type_2_317d101574213da5bb8a057dd455be7a.png?width=800",
     "url": "https://note.com/rapasai_lab/n/nda105608b101",
     "recommendation": "サイバー攻撃の侵入口は、高性能AIで見つけられるのか。脆弱性発見の実績と調査方法を検証し、企業がAIを使ってシステムを守るための条件を考えます。",
-    "published_at": "2026-10-26",
-    "note_metadata_source": "note_rss_ogp"
+    "published_at": "2026-10-26"
   },
   {
     "id": 42,
@@ -469,9 +454,7 @@
     "url": "https://note.com/rapasai_lab/n/n1e75deac4482",
     "recommendation": "企業の機密情報を外部へ送らずに、高性能AIでセキュリティ対策ができるとしたら？ AIを専用エンジンとして提供する仕組みと、開発企業・クラウド事業者の新しい収益モデルを考えます。",
     "published_at": "2026-10-27",
-    "recommendation_slot": "security_engine_pick",
-    "note_money_pickup": true,
-    "note_metadata_source": "note_rss_ogp"
+    "note_money_pickup": true
   },
   {
     "id": 43,
@@ -480,8 +463,7 @@
     "cover": "https://assets.st-note.com/production/uploads/images/329484307/rectangle_large_type_2_1d7912a5552ee6485cc0303ba38cbb56.png?width=800",
     "url": "https://note.com/rapasai_lab/n/n7de0b0dd9849?app_launch=false",
     "recommendation": "",
-    "published_at": "2026-10-28",
-    "note_metadata_source": "note_rss_ogp"
+    "published_at": "2026-10-28"
   },
   {
     "id": 44,
@@ -502,7 +484,7 @@
     "recommendation": "宇宙探査は、通信が途絶えたら終わる。\n約50年前のボイジャーと、今も通信を続ける地球。その命綱となる深宇宙通信網DSNは、どう進化してきたのか。誕生から現在、そして宇宙通信の未来を追う特集。",
     "published_at": "2026-11-01",
     "special_order": 0,
-    "note_metadata_source": "note_rss_ogp",
+    "note_metadata_source": "note_pdf_link",
     "recommendation_slot": "voyager_special_pick"
   },
   {
@@ -514,7 +496,7 @@
     "recommendation": "",
     "published_at": "2026-11-01",
     "special_order": 1,
-    "note_metadata_source": "note_rss_ogp"
+    "note_metadata_source": "note_pdf_link"
   },
   {
     "id": 47,
@@ -525,7 +507,7 @@
     "recommendation": "",
     "published_at": "2026-11-01",
     "special_order": 2,
-    "note_metadata_source": "note_rss_ogp"
+    "note_metadata_source": "note_pdf_link"
   },
   {
     "id": 48,
@@ -536,29 +518,40 @@
     "recommendation": "",
     "published_at": "2026-11-02",
     "special_order": 3,
-    "note_metadata_source": "note_rss_ogp"
+    "note_metadata_source": "note_pdf_link"
   },
   {
     "id": 49,
     "title": "第4回：深宇宙通信網DSNは、何を生み出してきたのか",
     "category": "special",
-    "cover": "https://assets.st-note.com/production/uploads/images/331715910/rectangle_large_type_2_2d28beb389e3ed6d2c6cfc8e88012e4b.png?width=800",
+    "cover": "https://assets.st-note.com/production/uploads/images/331715910/rectangle_large_type_2_2d28beb389e3ed6d2c6cfc8e88012e4b.png?width=1200",
     "url": "https://note.com/rapasai_lab/n/n5b0557a3e9cf?app_launch=false",
     "recommendation": "",
     "published_at": "2026-11-03",
     "special_order": 4,
-    "note_metadata_source": "note_rss_ogp"
+    "note_metadata_source": "note_pdf_link"
   },
   {
     "id": 50,
     "title": "第5回：深宇宙通信網DSNは、なぜ限界に近づいたのか――20年間の運営から考える再建策",
     "category": "special",
-    "cover": "https://assets.st-note.com/production/uploads/images/332573244/rectangle_large_type_2_d4c569a64b37c2970a4650103678eb8b.png?width=800",
+    "cover": "https://assets.st-note.com/production/uploads/images/332573244/rectangle_large_type_2_d4c569a64b37c2970a4650103678eb8b.png?width=1200",
     "url": "https://note.com/rapasai_lab/n/naa1a5fbe367b?app_launch=false",
     "recommendation": "",
     "published_at": "2026-11-05",
     "special_order": 5,
-    "note_metadata_source": "note_rss_ogp",
+    "note_metadata_source": "note_pdf_link",
     "note_money_pickup": true
+  },
+  {
+    "id": 51,
+    "title": "データセンターの騒音と排熱は、どこまで防げるのか――法規制の限界を補う自治体の環境協定",
+    "category": "infra",
+    "cover": "https://assets.st-note.com/production/uploads/images/333133777/rectangle_large_type_2_c006b95c3fed6d5a5b5b1abc0e60e796.png?width=1200",
+    "url": "https://note.com/rapasai_lab/n/n1759b72d768d",
+    "recommendation": "データセンターの騒音や排熱は、設計によってどこまで防げるのか。北九州と昭島の事例から、法規制で守れる範囲とその限界を調べました。地域の生活環境を守るために、自治体と事業者は何を約束すべきなのか。環境協定のあり方を考えます。",
+    "published_at": "2026-11-07",
+    "recommendation_slot": "environment_agreement_pick",
+    "note_metadata_source": "note_pdf_link"
   }
 ]

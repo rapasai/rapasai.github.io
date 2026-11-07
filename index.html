@@ -197,7 +197,7 @@ function renderBookSearch(){
 function render(){
   // おすすめ記事は記事データの設定から選ぶ。特定の枠名に依存しない。
   const picks=allArticles.filter(x=>typeof x.recommendation_slot==='string'&&x.recommendation_slot.trim()&&typeof x.recommendation==='string'&&x.recommendation.trim())
-    .sort((a,b)=>(a.recommendation_slot==='voyager_special_pick'?-1:0)-(b.recommendation_slot==='voyager_special_pick'?-1:0)||(b.published_at||'').localeCompare(a.published_at||'')||Number(b.id)-Number(a.id));
+    .sort((a,b)=>(a.recommendation_slot==='environment_agreement_pick'?-2:a.recommendation_slot==='voyager_special_pick'?-1:0)-(b.recommendation_slot==='environment_agreement_pick'?-2:b.recommendation_slot==='voyager_special_pick'?-1:0)||(b.published_at||'').localeCompare(a.published_at||'')||Number(b.id)-Number(a.id));
   document.querySelector('#featured-items').innerHTML=picks.map(featureArticle).join('');
   document.querySelector('#article-count').textContent=`全${allArticles.length}本`;
   document.querySelector('#shelves').innerHTML=cats.map(([id,label])=>{
