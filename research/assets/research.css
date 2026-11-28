@@ -63,7 +63,7 @@ a:focus-visible {outline:3px solid #526B5D;outline-offset:3px}
 }
 main {color:#273038;background:#F3F6F8}
 .hero {background:#fff;border-bottom:1px solid #DCE4EA}
-.research-hero-inner {padding:40px 0 46px}
+.research-hero-inner {padding:40px 24px 46px}
 .crumb {font-size:12px;color:#5C6871;margin:0 0 24px}
 .crumb a {text-decoration:none}
 .crumb a:hover {text-decoration:underline}
@@ -78,7 +78,7 @@ main {color:#273038;background:#F3F6F8}
 .area-sub {font-size:15px;color:#5C6871;margin:0}
 .area-link {display:inline-block;margin-top:22px;color:#365F7A;font-weight:700;font-size:14px}
 @media (max-width:740px) {
-  .research-hero-inner {padding:24px 0 32px}
+  .research-hero-inner {padding:24px 15px 32px}
   .research-content {padding-top:30px}
   .area {padding:24px 20px}
 }
